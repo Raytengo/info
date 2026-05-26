@@ -151,9 +151,8 @@ async function buildWidget() {
   footerText.font = Font.mediumSystemFont(11);
   footerText.textColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
 
-  // Tap → open Scriptable app to show full news list
-  const scriptName = encodeURIComponent(Script.name());
-  w.url = `scriptable:///run?scriptName=${scriptName}`;
+  // Tap → open GitHub Pages web app in Safari
+  w.url = "https://raytengo.github.io/info/";
 
   return w;
 }
@@ -177,42 +176,40 @@ async function showNewsList() {
   const table = new UITable();
   table.showSeparators = true;
 
-  // Header row
+  // Header
   const header = new UITableRow();
   header.isHeader = true;
-  header.height = 44;
+  header.height = 50;
   const headerCell = header.addText("AI Research News");
-  headerCell.titleFont = Font.boldSystemFont(17);
+  headerCell.titleFont = Font.boldSystemFont(18);
   table.addRow(header);
 
   if (!articles || articles.length === 0) {
-    const emptyRow = new UITableRow();
-    emptyRow.addText("資料載入失敗，請確認網路連線");
-    table.addRow(emptyRow);
+    const r = new UITableRow();
+    r.height = 60;
+    const c = r.addText("資料載入失敗", "請確認網路連線後重試");
+    c.titleColor = new Color("#8a8a8d");
+    table.addRow(r);
     await table.present(false);
     return;
   }
 
-  for (let i = 0; i < articles.length; i++) {
-    const a = articles[i];
+  const LAB_EMOJI = { openai: "🟢", anthropic: "🟠", deepmind: "🔵" };
+
+  for (const a of articles) {
     const row = new UITableRow();
-    row.height = 72;
+    row.height = 80;
     row.dismissOnSelect = false;
     row.onSelect = () => { Safari.open(a.url); };
 
-    // Lab color bar (narrow left cell)
-    const labCell = row.addText(LAB_LABELS[a.lab] || a.lab.toUpperCase());
-    labCell.titleColor = new Color(LAB_COLORS[a.lab] || "#8a8a8d");
-    labCell.titleFont = Font.semiboldSystemFont(11);
-    labCell.widthWeight = 20;
+    const emoji = LAB_EMOJI[a.lab] || "⚪";
+    const label = LAB_LABELS[a.lab] || a.lab;
+    const date  = formatDate(a.published_at);
 
-    // Title + summary (wide right cell)
-    const date = formatDate(a.published_at);
-    const titleCell = row.addText(a.title, (a.summary || "") + `\n${date}`);
-    titleCell.titleFont = Font.semiboldSystemFont(14);
-    titleCell.subtitleFont = Font.systemFont(12);
-    titleCell.subtitleColor = new Color("#8a8a8d");
-    titleCell.widthWeight = 80;
+    const cell = row.addText(a.title, `${emoji} ${label}  ·  ${date}`);
+    cell.titleFont    = Font.semiboldSystemFont(15);
+    cell.subtitleFont = Font.systemFont(12);
+    cell.subtitleColor = new Color("#8a8a8d");
 
     table.addRow(row);
   }
