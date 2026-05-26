@@ -19,7 +19,7 @@
 const QUEUE_URL = "https://raw.githubusercontent.com/Raytengo/info/master/queue.json";
 
 // Minutes each article stays on screen before rotating to the next
-const ROTATION_MINUTES = 30;
+const ROTATION_MINUTES = 5;
 
 const LAB_COLORS  = { openai: "#10A37F", anthropic: "#CC785C", deepmind: "#4285F4" };
 const LAB_LABELS  = { openai: "OpenAI",  anthropic: "Anthropic", deepmind: "DeepMind" };
@@ -35,17 +35,13 @@ if (args.widgetParameter) {
   if (LAB_COLORS[p]) { LAB_FILTER = p; }
 }
 
-if (config.runsInApp) {
-  const al = new Alert();
-  al.title = "AI Research Widget";
-  al.message = "Add to homescreen via Scriptable.\n\nParameter: openai / anthropic / deepmind / (empty = all)";
-  al.addAction("Preview");
-  al.addCancelAction("Cancel");
-  if (await al.presentSheet() !== 0) { return; }
-}
-
 await checkCacheDir();
 await cleanUpCache();
+
+if (config.runsInApp) {
+  await showNewsList();
+  return;
+}
 
 const widget = await buildWidget();
 if (!config.runsInWidget) { await widget.presentMedium(); }
@@ -155,8 +151,9 @@ async function buildWidget() {
   footerText.font = Font.mediumSystemFont(11);
   footerText.textColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
 
-  // Tap → open article URL
-  w.url = article.url;
+  // Tap → open Scriptable app to show full news list
+  const scriptName = encodeURIComponent(Script.name());
+  w.url = `scriptable:///run?scriptName=${scriptName}`;
 
   return w;
 }
@@ -170,6 +167,57 @@ function renderError(w) {
   t.centerAlignText();
   w.addSpacer();
   return w;
+}
+
+/* ============ NEWS LIST (in-app) ============ */
+
+async function showNewsList() {
+  const articles = await fetchArticles();
+
+  const table = new UITable();
+  table.showSeparators = true;
+
+  // Header row
+  const header = new UITableRow();
+  header.isHeader = true;
+  header.height = 44;
+  const headerCell = header.addText("AI Research News");
+  headerCell.titleFont = Font.boldSystemFont(17);
+  table.addRow(header);
+
+  if (!articles || articles.length === 0) {
+    const emptyRow = new UITableRow();
+    emptyRow.addText("資料載入失敗，請確認網路連線");
+    table.addRow(emptyRow);
+    await table.present(false);
+    return;
+  }
+
+  for (let i = 0; i < articles.length; i++) {
+    const a = articles[i];
+    const row = new UITableRow();
+    row.height = 72;
+    row.dismissOnSelect = false;
+    row.onSelect = () => { Safari.open(a.url); };
+
+    // Lab color bar (narrow left cell)
+    const labCell = row.addText(LAB_LABELS[a.lab] || a.lab.toUpperCase());
+    labCell.titleColor = new Color(LAB_COLORS[a.lab] || "#8a8a8d");
+    labCell.titleFont = Font.semiboldSystemFont(11);
+    labCell.widthWeight = 20;
+
+    // Title + summary (wide right cell)
+    const date = formatDate(a.published_at);
+    const titleCell = row.addText(a.title, (a.summary || "") + `\n${date}`);
+    titleCell.titleFont = Font.semiboldSystemFont(14);
+    titleCell.subtitleFont = Font.systemFont(12);
+    titleCell.subtitleColor = new Color("#8a8a8d");
+    titleCell.widthWeight = 80;
+
+    table.addRow(row);
+  }
+
+  await table.present(false);
 }
 
 /* ============ DATA ============ */
