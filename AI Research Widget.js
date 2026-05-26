@@ -44,7 +44,11 @@ if (config.runsInApp) {
 }
 
 const widget = await buildWidget();
-if (!config.runsInWidget) { await widget.presentMedium(); }
+if (!config.runsInWidget) {
+  if (WIDGET_SIZE === "small")       { await widget.presentSmall(); }
+  else if (WIDGET_SIZE === "large")  { await widget.presentLarge(); }
+  else                               { await widget.presentMedium(); }
+}
 Script.setWidget(widget);
 Script.complete();
 
@@ -52,39 +56,104 @@ Script.complete();
 
 async function buildWidget() {
   const articles = await fetchArticles();
-
-  // Pick article by time slot
-  const article = pickArticle(articles);
+  const article  = pickArticle(articles);
 
   const w = new ListWidget();
   w.setPadding(16, 18, 16, 18);
+  w.url = "https://raytengo.github.io/info/";
 
-  if (!article) {
-    return renderError(w);
+  if (!article) { return renderError(w); }
+
+  setBackground(w, article.lab);
+
+  const size = WIDGET_SIZE;
+
+  if (size === "small") {
+    buildSmall(w, article, articles.length);
+  } else if (size === "large") {
+    buildLarge(w, article, articles.length);
+  } else {
+    buildMedium(w, article, articles.length);
   }
 
+  return w;
+}
+
+// ── Small: lab badge + title only (no summary) ──
+function buildSmall(w, article, total) {
+  addHeader(w, article, total, 11);
+  w.addSpacer();
+
+  const title = w.addText(article.title);
+  title.font = Font.boldSystemFont(14);
+  title.textColor = Color.dynamic(new Color("#000000"), new Color("#f2f2f7"));
+  title.lineLimit = 4;
+  title.minimumScaleFactor = 0.8;
+
+  w.addSpacer();
+  addDate(w, article.published_at, 11);
+}
+
+// ── Medium: lab badge + title + summary ──
+function buildMedium(w, article, total) {
+  addHeader(w, article, total, 11);
+  w.addSpacer();
+
+  const title = w.addText(article.title);
+  title.font = Font.boldSystemFont(15);
+  title.textColor = Color.dynamic(new Color("#000000"), new Color("#f2f2f7"));
+  title.lineLimit = 3;
+  title.minimumScaleFactor = 0.85;
+
+  if (article.summary) {
+    w.addSpacer(5);
+    const summary = w.addText(article.summary);
+    summary.font = Font.systemFont(12);
+    summary.textColor = Color.dynamic(new Color("#3c3c43", 0.6), new Color("#ebebf5", 0.6));
+    summary.lineLimit = 2;
+  }
+
+  w.addSpacer();
+  addDate(w, article.published_at, 11);
+}
+
+// ── Large: lab badge + title + full detail ──
+function buildLarge(w, article, total) {
+  addHeader(w, article, total, 12);
+  w.addSpacer(10);
+
+  const title = w.addText(article.title);
+  title.font = Font.boldSystemFont(17);
+  title.textColor = Color.dynamic(new Color("#000000"), new Color("#f2f2f7"));
+  title.lineLimit = 3;
+  title.minimumScaleFactor = 0.85;
+
+  const content = article.detail || article.summary || "";
+  if (content) {
+    w.addSpacer(8);
+    const detail = w.addText(content);
+    detail.font = Font.systemFont(13);
+    detail.textColor = Color.dynamic(new Color("#3c3c43", 0.75), new Color("#ebebf5", 0.75));
+    detail.lineLimit = 8;
+    detail.minimumScaleFactor = 0.8;
+  }
+
+  w.addSpacer();
+  addDate(w, article.published_at, 12);
+}
+
+// ── Shared helpers ──
+
+function addHeader(w, article, total, fontSize) {
   const labColor = new Color(LAB_COLORS[article.lab] || "#8a8a8d");
   const labLabel = LAB_LABELS[article.lab] || article.lab.toUpperCase();
 
-  // --- Background: dark with subtle lab-color tint at bottom ---
-  const grad = new LinearGradient();
-  grad.locations = [0, 1];
-  grad.colors = [
-    Color.dynamic(new Color("#f2f2f7"), new Color("#111111")),
-    Color.dynamic(
-      new Color(LAB_COLORS[article.lab] || "#333333", 0.08),
-      new Color(LAB_COLORS[article.lab] || "#333333", 0.18)
-    ),
-  ];
-  w.backgroundGradient = grad;
+  const row = w.addStack();
+  row.layoutHorizontally();
+  row.centerAlignContent();
 
-  // --- Row 1: header (lab badge + article counter) ---
-  const headerStack = w.addStack();
-  headerStack.layoutHorizontally();
-  headerStack.centerAlignContent();
-
-  // Lab badge: colored pill
-  const badge = headerStack.addStack();
+  // Lab badge pill
+  const badge = row.addStack();
   badge.layoutHorizontally();
   badge.centerAlignContent();
   badge.backgroundColor = new Color(LAB_COLORS[article.lab] || "#8a8a8d", 0.15);
@@ -92,69 +161,55 @@ async function buildWidget() {
   badge.setPadding(3, 7, 3, 7);
 
   const dotCtx = new DrawContext();
-  dotCtx.size = new Size(7, 7);
+  dotCtx.size = new Size(6, 6);
   dotCtx.opaque = false;
   dotCtx.setFillColor(labColor);
-  dotCtx.fillEllipse(new Rect(0, 0, 7, 7));
-  const dotImg = badge.addImage(dotCtx.getImage());
-  dotImg.imageSize = new Size(7, 7);
+  dotCtx.fillEllipse(new Rect(0, 0, 6, 6));
+  const dot = badge.addImage(dotCtx.getImage());
+  dot.imageSize = new Size(6, 6);
   badge.addSpacer(5);
 
-  const badgeText = badge.addText(labLabel);
-  badgeText.font = Font.semiboldSystemFont(11);
-  badgeText.textColor = labColor;
+  const label = badge.addText(labLabel);
+  label.font = Font.semiboldSystemFont(fontSize);
+  label.textColor = labColor;
 
-  headerStack.addSpacer();
+  row.addSpacer();
 
-  // Article counter (e.g. "3 / 9")
-  if (articles && articles.length > 1) {
-    const idx = currentIndex(articles.length);
-    const counter = headerStack.addText(`${idx + 1} / ${articles.length}`);
-    counter.font = Font.mediumSystemFont(11);
+  // Counter + offline icon
+  if (total > 1) {
+    const idx = currentIndex(total);
+    const counter = row.addText(`${idx + 1} / ${total}`);
+    counter.font = Font.mediumSystemFont(fontSize);
     counter.textColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
   }
 
-  // Offline indicator
   if (!ONLINE) {
-    headerStack.addSpacer(6);
+    row.addSpacer(5);
     const sym = SFSymbol.named("icloud.slash");
-    sym.applyFont(Font.systemFont(11));
-    const offlineIcon = headerStack.addImage(sym.image);
-    offlineIcon.imageSize = new Size(13, 13);
-    offlineIcon.tintColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
+    sym.applyFont(Font.systemFont(fontSize));
+    const icon = row.addImage(sym.image);
+    icon.imageSize = new Size(fontSize, fontSize);
+    icon.tintColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
   }
+}
 
-  w.addSpacer();
+function addDate(w, dateStr, fontSize) {
+  const t = w.addText(formatDate(dateStr));
+  t.font = Font.mediumSystemFont(fontSize);
+  t.textColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
+}
 
-  // --- Row 2: Article title ---
-  const titleText = w.addText(article.title);
-  titleText.font = Font.boldSystemFont(16);
-  titleText.textColor = Color.dynamic(new Color("#000000"), new Color("#f2f2f7"));
-  titleText.minimumScaleFactor = 0.8;
-  titleText.lineLimit = 3;
-
-  // --- Row 3: Summary (if available) ---
-  if (article.summary && article.summary.length > 0) {
-    w.addSpacer(6);
-    const summaryText = w.addText(article.summary);
-    summaryText.font = Font.systemFont(12);
-    summaryText.textColor = Color.dynamic(new Color("#3c3c43", 0.6), new Color("#ebebf5", 0.6));
-    summaryText.lineLimit = 3;
-    summaryText.minimumScaleFactor = 0.85;
-  }
-
-  w.addSpacer();
-
-  // --- Row 4: Date ---
-  const dateStr = formatDate(article.published_at);
-  const footerText = w.addText(dateStr);
-  footerText.font = Font.mediumSystemFont(11);
-  footerText.textColor = Color.dynamic(new Color("#8a8a8d"), new Color("#636366"));
-
-  // Tap → open GitHub Pages web app in Safari
-  w.url = "https://raytengo.github.io/info/";
-
-  return w;
+function setBackground(w, lab) {
+  const grad = new LinearGradient();
+  grad.locations = [0, 1];
+  grad.colors = [
+    Color.dynamic(new Color("#f2f2f7"), new Color("#111111")),
+    Color.dynamic(
+      new Color(LAB_COLORS[lab] || "#333333", 0.08),
+      new Color(LAB_COLORS[lab] || "#333333", 0.20)
+    ),
+  ];
+  w.backgroundGradient = grad;
 }
 
 function renderError(w) {
