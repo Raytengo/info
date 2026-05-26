@@ -1,27 +1,60 @@
 {
   "meta": {
-    "last_crawled": "2026-05-26T10:00:00Z",
-    "total": 3
+    "last_crawled": "2026-05-27T10:00:00Z",
+    "total": 6
   },
   "digest": {
     "all": {
       "title": "本週 AI 研究總覽",
-      "body": "三大 lab 本週的研究突破不約而同地指向同一個主題：AI 正在從「回答問題」進化為「主動推進知識邊界」。\n\nOpenAI 的模型推翻了 Erdős 於 1946 年提出的平面單位距離猜想，這是 AI 在純數學領域的里程碑。\n\nAnthropic 發佈 Project Glasswing 首次成果，展示了 Claude Mythos Preview 在漏洞挖掘上超越人類的能力——但也正因如此，Anthropic 暫緩公開發佈該模型。\n\nDeepMind 的 Co-Scientist 從研究原型升級為 Nature 論文，並開放科研人員申請，標誌著 AI 科研夥伴正式進入實用階段。"
+      "body": "三大 lab 本週的動態呈現出不同面向：技術落地、倫理對話、與模型能力擴展。\n\nOpenAI 在巴西媒體市場邁出第一步，與 Grupo Folha 及 Grupo UOL 達成內容授權協議，結束了此前的訴訟，並讓 9 億周活躍用戶能在 ChatGPT 中讀到真實新聞來源。\n\nAnthropic 聯合創辦人 Chris Olah 應邀在梵蒂岡與教宗良十四世共同發表教宗通諭《壯哉人類》，倡議教會與科技界攜手建構 AI 全球倫理治理框架。\n\nDeepMind 發佈 Gemini 2.5 Computer Use 模型，讓 AI Agent 能直接操作使用者介面，標誌著模型能力從語言推理向具身執行的跨越。"
     },
     "openai": {
       "title": "OpenAI 近期方向",
-      "body": "數學與科學推理是本週的核心。OpenAI 模型推翻了離散幾何領域 80 年的 Erdős 單位距離猜想，解題關鍵來自代數數論，揭示了兩個數學領域之間意料之外的深層連結。\n\n此前 GPT-5.2 也已在理論物理中推導出新結果，顯示 OpenAI 正在系統性地將模型能力對準形式化推理與科學發現。\n\n應用端，Codex 透過與 Dell Technologies 合作擴展到混合雲與本地企業環境，以及個人財務功能在 ChatGPT 上線，顯示推理能力正快速向產品端滲透。"
+      "body": "數學與科學推理是上週的核心。OpenAI 模型推翻了離散幾何領域 80 年的 Erdős 單位距離猜想，解題關鍵來自代數數論，揭示了兩個數學領域之間意料之外的深層連結。\n\n本週最新動態是媒體版圖的拓展。OpenAI 與巴西最大媒體集團 Grupo Folha（旗下《聖保羅葉報》）及 Grupo UOL 簽訂內容合作協議，這是 OpenAI 在巴西的首個媒體合作。透過此協議，全球超過 9 億周活躍 ChatGPT 用戶將可存取這兩家媒體的即時新聞摘要，並附有原始來源連結；同時此舉也終止了 Folha 於 2025 年對 OpenAI 提起的版權訴訟。\n\nOpenAI 也宣布 DevDay 2026 將於 9 月 29 日在舊金山舉行，顯示其持續深耕開發者生態的策略方向。"
     },
     "anthropic": {
       "title": "Anthropic 近期方向",
-      "body": "安全研究是本週主軸。Project Glasswing 計畫以 Claude Mythos Preview 模型為核心，聯合約 50 個合作夥伴，首月在軟體基礎設施中挖出超過 10,000 個高危或嚴重漏洞，部分組織的漏洞發現速度提升了十倍。\n\nAnthropic 明確表示，Mythos 的網路安全能力已強到需要暫緩公開發佈——這是能力與安全取捨的公開示範。修補瓶頸（發現速度遠超修復速度）也成為下一步的核心挑戰。\n\n商業端，KPMG 全球 27.6 萬員工的 Claude 整合，以及收購 API 工具公司 Stainless，顯示 Anthropic 正同步拓展企業生態。"
+      "body": "安全研究是上週主軸。Project Glasswing 計畫以 Claude Mythos Preview 模型為核心，聯合約 50 個合作夥伴，首月在軟體基礎設施中挖出超過 10,000 個高危或嚴重漏洞，部分組織的漏洞發現速度提升了十倍。\n\n本週最新動態是倫理治理領域的重要突破。Anthropic 聯合創辦人 Chris Olah 受邀出席梵蒂岡，與教宗良十四世共同發表首份教宗通諭《壯哉人類：人工智慧時代中對人的守護》（Magnifica Humanitas），呼籲教會與科技界建立跨機構的 AI 安全合作機制。Olah 表示：「如果我們希望這項技術朝好的方向發展，在那些激勵結構之外，存在真正關心結果的人至關重要。」\n\n商業端，KPMG 全球 27.6 萬員工的 Claude 整合，以及收購 API 工具公司 Stainless，顯示 Anthropic 正同步拓展企業生態。"
     },
     "deepmind": {
       "title": "DeepMind 近期方向",
-      "body": "Co-Scientist 是本週重點。這套基於 Gemini 的多智能體科研系統，由生成、反思、排序、演化、鄰近度與元審查六類專屬 agent 組成，模仿科學研究本身的迭代方式。研究成果已在 Nature 發表，並從早期原型正式開放個人科研人員申請使用。\n\n已驗證的應用案例涵蓋抗藥性、植物免疫與肝臟纖維化，在急性骨髓性白血病研究中，系統提出的候選分子有一個通過實驗室驗證並顯示出特別潛力。\n\nWeatherNext 方面，DeepMind 也展示了對梅利莎颶風的精準預測，提前五天以 80% 信心預測到 Category 5 強度，顯示 AI 在地球科學的實際落地持續深化。"
+      "body": "Co-Scientist 是上週重點。這套基於 Gemini 的多智能體科研系統，由生成、反思、排序、演化、鄰近度與元審查六類專屬 agent 組成，研究成果已在 Nature 發表，並開放科研人員申請使用。\n\n本週最新動態是 Gemini 2.5 Computer Use 模型的發佈。這個專為 UI 操作打造的模型，建構於 Gemini 2.5 Pro 的視覺理解與推理能力之上，讓 AI Agent 能直接與應用程式介面互動——點擊按鈕、填寫表單、瀏覽網頁——而無需額外的螢幕擷取工具。這標誌著模型能力從純語言推理向具身執行任務的重要躍遷，也為未來的自動化工作流程鋪路。\n\nWeatherNext 方面，DeepMind 也展示了對梅利莎颶風的精準預測，提前五天以 80% 信心預測到 Category 5 強度，顯示 AI 在地球科學的實際落地持續深化。"
     }
   },
   "articles": [
+    {
+      "id": "openai-20260525-grupo-folha-uol-partnership",
+      "lab": "openai",
+      "title": "OpenAI, Grupo Folha, and Grupo UOL announce strategic content partnership",
+      "summary": "OpenAI 與巴西最大媒體集團 Grupo Folha 及 Grupo UOL 簽訂首個巴西媒體內容合作協議，讓全球 9 億多 ChatGPT 用戶可存取真實新聞來源，同時終止了 Folha 對 OpenAI 的版權訴訟。",
+      "detail": "OpenAI 於 2026 年 5 月 25 日宣布與巴西兩大媒體集團達成戰略內容合作：Grupo Folha（旗下知名報紙《聖保羅葉報》Folha de S.Paulo）及入口網站巨頭 Grupo UOL。這是 OpenAI 在巴西的第一個媒體合作夥伴關係。\n\n根據協議，兩家媒體將即時向 ChatGPT 提供新聞內容，全球超過 9 億周活躍用戶可直接在 ChatGPT 中看到基於這些報導的新聞摘要，並附有連回原始來源的連結，強調歸因與透明度。此前 OpenAI 已在美國、英國、法國、德國等市場建立類似的媒體合作，巴西是其持續拓展的重要市場。\n\n此次合作同時終止了 Folha 於 2025 年對 OpenAI 提起的訴訟——Folha 當時要求 OpenAI 停止未經授權使用其網站內容。作為協議的一部分，Grupo Folha 和 Grupo UOL 將可使用 Codex、ChatGPT Enterprise 及 OpenAI API，探索 AI 如何支援其新聞採編業務、開發創新讀者產品，並提升內部工作流程效率。",
+      "url": "https://openai.com/index/grupo-folha-grupo-uol-partnership/",
+      "image_url": null,
+      "published_at": "2026-05-25",
+      "crawled_at": "2026-05-27T10:00:00Z"
+    },
+    {
+      "id": "anthropic-20260525-chris-olah-pope-leo-encyclical",
+      "lab": "anthropic",
+      "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
+      "summary": "Anthropic 聯合創辦人 Chris Olah 受邀在梵蒂岡與教宗良十四世共同發表教宗通諭《壯哉人類》，呼籲教會與科技界建立跨機構的 AI 倫理合作機制，共同守護人工智慧時代的人類尊嚴。",
+      "detail": "2026 年 5 月 25 日，教宗良十四世（Pope Leo XIV）發表其首份教宗通諭《壯哉人類：人工智慧時代中對人的守護》（Magnifica Humanitas: On safeguarding the human person in the time of artificial intelligence）。這份通諭針對 AI 快速發展對人類尊嚴、倫理與社會結構的衝擊提出天主教神學觀點，並警告 AI 被用於軍事用途的潛在風險。\n\nAnthropic 聯合創辦人 Chris Olah 應教宗本人邀請，出席梵蒂岡的通諭發表記者會，與一排樞機主教和神學家並排就座，向座無虛席的梵蒂岡會堂演講。這位 33 歲的無神論科技人與教宗形成了令人矚目的對話組合。\n\nOlah 在發言中表示：「如果我們希望這項技術朝好的方向發展，在那些激勵結構之外，存在真正關心結果、並堅持安全的人至關重要。正是透過對話與相互努力、透過推拉之間，人類才能成就偉大的事。這就是我在《壯哉人類》中所看見的，也是我感謝教宗和教會承擔起這份辨別工作的原因。」\n\nAnthropic 將此次出席定位為拓展 AI 重要議題對話空間的行動，顯示其在技術安全研究之外，也積極參與跨領域的倫理治理對話。",
+      "url": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+      "image_url": null,
+      "published_at": "2026-05-25",
+      "crawled_at": "2026-05-27T10:00:00Z"
+    },
+    {
+      "id": "deepmind-20260520-gemini-computer-use",
+      "lab": "deepmind",
+      "title": "Introducing the Gemini 2.5 Computer Use model",
+      "summary": "DeepMind 發佈 Gemini 2.5 Computer Use 模型，這個專為操作使用者介面而設計的模型，讓 AI Agent 能直接點擊、填表、瀏覽應用程式，標誌著模型能力從語言推理向具身執行的重要躍遷。",
+      "detail": "2026 年 5 月 20 日，Google DeepMind 發佈 Gemini 2.5 Computer Use 模型，這是一個建構於 Gemini 2.5 Pro 視覺理解與推理能力之上的專屬模型，專為驅動能與使用者介面（UI）互動的 AI Agent 而設計。\n\n與一般語言模型不同，Gemini 2.5 Computer Use 模型能直接「看懂」螢幕上的畫面，並對按鈕、表單、選單等 UI 元素執行精確的操作指令——包括點擊、輸入文字、滾動頁面、在應用程式之間切換——而不需要依賴額外的截圖工具或特殊 API 整合。\n\n此模型繼承了 Gemini 2.5 Pro 在視覺推理方面的強大能力，能夠理解複雜的多步驟任務，並自主規劃操作順序以完成目標。這使得開發者得以更容易地打造能在真實電腦環境中運作的自動化 Agent，應用場景涵蓋自動化辦公流程、軟體測試、網頁資料擷取等。\n\nGemini 2.5 Computer Use 的發佈，與 OpenAI 的 Operator 及 Anthropic 的 Computer Use 功能形成直接競爭，標誌著各大 AI lab 在具身執行（agentic execution）賽道上的角力持續升溫。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/",
+      "image_url": null,
+      "published_at": "2026-05-20",
+      "crawled_at": "2026-05-27T10:00:00Z"
+    },
     {
       "id": "openai-20260522-discrete-geometry-conjecture",
       "lab": "openai",
