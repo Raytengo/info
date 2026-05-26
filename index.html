@@ -179,6 +179,7 @@
       font-size: 14px;
       color: var(--text2);
       line-height: 1.7;
+      white-space: pre-line;
     }
 
     /* ── Regular Card ── */
@@ -468,12 +469,6 @@
 
     return `<div class="card-digest" style="--lab-color:${color}">
       <div class="card-digest-inner">
-        <div class="digest-label">
-          <svg class="digest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-          ${label} · 近期動態
-        </div>
         <div class="digest-title">${d.title}</div>
         <div class="digest-body">${d.body}</div>
       </div>
