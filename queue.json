@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "last_crawled": "2026-05-26T08:00:00Z",
+    "total": 9,
+    "_note": "MOCK DATA for widget testing. Replace with real crawler output before Phase 1 完成."
+  },
+  "articles": [
+    {
+      "id": "deepmind-20260524-gemini-3-multimodal",
+      "lab": "deepmind",
+      "title": "Gemini 3.0: Multimodal Reasoning at Scale",
+      "summary": "DeepMind 釋出 Gemini 3.0,主打統一影像、音訊與長文本的端到端推理,並在 MMMU 與 GPQA 等基準上刷新紀錄。",
+      "url": "https://deepmind.google/blog/gemini-3-multimodal-reasoning/",
+      "image_url": null,
+      "published_at": "2026-05-24",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "openai-20260523-gpt5-verifiable-rewards",
+      "lab": "openai",
+      "title": "Improving GPT-5 Reasoning with Verifiable Reward Models",
+      "summary": "OpenAI 分享 GPT-5 在數學與程式推理上的訓練改進,核心是用可驗證獎勵訊號替換偏好打分,降低 reward hacking。",
+      "url": "https://openai.com/news/gpt-5-verifiable-rewards/",
+      "image_url": null,
+      "published_at": "2026-05-23",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "anthropic-20260521-claude-4-opus",
+      "lab": "anthropic",
+      "title": "Claude 4 Opus: Extended Reasoning and Tool Use",
+      "summary": "Claude 4 Opus 推出,強化長鏈推理與工具呼叫穩定性,並開放新的 computer-use 介面供開發者測試。",
+      "url": "https://www.anthropic.com/news/claude-4-opus/",
+      "image_url": null,
+      "published_at": "2026-05-21",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "deepmind-20260517-alphaproof-olympiad",
+      "lab": "deepmind",
+      "title": "AlphaProof: Olympiad-Level Mathematical Reasoning",
+      "summary": "AlphaProof 在 IMO 風格題目上達到金牌等級表現,結合形式化證明與大型語言模型協同搜尋。",
+      "url": "https://deepmind.google/blog/alphaproof-olympiad/",
+      "image_url": null,
+      "published_at": "2026-05-17",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "openai-20260516-gpt5-agents-long-horizon",
+      "lab": "openai",
+      "title": "GPT-5 Agents: Reliable Long-Horizon Workflows",
+      "summary": "介紹 GPT-5 在 multi-step agent 任務上的可靠性改進,包含狀態恢復、錯誤重試與外部工具的標準化呼叫協定。",
+      "url": "https://openai.com/news/gpt-5-agents/",
+      "image_url": null,
+      "published_at": "2026-05-16",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "anthropic-20260514-interpretability-concepts",
+      "lab": "anthropic",
+      "title": "Interpreting Claude's Inner Concepts: New Findings",
+      "summary": "Anthropic 解析 Claude 內部表徵中的抽象概念向量,展示如何透過特徵抑制觀察模型行為變化。",
+      "url": "https://www.anthropic.com/research/interpretability-concepts-2026/",
+      "image_url": null,
+      "published_at": "2026-05-14",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "deepmind-20260509-world-models-robotics",
+      "lab": "deepmind",
+      "title": "Robotic Manipulation with Learned World Models",
+      "summary": "用 video-based world model 預測物體互動,在真實機械臂上完成多步驟操作任務,sample efficiency 比傳統 RL 提升一個量級。",
+      "url": "https://deepmind.google/blog/world-models-robotics/",
+      "image_url": null,
+      "published_at": "2026-05-09",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "openai-20260508-frontier-risk-update",
+      "lab": "openai",
+      "title": "Updating Our Approach to Frontier AI Risk",
+      "summary": "OpenAI 公佈最新版 Preparedness Framework,涵蓋 autonomy、persuasion 與 cyber 三大領域的能力評估更新。",
+      "url": "https://openai.com/news/frontier-risk-update-2026/",
+      "image_url": null,
+      "published_at": "2026-05-08",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    },
+    {
+      "id": "anthropic-20260507-constitutional-multiagent",
+      "lab": "anthropic",
+      "title": "Constitutional AI for Multi-Agent Systems",
+      "summary": "把 CAI 框架延伸到多 agent 互動場景,探討當多個 Claude 實例協作時,如何避免衝突放大與目標偏移。",
+      "url": "https://www.anthropic.com/research/constitutional-multiagent/",
+      "image_url": null,
+      "published_at": "2026-05-07",
+      "crawled_at": "2026-05-26T08:00:00Z",
+      "_mock": true
+    }
+  ]
+}
