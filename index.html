@@ -365,9 +365,8 @@
     /* ── Rating Arrow ── */
     .rating-arrow {
       display: inline-block;
-      margin-left: 5px;
-      font-size: 13px;
-      font-weight: 800;
+      margin-left: 6px;
+      font-size: 17px;
       vertical-align: middle;
       opacity: 0;
       transition: opacity 250ms;
@@ -526,8 +525,8 @@
     const arrow  = document.querySelector(`.rating-arrow[data-id="${articleId}"]`);
     if (!arrow) return;
     arrow.classList.remove('like', 'dislike', 'visible');
-    if (rating === 'like')    { arrow.textContent = '↑'; arrow.classList.add('like',    'visible'); }
-    else if (rating === 'dislike') { arrow.textContent = '↓'; arrow.classList.add('dislike', 'visible'); }
+    if (rating === 'like')    { arrow.textContent = '▲'; arrow.classList.add('like',    'visible'); }
+    else if (rating === 'dislike') { arrow.textContent = '▼'; arrow.classList.add('dislike', 'visible'); }
     else { arrow.textContent = ''; }
   }
 
@@ -548,7 +547,7 @@
       if (!dragging && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 10) dragging = true;
       if (!dragging) return;
       currentDx = dx;
-      el.style.transform = `translateX(${dx}px) rotate(${dx * 0.03}deg)`;
+      el.style.transform = `translateX(${dx}px)`;
       const t = Math.min(Math.abs(dx) / 110, 1);
       if (dx > 10)       { el.style.boxShadow = `inset 0 0 0 2px rgba(52,199,89,${t}), 0 4px 16px rgba(52,199,89,${t * 0.35})`; }
       else if (dx < -10) { el.style.boxShadow = `inset 0 0 0 2px rgba(255,59,48,${t}), 0 4px 16px rgba(255,59,48,${t * 0.35})`; }
@@ -683,7 +682,7 @@
         <div class="card-accent"></div>
         <div class="card-inner">
           <div class="card-meta">${cardMeta}</div>
-          <div class="card-title">${a.title}<span class="rating-arrow${feedbackMap[a.id] ? ' visible ' + feedbackMap[a.id] : ''}" data-id="${a.id}">${feedbackMap[a.id] === 'like' ? '↑' : feedbackMap[a.id] === 'dislike' ? '↓' : ''}</span></div>
+          <div class="card-title">${a.title}<span class="rating-arrow${feedbackMap[a.id] ? ' visible ' + feedbackMap[a.id] : ''}" data-id="${a.id}">${feedbackMap[a.id] === 'like' ? '▲' : feedbackMap[a.id] === 'dislike' ? '▼' : ''}</span></div>
           ${a.summary ? `<div class="card-summary">${a.summary}</div>` : ''}
         </div>
       </div>`;
