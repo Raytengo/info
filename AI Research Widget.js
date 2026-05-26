@@ -29,6 +29,7 @@ var LAB_FILTER = "";   // set via widget parameter
 /* ================================ */
 
 const ONLINE = await isOnline();
+var WIDGET_SIZE = config.runsInWidget ? config.widgetFamily : "medium";
 
 if (args.widgetParameter) {
   const p = args.widgetParameter.trim().toLowerCase();
