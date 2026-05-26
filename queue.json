@@ -4,6 +4,24 @@
     "total": 9,
     "_note": "MOCK DATA for widget testing. Replace with real crawler output before Phase 1 完成."
   },
+  "digest": {
+    "all": {
+      "title": "本週 AI 研究總覽",
+      "body": "三大 lab 本週都在強化模型的推理能力，但切入點各有不同。OpenAI 從訓練機制下手，用可驗證的獎勵訊號取代人工評分；Anthropic 則深入模型內部，試圖理解並干預 Claude 的行為表徵；DeepMind 同時在兩條線推進——數學形式推理與多模態感知，Gemini 3.0 是目前最具代表性的成果。"
+    },
+    "openai": {
+      "title": "OpenAI 近期方向",
+      "body": "OpenAI 本期重心放在 GPT-5 的推理可靠性與 agent 工作流程上。訓練層面捨棄傳統偏好打分，改用可自動驗證的獎勵訊號；應用層面則推進長流程 agent 的穩定性，目標是讓模型在超過 20 步的任務中也能保持一致表現。同時持續更新 Preparedness Framework，強化對自主性與說服力兩類風險的評估能力。"
+    },
+    "anthropic": {
+      "title": "Anthropic 近期方向",
+      "body": "Anthropic 這期的重心分為兩塊：能力與安全。能力端推出 Claude 4 Opus，強化長鏈推理與工具呼叫的穩定性；安全端持續深化可解釋性研究，已能識別並干預模型內部的抽象概念向量。Constitutional AI 的研究範圍也從單一模型擴展到多 agent 協作場景，試圖解決多實例互動中的目標偏移問題。"
+    },
+    "deepmind": {
+      "title": "DeepMind 近期方向",
+      "body": "DeepMind 本期在三個領域同時發力。Gemini 3.0 代表多模態統一推理的最新進展；AlphaProof 則在競賽數學領域達到金牌水準，展示形式化證明與 LLM 結合的潛力；機器人研究方向則引入 video-based world model，大幅提升機械臂操作任務的樣本效率。三條線的共同主題是讓 AI 具備更深層的「預測與規劃」能力。"
+    }
+  },
   "articles": [
     {
       "id": "deepmind-20260524-gemini-3-multimodal",

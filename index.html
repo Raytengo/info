@@ -140,37 +140,45 @@
     .list.fade-out { opacity: 0; transform: translateY(4px); transition: opacity 150ms, transform 150ms; }
     .list.fade-in  { opacity: 1; transform: translateY(0);   transition: opacity 200ms, transform 200ms; }
 
-    /* ── Featured Card (first article) ── */
-    .card-featured {
+    /* ── Digest Card (summary, non-tappable) ── */
+    .card-digest {
       background: var(--surface);
       border-radius: var(--radius-card);
       overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
       display: block;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      transition: transform var(--transition), box-shadow var(--transition);
       border-top: 3px solid var(--lab-color);
+      transition: opacity 200ms;
     }
-    .card-featured:active { transform: scale(0.982); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .card-featured .card-inner { padding: 16px 18px 18px; }
-    .card-featured .card-title {
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 19px;
+    .card-digest-inner { padding: 14px 18px 18px; }
+    .digest-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
       font-weight: 700;
-      line-height: 1.38;
-      margin: 8px 0 7px;
+      color: var(--lab-color);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+    }
+    .digest-icon {
+      width: 14px; height: 14px;
+      color: var(--lab-color);
+      flex-shrink: 0;
+    }
+    .digest-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 8px;
       color: var(--text);
     }
-    .card-featured .card-summary {
+    .digest-body {
       font-size: 14px;
       color: var(--text2);
-      line-height: 1.65;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      line-height: 1.7;
     }
 
     /* ── Regular Card ── */
@@ -247,9 +255,8 @@
     }
 
     /* Read state */
-    .card.read, .card-featured.read { opacity: 0.45; }
-    .card.read .unread-dot,
-    .card-featured.read .unread-dot { display: none; }
+    .card.read { opacity: 0.45; }
+    .card.read .unread-dot { display: none; }
 
     /* ── Skeleton loading ── */
     .skeleton { background: var(--surface); border-radius: var(--radius-card); overflow: hidden; }
@@ -419,6 +426,7 @@
 
   let articles = [];
   let meta     = {};
+  let digest   = {};
   let filter   = 'all';
   let readSet  = new Set(JSON.parse(localStorage.getItem('ai-read') || '[]'));
   let sheetArticle = null;
@@ -450,6 +458,28 @@
     });
   }
 
+  // ── Digest card ──
+  function renderDigest() {
+    const d     = digest[filter];
+    const color = filter === 'all' ? '#636366' : (LAB_COLORS[filter] || '#636366');
+    const label = filter === 'all' ? '總覽' : (LAB_LABELS[filter] || filter);
+
+    if (!d) return '';
+
+    return `<div class="card-digest" style="--lab-color:${color}">
+      <div class="card-digest-inner">
+        <div class="digest-label">
+          <svg class="digest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          ${label} · 近期動態
+        </div>
+        <div class="digest-title">${d.title}</div>
+        <div class="digest-body">${d.body}</div>
+      </div>
+    </div>`;
+  }
+
   // ── Render ──
   function render(animate = true) {
     const shown = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
@@ -465,50 +495,41 @@
   }
 
   function doRender(shown, list) {
+    const digestHTML = renderDigest();
+
     if (shown.length === 0) {
-      list.innerHTML = `<div class="placeholder">
+      list.innerHTML = digestHTML + `<div class="placeholder">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <div>沒有符合的文章</div></div>`;
       return;
     }
 
-    list.innerHTML = shown.map((a, i) => {
+    const cardsHTML = shown.map((a, i) => {
       const color = LAB_COLORS[a.lab] || '#8a8a8d';
       const label = LAB_LABELS[a.lab] || a.lab;
       const date  = relTime(a.published_at);
       const read  = readSet.has(a.id);
       const unreadDot = !read ? '<div class="unread-dot"></div>' : '';
-
-      const meta = `
+      const cardMeta  = `
         <div class="lab-badge"><div class="lab-dot"></div>${label}</div>
         <div class="card-right">${unreadDot}<span class="card-date">${date}</span></div>`;
 
-      if (i === 0) {
-        // Featured card
-        return `<div class="card-featured${read ? ' read' : ''}" style="--lab-color:${color}" data-id="${a.id}" data-idx="${i}" role="button" tabindex="0" aria-label="${a.title}">
-          <div class="card-inner">
-            <div class="card-meta">${meta}</div>
-            <div class="card-title">${a.title}</div>
-            ${a.summary ? `<div class="card-summary">${a.summary}</div>` : ''}
-          </div>
-        </div>`;
-      }
-
-      // Regular card
       return `<div class="card${read ? ' read' : ''}" style="--lab-color:${color}" data-id="${a.id}" data-idx="${i}" role="button" tabindex="0" aria-label="${a.title}">
         <div class="card-accent"></div>
         <div class="card-inner">
-          <div class="card-meta">${meta}</div>
+          <div class="card-meta">${cardMeta}</div>
           <div class="card-title">${a.title}</div>
           ${a.summary ? `<div class="card-summary">${a.summary}</div>` : ''}
         </div>
       </div>`;
     }).join('');
 
+    list.innerHTML = digestHTML + cardsHTML;
+
     // Bind card taps
-    list.querySelectorAll('.card, .card-featured').forEach(el => {
+    list.querySelectorAll('.card').forEach(el => {
       el.addEventListener('click', () => {
-        const idx = parseInt(el.dataset.idx);
+        const idx  = parseInt(el.dataset.idx);
         const pool = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
         openSheet(pool[idx], el);
       });
@@ -578,6 +599,7 @@
       const r = await fetch('./queue.json?t=' + Date.now());
       const d = await r.json();
       meta     = d.meta || {};
+      digest   = d.digest || {};
       articles = (d.articles || []).sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 
       // Last updated
