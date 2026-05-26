@@ -362,33 +362,23 @@
     }
     .sheet-btn:active { opacity: 0.8; transform: scale(0.98); }
 
-    /* ── Feedback ── */
-    .feedback-row {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 16px;
+    /* ── Rating Arrow ── */
+    .rating-arrow {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      vertical-align: middle;
+      opacity: 0;
+      transition: opacity 250ms;
+      line-height: 1;
     }
-    .fb-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      padding: 11px;
-      border-radius: 12px;
-      border: 1.5px solid var(--sep);
-      background: transparent;
-      color: var(--text2);
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background var(--transition), border-color var(--transition), color var(--transition), transform 100ms;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .fb-btn:active { transform: scale(0.95); }
-    .fb-btn.active-like    { background: #34C759; border-color: #34C759; color: #fff; }
-    .fb-btn.active-dislike { background: #FF3B30; border-color: #FF3B30; color: #fff; }
-    .feedback-row.fb-saving { opacity: 0.5; pointer-events: none; }
+    .rating-arrow.visible { opacity: 1; }
+    .rating-arrow.like    { color: #34C759; }
+    .rating-arrow.dislike { color: #FF3B30; }
+
+    /* Swipe drag */
+    .card { will-change: transform; touch-action: pan-y; }
   </style>
 </head>
 <body>
@@ -450,10 +440,6 @@
     <div class="card-meta sheet-meta" id="sheetMeta"></div>
     <div class="sheet-title" id="sheetTitle"></div>
     <div class="sheet-detail" id="sheetDetail"></div>
-    <div class="feedback-row" id="feedbackRow">
-      <button class="fb-btn" id="fbLike" onclick="handleFeedback('like')">👍　有用</button>
-      <button class="fb-btn" id="fbDislike" onclick="handleFeedback('dislike')">👎　沒興趣</button>
-    </div>
     <a class="sheet-btn" id="sheetBtn" target="_blank" rel="noopener">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       閱讀全文
@@ -537,13 +523,70 @@
 
   function updateFeedbackUI(articleId) {
     const rating = feedbackMap[articleId];
-    document.getElementById('fbLike')   ?.classList.toggle('active-like',    rating === 'like');
-    document.getElementById('fbDislike')?.classList.toggle('active-dislike', rating === 'dislike');
+    const arrow  = document.querySelector(`.rating-arrow[data-id="${articleId}"]`);
+    if (!arrow) return;
+    arrow.classList.remove('like', 'dislike', 'visible');
+    if (rating === 'like')    { arrow.textContent = '↑'; arrow.classList.add('like',    'visible'); }
+    else if (rating === 'dislike') { arrow.textContent = '↓'; arrow.classList.add('dislike', 'visible'); }
+    else { arrow.textContent = ''; }
   }
 
-  function handleFeedback(rating) {
-    if (!sheetArticle) return;
-    submitFeedback(sheetArticle.id, rating);
+  function bindCardInteractions(el, article) {
+    if (!article) return;
+    let startX = 0, startY = 0, currentDx = 0;
+    let dragging = false, active = false;
+
+    function onDown(clientX, clientY) {
+      startX = clientX; startY = clientY; currentDx = 0;
+      dragging = false; active = true;
+      el.style.transition = 'none';
+    }
+    function onMove(clientX, clientY) {
+      if (!active) return;
+      const dx = clientX - startX;
+      const dy = clientY - startY;
+      if (!dragging && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 10) dragging = true;
+      if (!dragging) return;
+      currentDx = dx;
+      el.style.transform = `translateX(${dx}px) rotate(${dx * 0.03}deg)`;
+      const t = Math.min(Math.abs(dx) / 110, 1);
+      if (dx > 10)       { el.style.boxShadow = `inset 0 0 0 2px rgba(52,199,89,${t}), 0 4px 16px rgba(52,199,89,${t * 0.35})`; }
+      else if (dx < -10) { el.style.boxShadow = `inset 0 0 0 2px rgba(255,59,48,${t}), 0 4px 16px rgba(255,59,48,${t * 0.35})`; }
+      else               { el.style.boxShadow = ''; }
+    }
+    function onUp(clientX) {
+      if (!active) return;
+      active = false;
+      const dx = clientX - startX;
+      el.style.transition = 'transform 320ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 200ms';
+      el.style.transform  = '';
+      el.style.boxShadow  = '';
+      if (dragging && Math.abs(dx) > 60) {
+        el.dataset.swiped = '1';
+        submitFeedback(article.id, dx > 0 ? 'like' : 'dislike');
+      }
+      dragging = false;
+    }
+
+    // Touch
+    el.addEventListener('touchstart', e => onDown(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+    el.addEventListener('touchmove',  e => { if (dragging) e.preventDefault(); onMove(e.touches[0].clientX, e.touches[0].clientY); }, { passive: false });
+    el.addEventListener('touchend',   e => onUp(e.changedTouches[0].clientX),  { passive: true });
+    el.addEventListener('touchcancel',() => { active = false; dragging = false; el.style.transition = 'transform 300ms'; el.style.transform = ''; el.style.boxShadow = ''; }, { passive: true });
+
+    // Mouse (desktop)
+    el.addEventListener('mousedown',  e => { if (e.button !== 0) return; onDown(e.clientX, e.clientY); });
+    window.addEventListener('mousemove', e => { if (active) onMove(e.clientX, e.clientY); });
+    window.addEventListener('mouseup',   e => { if (active) onUp(e.clientX); });
+
+    // Tap to open sheet (only if not swiped)
+    el.addEventListener('click', () => {
+      if (el.dataset.swiped) { delete el.dataset.swiped; return; }
+      if (Math.abs(currentDx) > 10) return;
+      const idx  = parseInt(el.dataset.idx);
+      const pool = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
+      openSheet(pool[idx], el);
+    });
   }
 
   function promptToken() {
@@ -640,7 +683,7 @@
         <div class="card-accent"></div>
         <div class="card-inner">
           <div class="card-meta">${cardMeta}</div>
-          <div class="card-title">${a.title}</div>
+          <div class="card-title">${a.title}<span class="rating-arrow${feedbackMap[a.id] ? ' visible ' + feedbackMap[a.id] : ''}" data-id="${a.id}">${feedbackMap[a.id] === 'like' ? '↑' : feedbackMap[a.id] === 'dislike' ? '↓' : ''}</span></div>
           ${a.summary ? `<div class="card-summary">${a.summary}</div>` : ''}
         </div>
       </div>`;
@@ -648,13 +691,11 @@
 
     list.innerHTML = digestHTML + cardsHTML;
 
-    // Bind card taps
+    // Bind swipe + tap
     list.querySelectorAll('.card').forEach(el => {
-      el.addEventListener('click', () => {
-        const idx  = parseInt(el.dataset.idx);
-        const pool = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
-        openSheet(pool[idx], el);
-      });
+      const idx  = parseInt(el.dataset.idx);
+      const pool = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
+      bindCardInteractions(el, pool[idx]);
     });
   }
 
@@ -675,7 +716,6 @@
     document.getElementById('backdrop').classList.add('open');
     document.getElementById('sheet').classList.add('open');
     document.body.style.overflow = 'hidden';
-    updateFeedbackUI(article.id);
 
     // Mark as read
     if (!readSet.has(article.id)) {
