@@ -121,19 +121,19 @@ function buildMedium(w, article, total) {
 // ── Large: lab badge + title + full detail ──
 function buildLarge(w, article, total) {
   addHeader(w, article, total, 12);
-  w.addSpacer(10);
+  w.addSpacer(12);
 
   const title = w.addText(article.title);
-  title.font = Font.boldSystemFont(17);
+  title.font = Font.boldSystemFont(20);
   title.textColor = Color.dynamic(new Color("#000000"), new Color("#f2f2f7"));
   title.lineLimit = 3;
   title.minimumScaleFactor = 0.85;
 
   const content = article.detail || article.summary || "";
   if (content) {
-    w.addSpacer(8);
+    w.addSpacer(14);
     const detail = w.addText(content);
-    detail.font = Font.systemFont(13);
+    detail.font = Font.systemFont(15);
     detail.textColor = Color.dynamic(new Color("#3c3c43", 0.75), new Color("#ebebf5", 0.75));
     detail.lineLimit = 8;
     detail.minimumScaleFactor = 0.8;
