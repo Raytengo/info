@@ -388,18 +388,11 @@
       opacity: 0;
       transition: opacity 250ms;
       line-height: 1;
-      cursor: pointer;
     }
     .rating-arrow.visible { opacity: 1; }
     .rating-arrow.like    { color: #34C759; }
     .rating-arrow.dislike { color: #FF3B30; }
 
-    @keyframes arrowPop {
-      0%   { transform: scale(1); }
-      45%  { transform: scale(2); }
-      100% { transform: scale(1); }
-    }
-    .rating-arrow.pop { animation: arrowPop 380ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   </style>
 </head>
 <body>
@@ -552,15 +545,6 @@
     else                           { arrow.textContent = ''; }
   }
 
-  function popArrow(articleId) {
-    const arrow = document.querySelector(`.rating-arrow[data-id="${articleId}"]`);
-    if (!arrow) return;
-    arrow.classList.remove('pop');
-    void arrow.offsetWidth;
-    arrow.classList.add('pop');
-    arrow.addEventListener('animationend', () => arrow.classList.remove('pop'), { once: true });
-  }
-
   function bindCardInteractions(el, article) {
     if (!article) return;
     const DIST  = 68;     // px to commit
@@ -601,9 +585,13 @@
 
       el.style.transform = `translateX(${dx}px)`;
 
-      // Overlay ramps from 0 → 1 as dx approaches DIST
+      // Overlay colour: gray if already rated (any swipe = cancel), green/red if unrated
       const t = Math.min(Math.abs(dx) / DIST, 1);
+      const isRated = !!feedbackMap[article.id];
+      const cancelBg = 'rgba(142,142,147,0.18)';
       oLike.style.transition = oDislike.style.transition = 'none';
+      oLike.style.background    = isRated ? cancelBg : 'rgba(52,199,89,0.14)';
+      oDislike.style.background = isRated ? cancelBg : 'rgba(255,59,48,0.14)';
       if (dx > 6)       { oLike.style.opacity = t;  oDislike.style.opacity = '0'; }
       else if (dx < -6) { oDislike.style.opacity = t; oLike.style.opacity = '0'; }
       else              { oLike.style.opacity = oDislike.style.opacity = '0'; }
@@ -623,8 +611,12 @@
 
       if (committed) {
         el.dataset.swiped = '1';
-        submitFeedback(article.id, dx > 0 ? 'like' : 'dislike');
-        setTimeout(() => popArrow(article.id), 210);
+        if (feedbackMap[article.id]) {
+          // Already rated → any swipe = cancel (toggle off)
+          submitFeedback(article.id, feedbackMap[article.id]);
+        } else {
+          submitFeedback(article.id, dx > 0 ? 'like' : 'dislike');
+        }
       }
       dragging = false;
     }
@@ -745,8 +737,8 @@
         <div class="card-right">${unreadDot}<span class="card-date">${date}</span></div>`;
 
       return `<div class="card${read ? ' read' : ''}" style="--lab-color:${color}" data-id="${a.id}" data-idx="${i}" role="button" tabindex="0" aria-label="${a.title}">
-        <div class="swipe-overlay like">▲</div>
-        <div class="swipe-overlay dislike">▼</div>
+        <div class="swipe-overlay like"></div>
+        <div class="swipe-overlay dislike"></div>
         <div class="card-accent"></div>
         <div class="card-inner">
           <div class="card-meta">${cardMeta}</div>
@@ -765,14 +757,6 @@
       bindCardInteractions(el, pool[idx]);
     });
 
-    // Tap rating arrow to cancel (like tapping a ❤️ to unlike)
-    list.querySelectorAll('.rating-arrow').forEach(arrowEl => {
-      arrowEl.addEventListener('click', e => {
-        e.stopPropagation();
-        const id = arrowEl.dataset.id;
-        if (feedbackMap[id]) submitFeedback(id, feedbackMap[id]);
-      });
-    });
   }
 
   // ── Bottom Sheet ──
