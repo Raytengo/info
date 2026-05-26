@@ -361,6 +361,34 @@
       text-decoration: none;
     }
     .sheet-btn:active { opacity: 0.8; transform: scale(0.98); }
+
+    /* ── Feedback ── */
+    .feedback-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .fb-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 11px;
+      border-radius: 12px;
+      border: 1.5px solid var(--sep);
+      background: transparent;
+      color: var(--text2);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background var(--transition), border-color var(--transition), color var(--transition), transform 100ms;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .fb-btn:active { transform: scale(0.95); }
+    .fb-btn.active-like    { background: #34C759; border-color: #34C759; color: #fff; }
+    .fb-btn.active-dislike { background: #FF3B30; border-color: #FF3B30; color: #fff; }
+    .feedback-row.fb-saving { opacity: 0.5; pointer-events: none; }
   </style>
 </head>
 <body>
@@ -419,6 +447,10 @@
     <div class="card-meta sheet-meta" id="sheetMeta"></div>
     <div class="sheet-title" id="sheetTitle"></div>
     <div class="sheet-detail" id="sheetDetail"></div>
+    <div class="feedback-row" id="feedbackRow">
+      <button class="fb-btn" id="fbLike" onclick="handleFeedback('like')">👍　有用</button>
+      <button class="fb-btn" id="fbDislike" onclick="handleFeedback('dislike')">👎　沒興趣</button>
+    </div>
     <a class="sheet-btn" id="sheetBtn" target="_blank" rel="noopener">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       閱讀全文
@@ -430,12 +462,86 @@
   const LAB_COLORS = { openai: '#10A37F', anthropic: '#CC785C', deepmind: '#4285F4' };
   const LAB_LABELS = { openai: 'OpenAI', anthropic: 'Anthropic', deepmind: 'DeepMind' };
 
+  // ── GitHub Feedback Config ──
+  // 填入你的 fine-grained PAT（只需 Raytengo/info 的 Contents: Read and write）
+  const GH_TOKEN = 'YOUR_PAT_HERE';
+  const GH_OWNER = 'Raytengo';
+  const GH_REPO  = 'info';
+
   let articles = [];
   let meta     = {};
   let digest   = {};
   let filter   = 'all';
   let readSet  = new Set(JSON.parse(localStorage.getItem('ai-read') || '[]'));
   let sheetArticle = null;
+
+  // ── Feedback state ──
+  let feedbackMap = {}; // { articleId: 'like' | 'dislike' }
+  let feedbackSHA = null;
+
+  async function loadFeedback() {
+    if (!GH_TOKEN || GH_TOKEN === 'YOUR_PAT_HERE') return;
+    try {
+      const r = await fetch(
+        `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/feedback.json`,
+        { headers: { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github.v3+json' } }
+      );
+      if (r.ok) {
+        const file = await r.json();
+        feedbackSHA = file.sha;
+        const data = JSON.parse(atob(file.content.replace(/\n/g, '')));
+        feedbackMap = data.ratings || {};
+      }
+    } catch(e) { console.warn('feedback load:', e); }
+  }
+
+  async function submitFeedback(articleId, rating) {
+    // 點同一個按鈕 = 取消
+    if (feedbackMap[articleId] === rating) {
+      delete feedbackMap[articleId];
+    } else {
+      feedbackMap[articleId] = rating;
+    }
+    updateFeedbackUI(articleId);
+
+    if (!GH_TOKEN || GH_TOKEN === 'YOUR_PAT_HERE') return; // 未設定 PAT 時只更新本地 UI
+
+    const payload = { updated_at: new Date().toISOString(), ratings: feedbackMap };
+    const body    = {
+      message: `feedback: ${feedbackMap[articleId] || 'remove'} on ${articleId}`,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2)))),
+    };
+    if (feedbackSHA) body.sha = feedbackSHA;
+
+    const row = document.getElementById('feedbackRow');
+    try {
+      if (row) row.classList.add('fb-saving');
+      const r = await fetch(
+        `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/feedback.json`,
+        {
+          method: 'PUT',
+          headers: { Authorization: `token ${GH_TOKEN}`, 'Content-Type': 'application/json', Accept: 'application/vnd.github.v3+json' },
+          body: JSON.stringify(body)
+        }
+      );
+      if (r.ok) {
+        const data = await r.json();
+        feedbackSHA = data.content.sha;
+      }
+    } catch(e) { console.warn('feedback write:', e); }
+    finally { if (row) row.classList.remove('fb-saving'); }
+  }
+
+  function updateFeedbackUI(articleId) {
+    const rating = feedbackMap[articleId];
+    document.getElementById('fbLike')   ?.classList.toggle('active-like',    rating === 'like');
+    document.getElementById('fbDislike')?.classList.toggle('active-dislike', rating === 'dislike');
+  }
+
+  function handleFeedback(rating) {
+    if (!sheetArticle) return;
+    submitFeedback(sheetArticle.id, rating);
+  }
 
   // ── Relative time ──
   function relTime(dateStr) {
@@ -553,6 +659,7 @@
     document.getElementById('backdrop').classList.add('open');
     document.getElementById('sheet').classList.add('open');
     document.body.style.overflow = 'hidden';
+    updateFeedbackUI(article.id);
 
     // Mark as read
     if (!readSet.has(article.id)) {
@@ -617,6 +724,7 @@
   }
 
   load();
+  loadFeedback();
 </script>
 </body>
 </html>
