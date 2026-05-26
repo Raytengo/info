@@ -400,6 +400,9 @@
       <h1>AI Research</h1>
     </div>
     <span class="last-updated" id="lastUpdated"></span>
+    <button id="tokenBtn" onclick="promptToken()" style="background:none;border:none;cursor:pointer;padding:4px;color:var(--muted);line-height:1;" title="設定 GitHub Token">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
   </div>
   <div class="tabs" id="tabs">
     <button class="tab active" data-lab="all">全部<span class="tab-badge" id="badge-all"></span></button>
@@ -464,7 +467,7 @@
 
   // ── GitHub Feedback Config ──
   // 填入你的 fine-grained PAT（只需 Raytengo/info 的 Contents: Read and write）
-  const GH_TOKEN = 'YOUR_PAT_HERE';
+  const GH_TOKEN = localStorage.getItem('gh-feedback-token') || '';
   const GH_OWNER = 'Raytengo';
   const GH_REPO  = 'info';
 
@@ -541,6 +544,19 @@
   function handleFeedback(rating) {
     if (!sheetArticle) return;
     submitFeedback(sheetArticle.id, rating);
+  }
+
+  function promptToken() {
+    const cur = localStorage.getItem('gh-feedback-token') || '';
+    const val = prompt('貼上你的 GitHub fine-grained PAT\n（只需 Raytengo/info 的 Contents: Read and write）\n留空可清除已儲存的 token：', cur);
+    if (val === null) return; // 按取消
+    if (val.trim()) {
+      localStorage.setItem('gh-feedback-token', val.trim());
+      location.reload(); // reload 讓新 token 生效
+    } else {
+      localStorage.removeItem('gh-feedback-token');
+      alert('Token 已清除');
+    }
   }
 
   // ── Relative time ──
