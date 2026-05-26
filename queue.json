@@ -1,135 +1,59 @@
 {
   "meta": {
-    "last_crawled": "2026-05-26T08:00:00Z",
-    "total": 9,
-    "_note": "MOCK DATA for widget testing. Replace with real crawler output before Phase 1 完成."
+    "last_crawled": "2026-05-26T10:00:00Z",
+    "total": 3
   },
   "digest": {
     "all": {
       "title": "本週 AI 研究總覽",
-      "body": "三大 lab 本週都在強化模型的推理能力，但切入點各有不同。\n\nOpenAI 從訓練機制下手，用可驗證的獎勵訊號取代人工評分，並推進長流程 agent 的穩定性。\n\nAnthropic 深入模型內部，試圖理解並干預 Claude 的行為表徵，同時將 Constitutional AI 延伸到多 agent 場景。\n\nDeepMind 同時在兩條線推進——數學形式推理與多模態感知，Gemini 3.0 是目前最具代表性的成果。"
+      "body": "三大 lab 本週的研究突破不約而同地指向同一個主題：AI 正在從「回答問題」進化為「主動推進知識邊界」。\n\nOpenAI 的模型推翻了 Erdős 於 1946 年提出的平面單位距離猜想，這是 AI 在純數學領域的里程碑。\n\nAnthropic 發佈 Project Glasswing 首次成果，展示了 Claude Mythos Preview 在漏洞挖掘上超越人類的能力——但也正因如此，Anthropic 暫緩公開發佈該模型。\n\nDeepMind 的 Co-Scientist 從研究原型升級為 Nature 論文，並開放科研人員申請，標誌著 AI 科研夥伴正式進入實用階段。"
     },
     "openai": {
       "title": "OpenAI 近期方向",
-      "body": "訓練層面捨棄傳統偏好打分，改用可自動驗證的獎勵訊號，有效降低 reward hacking 並提升推理穩定性。\n\n應用層面推進長流程 agent 的可靠性，引入狀態快照與標準化工具呼叫協定，目標是讓模型在超過 20 步的任務中保持一致表現。\n\n安全面持續更新 Preparedness Framework，強化對自主性、說服力與網路攻擊能力三類風險的評估。"
+      "body": "數學與科學推理是本週的核心。OpenAI 模型推翻了離散幾何領域 80 年的 Erdős 單位距離猜想，解題關鍵來自代數數論，揭示了兩個數學領域之間意料之外的深層連結。\n\n此前 GPT-5.2 也已在理論物理中推導出新結果，顯示 OpenAI 正在系統性地將模型能力對準形式化推理與科學發現。\n\n應用端，Codex 透過與 Dell Technologies 合作擴展到混合雲與本地企業環境，以及個人財務功能在 ChatGPT 上線，顯示推理能力正快速向產品端滲透。"
     },
     "anthropic": {
       "title": "Anthropic 近期方向",
-      "body": "能力端推出 Claude 4 Opus，強化長鏈推理與工具呼叫穩定性，並開放新版 computer-use 介面。\n\n安全端深化可解釋性研究，已能識別模型內部的抽象概念向量，並透過直接干預觀察行為變化。\n\nConstitutional AI 的研究範圍從單一模型擴展到多 agent 協作，試圖解決多實例互動中的目標偏移問題。"
+      "body": "安全研究是本週主軸。Project Glasswing 計畫以 Claude Mythos Preview 模型為核心，聯合約 50 個合作夥伴，首月在軟體基礎設施中挖出超過 10,000 個高危或嚴重漏洞，部分組織的漏洞發現速度提升了十倍。\n\nAnthropic 明確表示，Mythos 的網路安全能力已強到需要暫緩公開發佈——這是能力與安全取捨的公開示範。修補瓶頸（發現速度遠超修復速度）也成為下一步的核心挑戰。\n\n商業端，KPMG 全球 27.6 萬員工的 Claude 整合，以及收購 API 工具公司 Stainless，顯示 Anthropic 正同步拓展企業生態。"
     },
     "deepmind": {
       "title": "DeepMind 近期方向",
-      "body": "多模態方向：Gemini 3.0 將影像、音訊與長文本統合進同一推理框架，在多項學術基準上刷新紀錄。\n\n數學推理方向：AlphaProof 結合形式化證明系統與 LLM，在 IMO 風格題目上達到金牌水準。\n\n機器人方向：引入 video-based world model，讓機械臂在行動前先「預測」結果，樣本效率提升一個量級。"
+      "body": "Co-Scientist 是本週重點。這套基於 Gemini 的多智能體科研系統，由生成、反思、排序、演化、鄰近度與元審查六類專屬 agent 組成，模仿科學研究本身的迭代方式。研究成果已在 Nature 發表，並從早期原型正式開放個人科研人員申請使用。\n\n已驗證的應用案例涵蓋抗藥性、植物免疫與肝臟纖維化，在急性骨髓性白血病研究中，系統提出的候選分子有一個通過實驗室驗證並顯示出特別潛力。\n\nWeatherNext 方面，DeepMind 也展示了對梅利莎颶風的精準預測，提前五天以 80% 信心預測到 Category 5 強度，顯示 AI 在地球科學的實際落地持續深化。"
     }
   },
   "articles": [
     {
-      "id": "deepmind-20260524-gemini-3-multimodal",
-      "lab": "deepmind",
-      "title": "Gemini 3.0: Multimodal Reasoning at Scale",
-      "summary": "DeepMind 釋出 Gemini 3.0，在 MMMU 與 GPQA 等基準上刷新紀錄。",
-      "detail": "DeepMind 正式釋出 Gemini 3.0，這是迄今為止最具野心的多模態模型。與前代相比，Gemini 3.0 最大的突破在於將影像、音訊與長文本的理解統合進同一個端到端推理框架，不再依賴各自獨立的編碼器。模型在 MMMU（大學程度多模態理解）與 GPQA（研究生程度科學問答）兩項基準上均刷新紀錄，尤其在需要跨模態推理的題目上表現突出。DeepMind 同步開放了 API 測試資格，並提供了詳細的技術報告說明訓練架構與資料配比策略。",
-      "url": "https://deepmind.google/blog/gemini-3-multimodal-reasoning/",
-      "image_url": null,
-      "published_at": "2026-05-24",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
-    },
-    {
-      "id": "openai-20260523-gpt5-verifiable-rewards",
+      "id": "openai-20260522-discrete-geometry-conjecture",
       "lab": "openai",
-      "title": "Improving GPT-5 Reasoning with Verifiable Reward Models",
-      "summary": "OpenAI 用可驗證獎勵訊號替換偏好打分，降低 reward hacking。",
-      "detail": "OpenAI 發布技術報告，說明 GPT-5 在數學與程式推理上的訓練改進。核心變革是捨棄傳統人類偏好打分（RLHF），改用可自動驗證的獎勵訊號——答案對錯由程式直接判定，不依賴人工評估。這種方式有效壓制了 reward hacking 問題，也讓訓練訊號更加穩定。實驗結果顯示在 MATH 與 HumanEval 基準上均有顯著提升，OpenAI 表示此方法已推廣至其他推理密集型任務。",
-      "url": "https://openai.com/news/gpt-5-verifiable-rewards/",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "summary": "OpenAI 的模型推翻了 Erdős 於 1946 年提出的平面單位距離猜想，成為 AI 在純數學領域的里程碑式突破。解題核心來自代數數論，揭示了兩個數學領域之間意想不到的深層連結。",
+      "detail": "OpenAI 發佈研究報告，宣布其模型已推翻離散幾何領域 80 年懸而未決的 Erdős 單位距離猜想。該問題由匈牙利數學家 Paul Erdős 於 1946 年提出：在平面上放置 n 個點，最多能有多少對點的距離恰好為 1？這是組合幾何中表述最簡單、卻極難解決的問題之一。\n\nOpenAI 模型構造出反例的關鍵來自代數數論，這一連結出乎數學界的預期——代數數論與離散幾何原本是相距甚遠的兩個領域。研究人員表示，這個解法不僅解決了特定猜想，更為數學家打開了一座橋樑，讓探索相關問題群成為可能。這也是繼 GPT-5.2 在理論物理中推導新結果後，OpenAI 連續在科學推理領域展現的重大突破。",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
       "image_url": null,
-      "published_at": "2026-05-23",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
+      "published_at": "2026-05-22",
+      "crawled_at": "2026-05-26T10:00:00Z"
     },
     {
-      "id": "anthropic-20260521-claude-4-opus",
+      "id": "anthropic-20260522-glasswing-initial-update",
       "lab": "anthropic",
-      "title": "Claude 4 Opus: Extended Reasoning and Tool Use",
-      "summary": "Claude 4 Opus 強化長鏈推理與工具呼叫，開放新 computer-use 介面。",
-      "detail": "Anthropic 發布 Claude 4 Opus，定位為旗艦推理模型。最顯著的改進來自長鏈推理能力——模型在回答前會進行更深層的內部思考步驟，並能主動拆解複雜問題。工具呼叫方面穩定性大幅提升，錯誤率較前代下降約 40%。Anthropic 同步開放新版 computer-use 介面供開發者測試，支援更複雜的 GUI 操作序列。值得注意的是，Claude 4 Opus 也是首個原生支援多輪工具呼叫記憶的 Claude 版本。",
-      "url": "https://www.anthropic.com/news/claude-4-opus/",
+      "title": "Project Glasswing: An initial update",
+      "summary": "Anthropic 推出 Project Glasswing，利用 Claude Mythos Preview 與約 50 個合作夥伴，在首月內發現超過 10,000 個高危或嚴重軟體漏洞，大幅加速安全研究速度。",
+      "detail": "Anthropic 發佈 Project Glasswing 的首次成果報告。這個計畫的核心目標是：在具有高度能力的 AI 模型被惡意行為者利用之前，搶先保護全球最關鍵的軟體基礎設施。計畫使用 Claude Mythos Preview 模型，聯合約 50 個合作夥伴，首月發現超過 10,000 個高危或嚴重漏洞，部分組織（如 Cloudflare）的漏洞發現速度提升了十倍以上。\n\n開源軟體掃描方面，在 1,000 多個開源專案中識別出約 6,202 個高危或嚴重漏洞。值得注意的是，計畫面臨的最大瓶頸並非發現速度，而是修補速度——Anthropic 正在研究如何加速從發現到修復的整個週期。最重要的是，Anthropic 明確宣示：正因為 Mythos 在網路安全領域的能力已過於強大，目前尚未開發出足夠的防護措施，因此暫緩公開發佈該模型。",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update",
       "image_url": null,
-      "published_at": "2026-05-21",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
+      "published_at": "2026-05-22",
+      "crawled_at": "2026-05-26T10:00:00Z"
     },
     {
-      "id": "deepmind-20260517-alphaproof-olympiad",
+      "id": "deepmind-20260519-co-scientist",
       "lab": "deepmind",
-      "title": "AlphaProof: Olympiad-Level Mathematical Reasoning",
-      "summary": "AlphaProof 在 IMO 風格題目上達到金牌等級，結合形式化證明與 LLM。",
-      "detail": "DeepMind 的 AlphaProof 系統在國際數學奧林匹亞（IMO）風格題目上達到金牌等級表現，這是 AI 在競賽數學領域的重要里程碑。AlphaProof 的核心架構結合了形式化證明搜尋（使用 Lean 4 定理證明器）與大型語言模型的直覺引導，兩者協同作業：LLM 負責提出證明方向，形式化系統驗證每個推導步驟的正確性。這種混合方式解決了純 LLM 方案容易產生「看似正確但邏輯有漏洞」的問題。",
-      "url": "https://deepmind.google/blog/alphaproof-olympiad/",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "DeepMind 發佈 Co-Scientist 研究成果至 Nature，這套基於 Gemini 的多智能體科研夥伴系統正式開放個人科研人員申請，標誌著 AI 輔助科學研究進入實用階段。",
+      "detail": "DeepMind 宣布 Co-Scientist 從早期研究原型升級為 Nature 論文，並同步開放個人研究者透過 Hypothesis Generation 工具申請使用。這套多智能體系統由六類專屬 agent 組成——生成、反思、排序、演化、鄰近度與元審查——每類 agent 模仿科學研究自身的迭代邏輯，透過自動化反饋持續生成、評估與精煉假說。\n\n自去年早期研究分享以來，Co-Scientist 已與多個科研團隊在抗藥性、植物免疫和肝臟纖維化等挑戰性課題上進行測試與驗證。在急性骨髓性白血病研究中，系統提出 30 個候選分子，人類腫瘤學家篩選至 5 個進行實驗室測試，其中 1 個展現出特別的治療潛力，驗證了 AI 在實際科研中的價值。",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
       "image_url": null,
-      "published_at": "2026-05-17",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
-    },
-    {
-      "id": "openai-20260516-gpt5-agents-long-horizon",
-      "lab": "openai",
-      "title": "GPT-5 Agents: Reliable Long-Horizon Workflows",
-      "summary": "GPT-5 改進多步驟 agent 可靠性，含狀態恢復與標準化工具呼叫協定。",
-      "detail": "OpenAI 發布 GPT-5 在 multi-step agent 任務上的可靠性改進報告。過去 agent 在長流程任務中最常見的失敗模式是中途狀態丟失與工具呼叫格式不一致，此次更新針對這兩點進行了系統性修正：引入自動狀態快照機制讓任務可以從失敗點恢復，並制定了標準化的外部工具呼叫協定（Tool Protocol v2）。測試結果顯示在超過 20 步的複雜工作流程中，任務完成率從 61% 提升至 84%。",
-      "url": "https://openai.com/news/gpt-5-agents/",
-      "image_url": null,
-      "published_at": "2026-05-16",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
-    },
-    {
-      "id": "anthropic-20260514-interpretability-concepts",
-      "lab": "anthropic",
-      "title": "Interpreting Claude's Inner Concepts: New Findings",
-      "summary": "Anthropic 解析 Claude 內部表徵的抽象概念向量，透過特徵抑制觀察行為變化。",
-      "detail": "Anthropic 可解釋性團隊發布新研究，深入分析 Claude 內部表徵中的抽象概念結構。研究者識別出一批對應特定概念的「特徵向量」——例如對應「欺騙」或「拒絕」的方向——並透過直接干預這些向量來觀察模型行為的變化。實驗顯示，抑制特定特徵向量可以有效改變模型在對應情境下的回應傾向，且效果具有一定的可預測性。這項研究被視為邁向可控 AI 行為的重要一步，但研究者也強調目前的干預精度仍有侷限。",
-      "url": "https://www.anthropic.com/research/interpretability-concepts-2026/",
-      "image_url": null,
-      "published_at": "2026-05-14",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
-    },
-    {
-      "id": "deepmind-20260509-world-models-robotics",
-      "lab": "deepmind",
-      "title": "Robotic Manipulation with Learned World Models",
-      "summary": "用 video-based world model 在真實機械臂完成多步驟操作，sample efficiency 提升一個量級。",
-      "detail": "DeepMind 發布機器人操作新研究，核心是用視訊預測型 world model 取代傳統的直接感測器回饋迴路。系統先從大量示範影片中學習物體互動的物理規律，再用這個內部模型進行規劃，而非依賴即時試錯。在真實機械臂測試中，系統能完成包含多個接觸點的複雜操作序列，且訓練所需的真實環境互動次數比傳統 RL 方法少了一個數量級。研究者認為 world model 的預測能力讓機器人在行動前就能「想清楚」步驟，大幅減少實體嘗試的需求。",
-      "url": "https://deepmind.google/blog/world-models-robotics/",
-      "image_url": null,
-      "published_at": "2026-05-09",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
-    },
-    {
-      "id": "openai-20260508-frontier-risk-update",
-      "lab": "openai",
-      "title": "Updating Our Approach to Frontier AI Risk",
-      "summary": "OpenAI 更新 Preparedness Framework，涵蓋 autonomy、persuasion 與 cyber 三大評估領域。",
-      "detail": "OpenAI 公佈最新版 Preparedness Framework，這是其用於評估前沿模型危險能力的內部標準。此次更新重點擴充了三個領域的評估細節：自主性（模型能否在無人監督下執行長期任務）、說服力（模型能否有效影響人類信念與行為）、以及網路攻擊能力（模型能否協助發動真實的資安攻擊）。框架同時引入了「能力門檻」概念——當模型在特定領域超過設定門檻時，將觸發額外的安全審查程序，才能繼續部署。",
-      "url": "https://openai.com/news/frontier-risk-update-2026/",
-      "image_url": null,
-      "published_at": "2026-05-08",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
-    },
-    {
-      "id": "anthropic-20260507-constitutional-multiagent",
-      "lab": "anthropic",
-      "title": "Constitutional AI for Multi-Agent Systems",
-      "summary": "把 CAI 框架延伸到多 agent 場景，探討如何避免衝突放大與目標偏移。",
-      "detail": "Anthropic 研究團隊發布論文，探討如何將 Constitutional AI（CAI）框架延伸至多個 AI agent 協作的場景。單一 agent 的 CAI 訓練已有成熟方法，但當多個 Claude 實例同時互動時，會出現新的對齊挑戰：各實例可能在溝通過程中互相強化偏差行為，或因局部目標優化而整體偏離原始任務。論文提出了「多層憲法」機制——每個 agent 保有個別行為準則，同時遵從一套跨 agent 的協調規則，並透過模擬實驗驗證此機制能有效降低目標偏移的發生率。",
-      "url": "https://www.anthropic.com/research/constitutional-multiagent/",
-      "image_url": null,
-      "published_at": "2026-05-07",
-      "crawled_at": "2026-05-26T08:00:00Z",
-      "_mock": true
+      "published_at": "2026-05-19",
+      "crawled_at": "2026-05-26T10:00:00Z"
     }
   ]
 }
