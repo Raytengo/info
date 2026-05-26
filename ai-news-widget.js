@@ -10,7 +10,7 @@
 //   5. (選擇性) Widget Parameter 填 "openai" / "anthropic" / "deepmind"
 //      不填 = 永遠顯示最新一篇
 
-const RAW_URL = "https://raw.githubusercontent.com/Raytengo/ai-research-data/main/data/queue.json";
+const RAW_URL = "https://raw.githubusercontent.com/Raytengo/info/master/queue.json";
 
 const LAB_COLORS = {
   openai: "#10A37F",
