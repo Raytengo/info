@@ -121,7 +121,7 @@ function buildMedium(w, article, total) {
 // ── Large: lab badge + title + full detail ──
 function buildLarge(w, article, total) {
   addHeader(w, article, total, 12);
-  w.addSpacer(12);
+  w.addSpacer(6);
 
   const title = w.addText(article.title);
   title.font = Font.boldSystemFont(20);
@@ -131,16 +131,16 @@ function buildLarge(w, article, total) {
 
   const content = article.detail || article.summary || "";
   if (content) {
-    w.addSpacer(14);
+    w.addSpacer(8);
     const detail = w.addText(content);
     detail.font = Font.systemFont(15);
     detail.textColor = Color.dynamic(new Color("#3c3c43", 0.75), new Color("#ebebf5", 0.75));
-    detail.lineLimit = 8;
-    detail.minimumScaleFactor = 0.8;
+    detail.lineLimit = 15;
+    detail.minimumScaleFactor = 0.75;
   }
 
-  w.addSpacer();
-  addDate(w, article.published_at, 12);
+  w.addSpacer(4);
+  addDate(w, article.published_at, 11);
 }
 
 // ── Shared helpers ──
