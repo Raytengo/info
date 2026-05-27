@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-05-27T18:43:13.629Z",
+  "updated_at": "2026-05-27T18:43:24.507Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
-    "openai-20260522-gartner-agentic-coding-leader": "dislike"
+    "openai-20260522-gartner-agentic-coding-leader": "dislike",
+    "deepmind-20260526-alphaevolve-impact": "like"
   }
 }
