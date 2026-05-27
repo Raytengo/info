@@ -1,103 +1,103 @@
 {
-    "meta":  {
-                 "last_crawled":  "2026-05-28T00:00:00Z",
-                 "total":  7
-             },
-    "digest":  {
-                   "all":  {
-                               "title":  "本週 AI 研究總覽",
-                               "body":  "本週三家 lab 的主軸集中在 agentic AI 的落地與治理：OpenAI 強化 Codex 在稅務與企業 coding agent 的定位，Anthropic 同步推進國際市場、AI 倫理對話與安全漏洞發現，DeepMind 則更新 AlphaEvolve 與 Co-Scientist 這類科研型代理的實際影響。\n\n整體來看，前沿模型不再只展示能力，而是被包進具體工作流程：稅務、企業軟體開發、漏洞掃描、科學假說生成與演算法最佳化。"
-                           },
-                   "openai":  {
-                                  "title":  "OpenAI 近期方向",
-                                  "body":  "OpenAI 本週兩篇都圍繞 Codex。Tax AI 案例展示 Codex 如何從專家修正、production traces 與 eval 中形成自我改進迴圈，將代理能力嵌入稅務準備這類高專業門檻流程。\n\n另一篇 Gartner 文章則把 Codex 放在企業 coding agents 市場中，強調治理、沙箱、審批、RBAC 與多開發介面。這顯示 OpenAI 正把 Codex 從開發者工具推向可受控部署的企業級代理平台。"
-                              },
-                   "anthropic":  {
-                                     "title":  "Anthropic 近期方向",
-                                     "body":  "Anthropic 本週同時呈現市場擴張、倫理治理與安全研究。韓國代表任命與首爾辦公室規劃顯示其亞太布局加速；Chris Olah 在梵蒂岡相關活動中的發言，則把 AI 安全討論帶到宗教與跨機構治理場景。\n\nProject Glasswing 的更新延續 Anthropic 在高風險安全能力上的定位：Claude Mythos Preview 協助合作夥伴發現大量漏洞，但文章也承認修補速度與協調流程才是下一個瓶頸。"
-                                 },
-                   "deepmind":  {
-                                    "title":  "DeepMind 近期方向",
-                                    "body":  "DeepMind 本週 sitemap 更新集中在科研代理與演算法發現。AlphaEvolve 展示 Gemini-powered coding agent 已被用於基因體、電網、量子電路、數學與基礎設施最佳化，重點是把搜尋與程式生成能力接到實際科學和工程問題。\n\nCo-Scientist 則代表另一條路線：用多智能體流程協助研究者生成、評估與精煉假說。DeepMind 官網對部分文章只穩定提供月分或更新時間，因此這裡依 sitemap 本週更新納入。"
-                                }
-               },
-    "articles":  [
-                     {
-                         "id":  "openai-20260527-tax-agents-codex",
-                         "lab":  "openai",
-                         "title":  "Building self-improving tax agents with Codex",
-                         "summary":  "Codex 讓稅務 AI 從專家修正中持續改進。",
-                         "detail":  "OpenAI 與 Thrive Holdings 共同開發 Tax AI，把會計師的實務修正、產品追蹤紀錄與 eval 轉成改進迴圈。系統在試點稅季處理約 7,000 份稅表，目標是讓複雜稅務工作在準確性與吞吐量上持續提升。",
-                         "url":  "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
-                         "image_url":  null,
-                         "published_at":  "2026-05-27",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "anthropic-20260526-korea-representative-director",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
-                         "summary":  "Anthropic 任命韓國代表，準備開設首爾辦公室。",
-                         "detail":  "Anthropic 任命 KiYoung Choi 擔任韓國 Representative Director，為首爾辦公室開設做準備。這代表 Anthropic 繼續擴張亞太布局，並把韓國企業、政府與在地 AI 生態納入更直接的市場經營。",
-                         "url":  "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
-                         "image_url":  null,
-                         "published_at":  "2026-05-26",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "anthropic-20260525-chris-olah-pope-encyclical",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic co-founder Chris Olah\u0027s remarks on Pope Leo XIV\u0027s encyclical \"Magnifica humanitas\"",
-                         "summary":  "Chris Olah 參與梵蒂岡 AI 倫理治理對話。",
-                         "detail":  "Anthropic 聯合創辦人 Chris Olah 出席教宗良十四世關於 AI 時代人類尊嚴的通諭發表場合，談到安全研究與外部倫理力量的重要性。這篇文章反映 Anthropic 把前沿 AI 風險討論推向宗教、治理與公民社會層面。",
-                         "url":  "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
-                         "image_url":  null,
-                         "published_at":  "2026-05-25",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "openai-20260522-gartner-agentic-coding-leader",
-                         "lab":  "openai",
-                         "title":  "OpenAI named a Leader in enterprise coding agents by Gartner",
-                         "summary":  "OpenAI 被 Gartner 評為企業 coding agents 領導者。",
-                         "detail":  "OpenAI 表示 Codex 在 Gartner 企業 AI coding agents 評估中被列為 Leader，並強調 Codex 已支援大型企業部署。文章重點放在 agentic software development、治理、沙箱、審批與多種開發介面，呈現 Codex 從 coding assistant 走向企業工作流平台。",
-                         "url":  "https://openai.com/index/gartner-2026-agentic-coding-leader/",
-                         "image_url":  null,
-                         "published_at":  "2026-05-22",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "anthropic-20260522-glasswing-initial-update",
-                         "lab":  "anthropic",
-                         "title":  "Project Glasswing: An initial update",
-                         "summary":  "Project Glasswing 首月發現大量高風險漏洞。",
-                         "detail":  "Anthropic 更新 Project Glasswing 進展，說明 Claude Mythos Preview 與約 50 個合作夥伴如何協助掃描關鍵軟體基礎設施。文章指出首月發現超過 10,000 個高危或嚴重漏洞，也凸顯瓶頸正從漏洞發現轉向修補與協調。",
-                         "url":  "https://www.anthropic.com/research/glasswing-initial-update",
-                         "image_url":  null,
-                         "published_at":  "2026-05-22",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "deepmind-20260526-alphaevolve-impact",
-                         "lab":  "deepmind",
-                         "title":  "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
-                         "summary":  "AlphaEvolve 從研究原型擴展到多領域實際應用。",
-                         "detail":  "DeepMind 更新 AlphaEvolve 的影響案例，涵蓋基因體學、電網最佳化、量子電路、數學問題與 Google 基礎設施。原文發布於 5 月 7 日，但 sitemap 於 5 月 26 日更新；本週納入是因為 DeepMind 官方 sitemap 顯示本週有更新。",
-                         "url":  "https://deepmind.google/blog/alphaevolve-impact/",
-                         "image_url":  null,
-                         "published_at":  "2026-05-26",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "deepmind-20260521-co-scientist",
-                         "lab":  "deepmind",
-                         "title":  "Co-Scientist: A multi-agent AI partner to accelerate research",
-                         "summary":  "Co-Scientist 用多智能體流程協助科研假說生成。",
-                         "detail":  "DeepMind 的 Co-Scientist 是基於 Gemini 的多智能體科研系統，用生成、反思、排序、演化等角色協助研究者提出並精煉假說。原文發布於 5 月稍早時間，但 sitemap 於 5 月 21 日更新；本週納入是因為 DeepMind 只穩定提供月分與 sitemap 更新時間。",
-                         "url":  "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
-                         "image_url":  null,
-                         "published_at":  "2026-05-21",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     }
-                 ]
+    "meta": {
+        "last_crawled": "2026-05-28T00:00:00Z",
+        "total": 7
+    },
+    "digest": {
+        "all": {
+            "title": "本週 AI 研究總覽",
+            "body": "本週三大 lab 的動態橫跨企業落地、市場擴張與科研突破三條軸線，且都有清晰的商業成果支撐。\n\nOpenAI 雙線推進 Codex 的企業化定位：Tax AI 案例展示 Codex 如何在稅務流程中建立自我改進迴圈，試點稅季已處理逾 7,000 份稅表；同期被 Gartner 評為企業 coding agents 領導者，確立了 Codex 從開發者工具走向可受控企業部署平台的戰略方向。\n\nAnthropic 本週呈現三個不同維度：任命韓國 Representative Director 加速亞太布局（韓國 Claude 用量超出人口比例基準 3.5 倍）；Glasswing 計畫首月發現逾 10,000 個高危漏洞，瓶頸已從發現轉向修補；Chris Olah 則受邀出席梵蒂岡，把 AI 安全討論帶進宗教與跨機構倫理治理場域。\n\nDeepMind 以具體數字展示 AlphaEvolve 的實際規模：從 TPU 晶片設計、量子電路到電網最佳化，皆有可量化的工程成果；Co-Scientist 則代表 AI 輔助科研的另一條路線，以多智能體流程加速從假說生成到實驗室驗證的全週期。"
+        },
+        "openai": {
+            "title": "OpenAI 近期方向",
+            "body": "本週 OpenAI 兩篇文章都圍繞 Codex，合在一起描繪出清晰的企業化路線圖。\n\nTax AI 案例展示的是 Codex 在垂直領域的落地深度：系統把會計師的每次修正、生產環境追蹤紀錄與 eval 轉成持續改進的回饋迴圈，試點稅季處理逾 7,000 份稅表。這不是通用 coding 工具的延伸應用，而是把 agentic 能力嵌進高度法規密集、需要持續精確性保證的真實工作流程。\n\nGartner 的 Leader 認定則是市場定位的外部確認：評估維度不只是代碼生成準確率，更核心的是治理框架、執行沙箱、審批流程與 RBAC 等企業部署要件。兩篇加總的訊息是：OpenAI 正積極把 Codex 從開發者的 copilot，推進為能嵌入複雜組織工作流程、具備完整稽核與治理能力的企業級 AI 代理平台。"
+        },
+        "anthropic": {
+            "title": "Anthropic 近期方向",
+            "body": "本週 Anthropic 的三篇文章分佈在截然不同的戰線，卻共同反映出一個走向：前沿 AI 公司在技術研發之外，需要同時在市場、安全與社會治理三個層次建立存在感。\n\n韓國辦公室是地理擴張。韓國 Claude 用量超出人口比例基準 3.5 倍，新任 Representative Director KiYoung Choi 帶來逾 30 年亞太科技領導經驗，目標鎖定企業夥伴關係、政府研究機構連結與開發者社群。這是 Anthropic 在亞太地區的第三個本地據點。\n\nProject Glasswing 是安全研究的落地驗證。Claude Mythos Preview 聯合約 50 個合作夥伴，首月在關鍵軟體基礎設施中發現逾 10,000 個高危或嚴重漏洞——而 Anthropic 也在文章中坦承：正因 Mythos 的網路安全能力已過於強大，暫緩公開發佈，顯示其在能力與安全之間的張力有多真實。\n\nChris Olah 的梵蒂岡之行則是最難分類的一篇：一位 33 歲的無神論 AI 安全研究者，受教宗本人邀請，與樞機主教並排就座談 AI 風險。Anthropic 把這定位為「把前沿 AI 討論帶進宗教與跨機構治理場域」，這種跨界對話本身就是一種新的政策影響策略。"
+        },
+        "deepmind": {
+            "title": "DeepMind 近期方向",
+            "body": "DeepMind 本週兩篇更新的共同主題，是 AI agent 在科學與工程領域的實際規模化影響。\n\nAlphaEvolve 是以演算法搜尋為核心的 coding agent：在基因體、電網、量子電路、數學和 Google 自身基礎設施中都留下可量化的工程成果。其中最具象徵意義的是：AlphaEvolve 提出一個「反直覺卻高效」的電路設計，已被直接整合到 Google 下一代 TPU 矽晶片中——這意味著 AI 生成的演算法已進入實際生產硬體。Jeff Dean 親自確認此案例，而 AlphaEvolve 也協助了 Terence Tao 在多個 Erdős 問題上的數學進展。\n\nCo-Scientist 則代表不同的路線：以多智能體流程模仿科學研究自身的迭代邏輯，由六類專屬 agent 分工負責生成、反思、排序與精煉假說。在急性骨髓性白血病研究中，系統生成 30 個候選分子，人類腫瘤學家篩選至 5 個進入實驗室測試，1 個展現治療潛力。研究成果已發表於 Nature，並開放科研人員申請使用。"
+        }
+    },
+    "articles": [
+        {
+            "id": "openai-20260527-tax-agents-codex",
+            "lab": "openai",
+            "title": "Building self-improving tax agents with Codex",
+            "summary": "OpenAI 與 Thrive Holdings 合作開發 Tax AI，利用 Codex 建構能持續自我改進的稅務代理系統：每次會計師修正、生產環境追蹤紀錄與 eval 結果都轉化為模型改進的輸入，形成封閉的自我強化迴圈。試點稅季已處理逾 7,000 份稅表，目標是讓 AI 在高度專業、法規密集的稅務流程中達到可持續的準確性與吞吐量提升。",
+            "detail": "OpenAI 聯合 Thrive Holdings 發佈 Tax AI 開發案例，展示如何透過 Codex 將傳統稅務工作流程轉化為能持續迭代的 AI 代理系統。\n\n這套系統的核心機制是「自我改進迴圈」：當 Codex 生成的稅務草案需要修正時，會計師的每一次更動都被系統記錄下來，連同來自生產環境的追蹤紀錄（production traces）一同輸入 eval 框架評估。累積的修正訊號讓模型得以在不重新全量訓練的情況下，持續優化對特定稅務情境的處理能力——這與傳統機器學習需要大量標注資料才能改進的範式截然不同。\n\n試點稅季期間系統共處理約 7,000 份稅表，涵蓋從個人稅申報到更複雜的企業稅案例。不同於多數 AI coding agent 聚焦於軟體開發場景，Tax AI 將 Codex 的代理能力嵌入高度專業化的稅務流程，展示了 agentic AI 在監管密集、需要持續精確性保證的垂直領域中的可行性。\n\n這篇案例與 OpenAI 同期被 Gartner 評為企業 coding agents 領導者的消息形成呼應，共同呈現 OpenAI 對 Codex 的戰略路線：從輔助個別工程師的 copilot，演進為能嵌入複雜行業工作流程、具備自我改進能力的企業級 AI 代理平台。",
+            "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+            "image_url": null,
+            "published_at": "2026-05-27",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        },
+        {
+            "id": "anthropic-20260526-korea-representative-director",
+            "lab": "anthropic",
+            "title": "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+            "summary": "Anthropic 任命擁有逾 30 年亞太科技領導經驗的 KiYoung Choi 擔任韓國 Representative Director，為即將開設的首爾辦公室做準備。韓國的 Claude 用量已超出人口比例基準 3.5 倍，技術與創意應用黏著度尤其突出，這也是 Anthropic 繼日本和新加坡之後在亞太地區建立的第三個本地據點。",
+            "detail": "Anthropic 宣布任命 KiYoung Choi 擔任韓國 Representative Director，標誌著 Anthropic 正式進軍韓國市場。Anthropic 高層將於近期赴首爾出席辦公室揭牌，這是繼日本和新加坡後，Anthropic 在亞太地區建立的第三個在地辦公室。\n\nChoi 擁有逾 30 年的韓國與亞太科技產業領導資歷，曾先後在 Snowflake（韓國總經理）、Google Cloud、Adobe、Autodesk 與 Microsoft 擔任高階職位，主導過多家大型企業的雲端與 AI 轉型。他表示：「韓國企業結合了深厚的技術能力與負責任部署的承諾，這正是 Anthropic 所在的位置。」\n\n市場數據面，韓國的 Claude 用量超出人口比例基準 3.5 倍，在技術與創意應用類別的黏著度尤其強勁。首爾辦公室的工作重點將落在三個方向：與企業及新創建立合作夥伴關係、深化與政府及研究機構的連結、擴大在地開發者社群的支援能量。\n\n此次布局呼應了各大前沿 AI lab 加速搶進亞太市場的趨勢——本地辦公室不僅服務商業需求，也是在各國 AI 監管框架成形前提早進入政策對話的重要戰略棋子。",
+            "url": "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+            "image_url": null,
+            "published_at": "2026-05-26",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        },
+        {
+            "id": "anthropic-20260525-chris-olah-pope-encyclical",
+            "lab": "anthropic",
+            "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
+            "summary": "Anthropic 聯合創辦人 Chris Olah 受教宗良十四世本人邀請，出席梵蒂岡首份 AI 相關教宗通諭《壯哉人類》的發表場合，與樞機主教並排就座向梵蒂岡會堂演講，呼籲教會與科技界在激勵結構之外建立真正關心結果的跨機構合作。這場對話標誌著 AI 安全討論首次以如此高層級的方式進入天主教治理體系。",
+            "detail": "2026 年 5 月 25 日，教宗良十四世（Pope Leo XIV）發表首份教宗通諭《壯哉人類：人工智慧時代中對人的守護》（Magnifica Humanitas: On safeguarding the human person in the time of artificial intelligence）。這份通諭從天主教神學觀點出發，針對 AI 快速發展對人類尊嚴、倫理與社會結構的衝擊提出回應，並特別警告 AI 被用於軍事用途的潛在風險。\n\nAnthropic 聯合創辦人 Chris Olah 應教宗本人邀請，出席梵蒂岡的通諭發表記者會。現場座位安排令人矚目：這位 33 歲的無神論 AI 安全研究者，與一排樞機主教和神學家並排就座，向座無虛席的梵蒂岡會堂發言。\n\nOlah 在演講中說道：「如果我們希望這項技術朝好的方向發展，在那些激勵結構之外，存在真正關心結果、並堅持安全的人至關重要。正是透過對話與相互努力、透過推拉之間，人類才能成就偉大的事。這就是我在《壯哉人類》中所看見的，也是我感謝教宗和教會承擔起這份辨別工作的原因。」\n\nAnthropic 將此次出席定位為拓展 AI 重要議題對話空間的行動——Anthropic 的影響力策略不只在技術社群，也主動延伸到宗教組織、公民社會與跨機構倫理治理場域，試圖在政策真正成形之前，建立更廣泛的社會共識基礎。",
+            "url": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+            "image_url": null,
+            "published_at": "2026-05-25",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        },
+        {
+            "id": "openai-20260522-gartner-agentic-coding-leader",
+            "lab": "openai",
+            "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+            "summary": "OpenAI 宣布 Codex 在 Gartner 2026 年企業 AI coding agents 評估中獲評為 Leader，這份評估的核心不是代碼生成準確率，而是企業部署所需的治理、沙箱隔離、人工審批流程與 RBAC 等管控能力。此次認定是 Codex 從開發者 copilot 轉型為企業基礎設施的外部市場確認。",
+            "detail": "OpenAI 宣布 Codex 在 Gartner 2026 年企業 AI coding agents 報告中獲評為 Leader，標誌著 Codex 在企業採購決策中的定位正式確立。Gartner 此類別的評估對象是「能在企業環境中受控部署的 AI coding agent」，考量維度遠超出代碼生成的準確率，更核心的是整套部署管理能力。\n\n在企業場景下，Gartner 重點評估的要素包括：治理框架（Governance）、執行沙箱（Sandbox isolation）、人工審批流程（Human-in-the-loop approval）、角色型存取控制（RBAC），以及對多種開發介面——IDE、CLI、API、Web UI——的原生支援。Codex 在這些維度的完整性，使其與多數仍以個人開發者為核心設計的 AI coding 工具明顯區隔。\n\n此次認定與 OpenAI 同期發佈的 Tax AI 案例相互佐證，共同描繪 OpenAI 對 Codex 的商業路線：不再只是工程師的 coding 加速器，而是需要納入企業 IT 治理框架的基礎設施——這對大型組織的 CIO 與採購決策者而言意義重大，因為 Gartner 評估本身就是企業採購的重要參考依據。",
+            "url": "https://openai.com/index/gartner-2026-agentic-coding-leader/",
+            "image_url": null,
+            "published_at": "2026-05-22",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        },
+        {
+            "id": "anthropic-20260522-glasswing-initial-update",
+            "lab": "anthropic",
+            "title": "Project Glasswing: An initial update",
+            "summary": "Anthropic 更新 Project Glasswing 的首月進展：Claude Mythos Preview 聯合約 50 個合作夥伴，在關鍵軟體基礎設施中發現逾 10,000 個高危或嚴重漏洞，部分組織的漏洞發現速度提升十倍以上。計畫同時揭示一個關鍵悖論：Mythos 的網路安全能力已強到 Anthropic 主動暫緩公開發佈。",
+            "detail": "Anthropic 發佈 Project Glasswing 的首次成果報告。這個計畫的核心目標是搶在惡意行為者之前，主動保護全球最關鍵的軟體基礎設施——特別是當 AI 模型的能力已強到足以被用於大規模自動化攻擊的當下。\n\n首月成果：Claude Mythos Preview 聯合約 50 個合作夥伴，在關鍵軟體基礎設施中發現逾 10,000 個高危或嚴重漏洞。以 Cloudflare 為例，漏洞發現速度提升逾十倍。開源軟體掃描方面，在超過 1,000 個開源專案中識別出約 6,202 個高危或嚴重漏洞。\n\n文章中最值得關注的是一個坦率的承認：計畫目前面臨的最大瓶頸並非發現速度，而是修補速度。從漏洞被發現到實際完成修補，中間涉及的協調流程與組織能力，仍遠跟不上 AI 輔助掃描的速度。Anthropic 表示正在研究如何加速從發現到修復的完整週期。\n\n最重要的訊號或許在文章末尾：Anthropic 明確宣示，正因為 Mythos 在網路安全領域的能力已過於強大、目前尚未開發出足夠的防護措施，因此暫緩公開發佈該模型。這是 Anthropic「能力與安全張力」論述中少見的具體案例——不是抽象宣稱，而是用一個實際的產品決策加以落地。",
+            "url": "https://www.anthropic.com/research/glasswing-initial-update",
+            "image_url": null,
+            "published_at": "2026-05-22",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        },
+        {
+            "id": "deepmind-20260526-alphaevolve-impact",
+            "lab": "deepmind",
+            "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
+            "summary": "DeepMind 更新 AlphaEvolve 的實際影響案例，這個以 Gemini 為核心的 AI coding agent 已在基因體、電網、量子電路、數學與 Google 自身基礎設施中留下可量化的工程成果。最具象徵意義的是：AlphaEvolve 提出一個「反直覺卻高效」的電路設計，已被 Jeff Dean 確認直接整合進 Google 下一代 TPU 矽晶片，是 AI 生成演算法首次進入生產硬體的里程碑案例之一。",
+            "detail": "DeepMind 更新 AlphaEvolve 的規模化影響報告（原始發布於 5 月 7 日，sitemap 於 5 月 26 日更新）。AlphaEvolve 是建構於 Gemini 的 AI coding agent，核心能力是透過進化搜索與程式碼生成的結合，在廣泛問題空間中自主發現、設計與最佳化演算法——探索人類設計師難以系統性觸及的解法空間。\n\n**科學研究端**：在基因體學中，改進了 DeepConsensus 的 DNA 定序錯誤校正，變異偵測錯誤率下降 30%；為 Google Willow 量子處理器最佳化量子電路，誤差率比傳統基線低 10 倍，實現了此前無法達到的量子計算演示；在數學上與 Terence Tao 等數學家合作，提升了旅行推銷員問題下界與 Ramsey Number 紀錄；電網 AC Optimal Power Flow 問題的可行解比例從 14% 提升至 88%。\n\n**Google 基礎設施端**：Google Spanner 的寫入放大減少 20%；透過編譯器最佳化節省 9% 儲存空間。最具象徵意義的成果：AlphaEvolve 提出一個「反直覺卻高效」的電路設計，Google 首席科學家 Jeff Dean 確認已直接整合進下一代 TPU 矽晶片——這意味著 AI 生成的演算法首次進入實際生產硬體。\n\n**商業落地**：Klarna 的 transformer 模型訓練速度翻倍；FM Logistic 年節省 15,000 公里路線規劃（效率提升 10.4%）；Schrödinger 的機器學習力場訓練與推理加速 4 倍。\n\n這些案例的共同模式是：AlphaEvolve 不取代科學家或工程師，而是作為「演算法層面的自動化研究夥伴」，把大規模搜尋能力接到既有的科學與工程問題上，在人類難以窮舉的解法空間中找出反直覺但有效的解答。",
+            "url": "https://deepmind.google/blog/alphaevolve-impact/",
+            "image_url": null,
+            "published_at": "2026-05-26",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        },
+        {
+            "id": "deepmind-20260521-co-scientist",
+            "lab": "deepmind",
+            "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+            "summary": "DeepMind 的 Co-Scientist 從早期研究原型正式升級為 Nature 論文，並同步開放個人科研人員申請使用。這套基於 Gemini 的多智能體系統由六類專屬 agent 組成，模仿科學研究自身的迭代邏輯，協助研究者生成、反思與精煉假說；在急性骨髓性白血病研究中，系統生成 30 個候選分子，1 個進入實驗室後展現出特別的治療潛力。",
+            "detail": "DeepMind 宣布 Co-Scientist 從早期研究分享正式升級為 Nature 論文，並同步開放個人研究者透過 Hypothesis Generation 工具申請使用，標誌著 AI 輔助科學研究從概念驗證走向實用部署。\n\nCo-Scientist 的架構核心是六類專屬 agent 的分工協作：生成（Generation）、反思（Reflection）、排序（Ranking）、演化（Evolution）、鄰近度（Proximity）與元審查（Meta-review）。每類 agent 模仿科學研究過程中的不同認知角色，透過自動化反饋機制持續生成、評估與精煉假說，而非單次輸出一個答案。\n\n在最具代表性的急性骨髓性白血病（AML）研究案例中，系統生成 30 個候選治療分子，人類腫瘤學家篩選至 5 個進行實驗室測試，其中 1 個展現出特別的治療潛力，驗證了 AI 在縮短假說到實驗室驗證週期方面的實際價值。此外，系統也在抗藥性、植物免疫和肝臟纖維化等領域與多個科研團隊完成了測試與驗證。\n\n值得注意的是，Co-Scientist 的設計哲學是「加速研究者」而非「替代研究者」：系統負責在廣大假說空間中高效搜尋，人類科學家負責判斷、篩選與最終的實驗驗證。DeepMind 將此定位為 AI 與科學界合作的新範式——而 Nature 的刊登，也為這套方法論提供了學術社群的初步背書。",
+            "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
+            "image_url": null,
+            "published_at": "2026-05-21",
+            "crawled_at": "2026-05-28T00:00:00Z"
+        }
+    ]
 }
