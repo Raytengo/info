@@ -1,4 +1,4 @@
-﻿{
+{
     "meta":  {
                  "description":  "Raw article metadata from official lab websites, 2026 only. For RS/RAG experiments — do NOT mix with queue.json.",
                  "crawled_at":  "2026-05-28T00:00:00Z",
@@ -1038,4 +1038,3 @@
                      }
                  ]
 }
-              
