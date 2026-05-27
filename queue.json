@@ -6,19 +6,19 @@
     "digest": {
         "all": {
             "title": "本週 AI 研究總覽",
-            "body": "本週三大實驗室共釋出七篇重要更新：\n\nOpenAI 雙線推進 Codex 的企業化落地（Tax AI 試點 7,000 份稅表、Gartner 將其列為企業 AI Coding Agents Leader）；\n\nAnthropic 同時在市場、安全與社會三條戰線推進（韓國 Representative Director 任命、Glasswing 首月發現逾 10,000 個高危漏洞、Chris Olah 受邀出席梵蒂岡通諭發表）；\n\nDeepMind 兩項科學成果落地（AlphaEvolve 設計的電路整合進下一代 TPU、Co-Scientist 刊登於《Nature》）。"
+            "body": "本週三大實驗室共釋出七篇重要更新：\n\nOpenAI 雙線推進 Codex 的企業化落地（Tax AI 試點 7,000 份稅表、Gartner 將其列為企業 AI Coding Agents Leader）\n\nAnthropic 同時在市場、安全與社會三條戰線推進（韓國 Representative Director 任命、Glasswing 首月發現逾 10,000 個高危漏洞、Chris Olah 受邀出席梵蒂岡通諭發表）\n\nDeepMind 兩項科學成果落地（AlphaEvolve 設計的電路整合進下一代 TPU、Co-Scientist 刊登於《Nature》）"
         },
         "openai": {
             "title": "OpenAI 近期方向",
-            "body": "雙線推進 Codex 的企業化定位：\n\n與 Thrive Holdings 合作的 Tax AI 在試點稅季處理逾 7,000 份稅表、準確率最高 97%，展示垂直行業落地能力；\n\n同期被 Gartner 列入 2026 年企業 AI Coding Agents Magic Quadrant 的 Leader 象限，每週活躍用戶逾 400 萬。"
+            "body": "雙線推進 Codex 的企業化定位：\n\n與 Thrive Holdings 合作的 Tax AI 在試點稅季處理逾 7,000 份稅表、準確率最高 97%，展示垂直行業落地能力\n\n同期被 Gartner 列入 2026 年企業 AI Coding Agents Magic Quadrant 的 Leader 象限，每週活躍用戶逾 400 萬"
         },
         "anthropic": {
             "title": "Anthropic 近期方向",
-            "body": "三條戰線並行：\n\n市場面任命 KiYoung Choi 為韓國 Representative Director，於首爾設立亞太第三個辦公室；\n\n安全面 Project Glasswing 首月發現逾 10,000 個高危漏洞，並因 Claude Mythos 網路安全能力過強而主動暫緩發佈；\n\n社會面 Chris Olah 受邀出席教宗良十四世首份 AI 通諭《壯哉人類》發表場合。"
+            "body": "三條戰線並行：\n\n市場面任命 KiYoung Choi 為韓國 Representative Director，於首爾設立亞太第三個辦公室\n\n安全面 Project Glasswing 首月發現逾 10,000 個高危漏洞，並因 Claude Mythos 網路安全能力過強而主動暫緩發佈\n\n社會面 Chris Olah 受邀出席教宗良十四世首份 AI 通諭《壯哉人類》發表場合"
         },
         "deepmind": {
             "title": "DeepMind 近期方向",
-            "body": "兩項已落地的科學成果：\n\nAlphaEvolve 在基因體、量子電路、數學、電網與 Google 基礎設施皆留下可量化影響，首席科學家 Jeff Dean 確認其設計之反直覺電路已整合進下一代 TPU 矽晶片；\n\nCo-Scientist 刊登於《Nature》，由六類專屬 agent 組成的多智能體系統開放個人研究者申請使用。"
+            "body": "兩項已落地的科學成果：\n\nAlphaEvolve 在基因體、量子電路、數學、電網與 Google 基礎設施皆留下可量化影響，首席科學家 Jeff Dean 確認其設計之反直覺電路已整合進下一代 TPU 矽晶片\n\nCo-Scientist 刊登於《Nature》，由六類專屬 agent 組成的多智能體系統開放個人研究者申請使用"
         }
     },
     "articles": [
