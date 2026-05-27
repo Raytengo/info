@@ -1,92 +1,104 @@
-{
-  "meta": {
-    "last_crawled": "2026-05-27T10:00:00Z",
-    "total": 6
-  },
-  "digest": {
-    "all": {
-      "title": "本週 AI 研究總覽",
-      "body": "三大 lab 本週的動態呈現出不同面向：技術落地、倫理對話、與模型能力擴展。\n\nOpenAI 在巴西媒體市場邁出第一步，與 Grupo Folha 及 Grupo UOL 達成內容授權協議，結束了此前的訴訟，並讓 9 億周活躍用戶能在 ChatGPT 中讀到真實新聞來源。\n\nAnthropic 聯合創辦人 Chris Olah 應邀在梵蒂岡與教宗良十四世共同發表教宗通諭《壯哉人類》，倡議教會與科技界攜手建構 AI 全球倫理治理框架。\n\nDeepMind 發佈 Gemini 2.5 Computer Use 模型，讓 AI Agent 能直接操作使用者介面，標誌著模型能力從語言推理向具身執行的跨越。"
-    },
-    "openai": {
-      "title": "OpenAI 近期方向",
-      "body": "數學與科學推理是上週的核心。OpenAI 模型推翻了離散幾何領域 80 年的 Erdős 單位距離猜想，解題關鍵來自代數數論，揭示了兩個數學領域之間意料之外的深層連結。\n\n本週最新動態是媒體版圖的拓展。OpenAI 與巴西最大媒體集團 Grupo Folha（旗下《聖保羅葉報》）及 Grupo UOL 簽訂內容合作協議，這是 OpenAI 在巴西的首個媒體合作。透過此協議，全球超過 9 億周活躍 ChatGPT 用戶將可存取這兩家媒體的即時新聞摘要，並附有原始來源連結；同時此舉也終止了 Folha 於 2025 年對 OpenAI 提起的版權訴訟。\n\nOpenAI 也宣布 DevDay 2026 將於 9 月 29 日在舊金山舉行，顯示其持續深耕開發者生態的策略方向。"
-    },
-    "anthropic": {
-      "title": "Anthropic 近期方向",
-      "body": "安全研究是上週主軸。Project Glasswing 計畫以 Claude Mythos Preview 模型為核心，聯合約 50 個合作夥伴，首月在軟體基礎設施中挖出超過 10,000 個高危或嚴重漏洞，部分組織的漏洞發現速度提升了十倍。\n\n本週最新動態是倫理治理領域的重要突破。Anthropic 聯合創辦人 Chris Olah 受邀出席梵蒂岡，與教宗良十四世共同發表首份教宗通諭《壯哉人類：人工智慧時代中對人的守護》（Magnifica Humanitas），呼籲教會與科技界建立跨機構的 AI 安全合作機制。Olah 表示：「如果我們希望這項技術朝好的方向發展，在那些激勵結構之外，存在真正關心結果的人至關重要。」\n\n商業端，KPMG 全球 27.6 萬員工的 Claude 整合，以及收購 API 工具公司 Stainless，顯示 Anthropic 正同步拓展企業生態。"
-    },
-    "deepmind": {
-      "title": "DeepMind 近期方向",
-      "body": "Co-Scientist 是上週重點。這套基於 Gemini 的多智能體科研系統，由生成、反思、排序、演化、鄰近度與元審查六類專屬 agent 組成，研究成果已在 Nature 發表，並開放科研人員申請使用。\n\n本週最新動態是 Gemini 2.5 Computer Use 模型的發佈。這個專為 UI 操作打造的模型，建構於 Gemini 2.5 Pro 的視覺理解與推理能力之上，讓 AI Agent 能直接與應用程式介面互動——點擊按鈕、填寫表單、瀏覽網頁——而無需額外的螢幕擷取工具。這標誌著模型能力從純語言推理向具身執行任務的重要躍遷，也為未來的自動化工作流程鋪路。\n\nWeatherNext 方面，DeepMind 也展示了對梅利莎颶風的精準預測，提前五天以 80% 信心預測到 Category 5 強度，顯示 AI 在地球科學的實際落地持續深化。"
-    }
-  },
-  "articles": [
-    {
-      "id": "openai-20260525-grupo-folha-uol-partnership",
-      "lab": "openai",
-      "title": "OpenAI, Grupo Folha, and Grupo UOL announce strategic content partnership",
-      "summary": "OpenAI 與巴西最大媒體集團 Grupo Folha 及 Grupo UOL 簽訂首個巴西媒體內容合作協議，讓全球 9 億多 ChatGPT 用戶可存取真實新聞來源，同時終止了 Folha 對 OpenAI 的版權訴訟。",
-      "detail": "OpenAI 於 2026 年 5 月 25 日宣布與巴西兩大媒體集團達成戰略內容合作：Grupo Folha（旗下知名報紙《聖保羅葉報》Folha de S.Paulo）及入口網站巨頭 Grupo UOL。這是 OpenAI 在巴西的第一個媒體合作夥伴關係。\n\n根據協議，兩家媒體將即時向 ChatGPT 提供新聞內容，全球超過 9 億周活躍用戶可直接在 ChatGPT 中看到基於這些報導的新聞摘要，並附有連回原始來源的連結，強調歸因與透明度。此前 OpenAI 已在美國、英國、法國、德國等市場建立類似的媒體合作，巴西是其持續拓展的重要市場。\n\n此次合作同時終止了 Folha 於 2025 年對 OpenAI 提起的訴訟——Folha 當時要求 OpenAI 停止未經授權使用其網站內容。作為協議的一部分，Grupo Folha 和 Grupo UOL 將可使用 Codex、ChatGPT Enterprise 及 OpenAI API，探索 AI 如何支援其新聞採編業務、開發創新讀者產品，並提升內部工作流程效率。",
-      "url": "https://openai.com/index/grupo-folha-grupo-uol-partnership/",
-      "image_url": null,
-      "published_at": "2026-05-25",
-      "crawled_at": "2026-05-27T10:00:00Z"
-    },
-    {
-      "id": "anthropic-20260525-chris-olah-pope-leo-encyclical",
-      "lab": "anthropic",
-      "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
-      "summary": "Anthropic 聯合創辦人 Chris Olah 受邀在梵蒂岡與教宗良十四世共同發表教宗通諭《壯哉人類》，呼籲教會與科技界建立跨機構的 AI 倫理合作機制，共同守護人工智慧時代的人類尊嚴。",
-      "detail": "2026 年 5 月 25 日，教宗良十四世（Pope Leo XIV）發表其首份教宗通諭《壯哉人類：人工智慧時代中對人的守護》（Magnifica Humanitas: On safeguarding the human person in the time of artificial intelligence）。這份通諭針對 AI 快速發展對人類尊嚴、倫理與社會結構的衝擊提出天主教神學觀點，並警告 AI 被用於軍事用途的潛在風險。\n\nAnthropic 聯合創辦人 Chris Olah 應教宗本人邀請，出席梵蒂岡的通諭發表記者會，與一排樞機主教和神學家並排就座，向座無虛席的梵蒂岡會堂演講。這位 33 歲的無神論科技人與教宗形成了令人矚目的對話組合。\n\nOlah 在發言中表示：「如果我們希望這項技術朝好的方向發展，在那些激勵結構之外，存在真正關心結果、並堅持安全的人至關重要。正是透過對話與相互努力、透過推拉之間，人類才能成就偉大的事。這就是我在《壯哉人類》中所看見的，也是我感謝教宗和教會承擔起這份辨別工作的原因。」\n\nAnthropic 將此次出席定位為拓展 AI 重要議題對話空間的行動，顯示其在技術安全研究之外，也積極參與跨領域的倫理治理對話。",
-      "url": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
-      "image_url": null,
-      "published_at": "2026-05-25",
-      "crawled_at": "2026-05-27T10:00:00Z"
-    },
-    {
-      "id": "deepmind-20260520-gemini-computer-use",
-      "lab": "deepmind",
-      "title": "Introducing the Gemini 2.5 Computer Use model",
-      "summary": "DeepMind 發佈 Gemini 2.5 Computer Use 模型，這個專為操作使用者介面而設計的模型，讓 AI Agent 能直接點擊、填表、瀏覽應用程式，標誌著模型能力從語言推理向具身執行的重要躍遷。",
-      "detail": "2026 年 5 月 20 日，Google DeepMind 發佈 Gemini 2.5 Computer Use 模型，這是一個建構於 Gemini 2.5 Pro 視覺理解與推理能力之上的專屬模型，專為驅動能與使用者介面（UI）互動的 AI Agent 而設計。\n\n與一般語言模型不同，Gemini 2.5 Computer Use 模型能直接「看懂」螢幕上的畫面，並對按鈕、表單、選單等 UI 元素執行精確的操作指令——包括點擊、輸入文字、滾動頁面、在應用程式之間切換——而不需要依賴額外的截圖工具或特殊 API 整合。\n\n此模型繼承了 Gemini 2.5 Pro 在視覺推理方面的強大能力，能夠理解複雜的多步驟任務，並自主規劃操作順序以完成目標。這使得開發者得以更容易地打造能在真實電腦環境中運作的自動化 Agent，應用場景涵蓋自動化辦公流程、軟體測試、網頁資料擷取等。\n\nGemini 2.5 Computer Use 的發佈，與 OpenAI 的 Operator 及 Anthropic 的 Computer Use 功能形成直接競爭，標誌著各大 AI lab 在具身執行（agentic execution）賽道上的角力持續升溫。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/",
-      "image_url": null,
-      "published_at": "2026-05-20",
-      "crawled_at": "2026-05-27T10:00:00Z"
-    },
-    {
-      "id": "openai-20260522-discrete-geometry-conjecture",
-      "lab": "openai",
-      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-      "summary": "OpenAI 的模型推翻了 Erdős 於 1946 年提出的平面單位距離猜想，成為 AI 在純數學領域的里程碑式突破。解題核心來自代數數論，揭示了兩個數學領域之間意想不到的深層連結。",
-      "detail": "OpenAI 發佈研究報告，宣布其模型已推翻離散幾何領域 80 年懸而未決的 Erdős 單位距離猜想。該問題由匈牙利數學家 Paul Erdős 於 1946 年提出：在平面上放置 n 個點，最多能有多少對點的距離恰好為 1？這是組合幾何中表述最簡單、卻極難解決的問題之一。\n\nOpenAI 模型構造出反例的關鍵來自代數數論，這一連結出乎數學界的預期——代數數論與離散幾何原本是相距甚遠的兩個領域。研究人員表示，這個解法不僅解決了特定猜想，更為數學家打開了一座橋樑，讓探索相關問題群成為可能。這也是繼 GPT-5.2 在理論物理中推導新結果後，OpenAI 連續在科學推理領域展現的重大突破。",
-      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "image_url": null,
-      "published_at": "2026-05-22",
-      "crawled_at": "2026-05-26T10:00:00Z"
-    },
-    {
-      "id": "anthropic-20260522-glasswing-initial-update",
-      "lab": "anthropic",
-      "title": "Project Glasswing: An initial update",
-      "summary": "Anthropic 推出 Project Glasswing，利用 Claude Mythos Preview 與約 50 個合作夥伴，在首月內發現超過 10,000 個高危或嚴重軟體漏洞，大幅加速安全研究速度。",
-      "detail": "Anthropic 發佈 Project Glasswing 的首次成果報告。這個計畫的核心目標是：在具有高度能力的 AI 模型被惡意行為者利用之前，搶先保護全球最關鍵的軟體基礎設施。計畫使用 Claude Mythos Preview 模型，聯合約 50 個合作夥伴，首月發現超過 10,000 個高危或嚴重漏洞，部分組織（如 Cloudflare）的漏洞發現速度提升了十倍以上。\n\n開源軟體掃描方面，在 1,000 多個開源專案中識別出約 6,202 個高危或嚴重漏洞。值得注意的是，計畫面臨的最大瓶頸並非發現速度，而是修補速度——Anthropic 正在研究如何加速從發現到修復的整個週期。最重要的是，Anthropic 明確宣示：正因為 Mythos 在網路安全領域的能力已過於強大，目前尚未開發出足夠的防護措施，因此暫緩公開發佈該模型。",
-      "url": "https://www.anthropic.com/research/glasswing-initial-update",
-      "image_url": null,
-      "published_at": "2026-05-22",
-      "crawled_at": "2026-05-26T10:00:00Z"
-    },
-    {
-      "id": "deepmind-20260519-co-scientist",
-      "lab": "deepmind",
-      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
-      "summary": "DeepMind 發佈 Co-Scientist 研究成果至 Nature，這套基於 Gemini 的多智能體科研夥伴系統正式開放個人科研人員申請，標誌著 AI 輔助科學研究進入實用階段。",
-      "detail": "DeepMind 宣布 Co-Scientist 從早期研究原型升級為 Nature 論文，並同步開放個人研究者透過 Hypothesis Generation 工具申請使用。這套多智能體系統由六類專屬 agent 組成——生成、反思、排序、演化、鄰近度與元審查——每類 agent 模仿科學研究自身的迭代邏輯，透過自動化反饋持續生成、評估與精煉假說。\n\n自去年早期研究分享以來，Co-Scientist 已與多個科研團隊在抗藥性、植物免疫和肝臟纖維化等挑戰性課題上進行測試與驗證。在急性骨髓性白血病研究中，系統提出 30 個候選分子，人類腫瘤學家篩選至 5 個進行實驗室測試，其中 1 個展現出特別的治療潛力，驗證了 AI 在實際科研中的價值。",
-      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
-      "image_url": null,
-      "published_at": "2026-05-19",
-      "crawled_at": "2026-05-26T10:00:00Z"
-    }
-  ]
+﻿{
+    "meta":  {
+                 "last_crawled":  "2026-05-28T00:00:00Z",
+                 "total":  7
+             },
+    "digest":  {
+                   "all":  {
+                               "title":  "本週 AI 研究總覽",
+                               "body":  "本週三家 lab 的主軸集中在 agentic AI 的落地與治理：OpenAI 強化 Codex 在稅務與企業 coding agent 的定位，Anthropic 同步推進國際市場、AI 倫理對話與安全漏洞發現，DeepMind 則更新 AlphaEvolve 與 Co-Scientist 這類科研型代理的實際影響。\n\n整體來看，前沿模型不再只展示能力，而是被包進具體工作流程：稅務、企業軟體開發、漏洞掃描、科學假說生成與演算法最佳化。"
+                           },
+                   "openai":  {
+                                  "title":  "OpenAI 近期方向",
+                                  "body":  "OpenAI 本週兩篇都圍繞 Codex。Tax AI 案例展示 Codex 如何從專家修正、production traces 與 eval 中形成自我改進迴圈，將代理能力嵌入稅務準備這類高專業門檻流程。\n\n另一篇 Gartner 文章則把 Codex 放在企業 coding agents 市場中，強調治理、沙箱、審批、RBAC 與多開發介面。這顯示 OpenAI 正把 Codex 從開發者工具推向可受控部署的企業級代理平台。"
+                              },
+                   "anthropic":  {
+                                     "title":  "Anthropic 近期方向",
+                                     "body":  "Anthropic 本週同時呈現市場擴張、倫理治理與安全研究。韓國代表任命與首爾辦公室規劃顯示其亞太布局加速；Chris Olah 在梵蒂岡相關活動中的發言，則把 AI 安全討論帶到宗教與跨機構治理場景。\n\nProject Glasswing 的更新延續 Anthropic 在高風險安全能力上的定位：Claude Mythos Preview 協助合作夥伴發現大量漏洞，但文章也承認修補速度與協調流程才是下一個瓶頸。"
+                                 },
+                   "deepmind":  {
+                                    "title":  "DeepMind 近期方向",
+                                    "body":  "DeepMind 本週 sitemap 更新集中在科研代理與演算法發現。AlphaEvolve 展示 Gemini-powered coding agent 已被用於基因體、電網、量子電路、數學與基礎設施最佳化，重點是把搜尋與程式生成能力接到實際科學和工程問題。\n\nCo-Scientist 則代表另一條路線：用多智能體流程協助研究者生成、評估與精煉假說。DeepMind 官網對部分文章只穩定提供月分或更新時間，因此這裡依 sitemap 本週更新納入。"
+                                }
+               },
+    "articles":  [
+                     {
+                         "id":  "openai-20260527-tax-agents-codex",
+                         "lab":  "openai",
+                         "title":  "Building self-improving tax agents with Codex",
+                         "summary":  "Codex 讓稅務 AI 從專家修正中持續改進。",
+                         "detail":  "OpenAI 與 Thrive Holdings 共同開發 Tax AI，把會計師的實務修正、產品追蹤紀錄與 eval 轉成改進迴圈。系統在試點稅季處理約 7,000 份稅表，目標是讓複雜稅務工作在準確性與吞吐量上持續提升。",
+                         "url":  "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+                         "image_url":  null,
+                         "published_at":  "2026-05-27",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     },
+                     {
+                         "id":  "anthropic-20260526-korea-representative-director",
+                         "lab":  "anthropic",
+                         "title":  "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+                         "summary":  "Anthropic 任命韓國代表，準備開設首爾辦公室。",
+                         "detail":  "Anthropic 任命 KiYoung Choi 擔任韓國 Representative Director，為首爾辦公室開設做準備。這代表 Anthropic 繼續擴張亞太布局，並把韓國企業、政府與在地 AI 生態納入更直接的市場經營。",
+                         "url":  "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+                         "image_url":  null,
+                         "published_at":  "2026-05-26",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     },
+                     {
+                         "id":  "anthropic-20260525-chris-olah-pope-encyclical",
+                         "lab":  "anthropic",
+                         "title":  "Anthropic co-founder Chris Olah\u0027s remarks on Pope Leo XIV\u0027s encyclical \"Magnifica humanitas\"",
+                         "summary":  "Chris Olah 參與梵蒂岡 AI 倫理治理對話。",
+                         "detail":  "Anthropic 聯合創辦人 Chris Olah 出席教宗良十四世關於 AI 時代人類尊嚴的通諭發表場合，談到安全研究與外部倫理力量的重要性。這篇文章反映 Anthropic 把前沿 AI 風險討論推向宗教、治理與公民社會層面。",
+                         "url":  "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+                         "image_url":  null,
+                         "published_at":  "2026-05-25",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     },
+                     {
+                         "id":  "openai-20260522-gartner-agentic-coding-leader",
+                         "lab":  "openai",
+                         "title":  "OpenAI named a Leader in enterprise coding agents by Gartner",
+                         "summary":  "OpenAI 被 Gartner 評為企業 coding agents 領導者。",
+                         "detail":  "OpenAI 表示 Codex 在 Gartner 企業 AI coding agents 評估中被列為 Leader，並強調 Codex 已支援大型企業部署。文章重點放在 agentic software development、治理、沙箱、審批與多種開發介面，呈現 Codex 從 coding assistant 走向企業工作流平台。",
+                         "url":  "https://openai.com/index/gartner-2026-agentic-coding-leader/",
+                         "image_url":  null,
+                         "published_at":  "2026-05-22",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     },
+                     {
+                         "id":  "anthropic-20260522-glasswing-initial-update",
+                         "lab":  "anthropic",
+                         "title":  "Project Glasswing: An initial update",
+                         "summary":  "Project Glasswing 首月發現大量高風險漏洞。",
+                         "detail":  "Anthropic 更新 Project Glasswing 進展，說明 Claude Mythos Preview 與約 50 個合作夥伴如何協助掃描關鍵軟體基礎設施。文章指出首月發現超過 10,000 個高危或嚴重漏洞，也凸顯瓶頸正從漏洞發現轉向修補與協調。",
+                         "url":  "https://www.anthropic.com/research/glasswing-initial-update",
+                         "image_url":  null,
+                         "published_at":  "2026-05-22",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     },
+                     {
+                         "id":  "deepmind-20260526-alphaevolve-impact",
+                         "lab":  "deepmind",
+                         "title":  "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
+                         "summary":  "AlphaEvolve 從研究原型擴展到多領域實際應用。",
+                         "detail":  "DeepMind 更新 AlphaEvolve 的影響案例，涵蓋基因體學、電網最佳化、量子電路、數學問題與 Google 基礎設施。原文發布於 5 月 7 日，但 sitemap 於 5 月 26 日更新；本週納入是因為 DeepMind 官方 sitemap 顯示本週有更新。",
+                         "url":  "https://deepmind.google/blog/alphaevolve-impact/",
+                         "image_url":  null,
+                         "published_at":  "2026-05-26",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     },
+                     {
+                         "id":  "deepmind-20260521-co-scientist",
+                         "lab":  "deepmind",
+                         "title":  "Co-Scientist: A multi-agent AI partner to accelerate research",
+                         "summary":  "Co-Scientist 用多智能體流程協助科研假說生成。",
+                         "detail":  "DeepMind 的 Co-Scientist 是基於 Gemini 的多智能體科研系統，用生成、反思、排序、演化等角色協助研究者提出並精煉假說。原文發布於 5 月稍早時間，但 sitemap 於 5 月 21 日更新；本週納入是因為 DeepMind 只穩定提供月分與 sitemap 更新時間。",
+                         "url":  "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
+                         "image_url":  null,
+                         "published_at":  "2026-05-21",
+                         "crawled_at":  "2026-05-28T00:00:00Z"
+                     }
+                 ]
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
