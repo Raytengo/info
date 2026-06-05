@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T18:44:39.884Z",
+  "updated_at": "2026-06-05T15:28:42.717Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -7,6 +7,7 @@
     "deepmind-20260526-alphaevolve-impact": "like",
     "anthropic-20260526-korea-representative-director": "dislike",
     "deepmind-20260521-co-scientist": "like",
-    "anthropic-20260522-glasswing-initial-update": "like"
+    "anthropic-20260522-glasswing-initial-update": "like",
+    "anthropic-20260603-services-track-partner-hub": "dislike"
   }
 }
