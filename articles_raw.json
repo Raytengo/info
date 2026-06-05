@@ -1,13 +1,13 @@
-{
+﻿{
     "meta":  {
                  "description":  "Raw article metadata from official lab websites, 2026 only. For RS/RAG experiments — do NOT mix with queue.json.",
                  "crawled_at":  "2026-05-28T00:00:00Z",
                  "note":  "DeepMind dates have month precision only (date_precision: month). Anthropic articles may have some gaps in Jan–Mar 2026.",
                  "counts":  {
-                                "openai":  69,
-                                "anthropic":  34,
+                                "openai":  118,
+                                "anthropic":  58,
                                 "deepmind":  25,
-                                "total":  128
+                                "total":  201
                             }
              },
     "articles":  [
@@ -1035,6 +1035,6 @@
                          "url":  "https://openai.com/index/openai-to-acquire-promptfoo/",
                          "published_at":  "2026-03-09",
                          "category":  "公司"
-                     }
-                 ]
-}
+                     },
+                     {
+           
