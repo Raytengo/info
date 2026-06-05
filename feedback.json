@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T15:29:55.171Z",
+  "updated_at": "2026-06-05T15:30:15.774Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -9,6 +9,7 @@
     "deepmind-20260521-co-scientist": "like",
     "anthropic-20260522-glasswing-initial-update": "like",
     "anthropic-20260603-services-track-partner-hub": "dislike",
-    "openai-20260604-chatgpt-memory-dreaming": "like"
+    "openai-20260604-chatgpt-memory-dreaming": "like",
+    "openai-20260529-rosalind-biodefense": "like"
   }
 }
