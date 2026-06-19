@@ -1,1040 +1,1186 @@
-﻿{
-    "meta":  {
-                 "description":  "Raw article metadata from official lab websites, 2026 only. For RS/RAG experiments — do NOT mix with queue.json.",
-                 "crawled_at":  "2026-05-28T00:00:00Z",
-                 "note":  "DeepMind dates have month precision only (date_precision: month). Anthropic articles may have some gaps in Jan–Mar 2026.",
-                 "counts":  {
-                                "openai":  118,
-                                "anthropic":  58,
-                                "deepmind":  25,
-                                "total":  201
-                            }
-             },
-    "articles":  [
-                     {
-                         "id":  "openai-2026-05-27-building-self-improving-tax-agents-with-codex",
-                         "lab":  "openai",
-                         "title":  "Building self-improving tax agents with Codex",
-                         "url":  "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
-                         "published_at":  "2026-05-27",
-                         "category":  "Engineering",
-                         "crawled_at":  "2026-05-28T00:00:00Z"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-26-anthropic-appoints-kiyoung-choi-as-representa",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
-                         "url":  "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
-                         "published_at":  "2026-05-26",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-25-anthropic-co-founder-chris-olah-s-remarks-on",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic co-founder Chris Olah\u0027s remarks on Pope Leo XIV\u0027s encyclical \"Magnifica humanitas\"",
-                         "url":  "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
-                         "published_at":  "2026-05-25",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-22-openai-named-a-leader-in-enterprise-coding-ag",
-                         "lab":  "openai",
-                         "title":  "OpenAI named a Leader in enterprise coding agents by Gartner",
-                         "url":  "https://openai.com/index/gartner-2026-agentic-coding-leader/",
-                         "published_at":  "2026-05-22",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-22-project-glasswing-an-initial-update",
-                         "lab":  "anthropic",
-                         "title":  "Project Glasswing: An initial update",
-                         "url":  "https://www.anthropic.com/research/glasswing-initial-update",
-                         "published_at":  "2026-05-22",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-20-an-openai-model-has-disproved-a-central-conje",
-                         "lab":  "openai",
-                         "title":  "An OpenAI model has disproved a central conjecture in discrete geometry",
-                         "url":  "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-                         "published_at":  "2026-05-20",
-                         "category":  "研究"
-                     },
-                     {
-                         "id":  "openai-2026-05-19-ai",
-                         "lab":  "openai",
-                         "title":  "推進內容來源機制，打造更安全、更透明的 AI 生態系",
-                         "url":  "https://openai.com/index/advancing-content-provenance/",
-                         "published_at":  "2026-05-19",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-19-widening-the-conversation-on-frontier-ai",
-                         "lab":  "anthropic",
-                         "title":  "Widening the conversation on frontier AI",
-                         "url":  "https://www.anthropic.com/news/widening-conversation-ai",
-                         "published_at":  "2026-05-19",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-19-kpmg-integrates-claude-across-its-core-busine",
-                         "lab":  "anthropic",
-                         "title":  "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
-                         "url":  "https://www.anthropic.com/news/anthropic-kpmg",
-                         "published_at":  "2026-05-19",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-18-openai-dell-technologies-codex",
-                         "lab":  "openai",
-                         "title":  "OpenAI 與 Dell Technologies 合作，將 Codex 帶入混合式與地端企業環境",
-                         "url":  "https://openai.com/index/dell-codex-enterprise-partnership/",
-                         "published_at":  "2026-05-18",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-18-anthropic-acquires-stainless",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic acquires Stainless",
-                         "url":  "https://www.anthropic.com/news/anthropic-acquires-stainless",
-                         "published_at":  "2026-05-18",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-15-chatgpt",
-                         "lab":  "openai",
-                         "title":  "ChatGPT 中全新的個人理財體驗",
-                         "url":  "https://openai.com/index/personal-finance-chatgpt/",
-                         "published_at":  "2026-05-15",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-05-14-work-with-codex-from-anywhere",
-                         "lab":  "openai",
-                         "title":  "Work with Codex from anywhere",
-                         "url":  "https://openai.com/index/work-with-codex-from-anywhere/",
-                         "published_at":  "2026-05-14",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-05-14-helping-chatgpt-better-recognize-context-in-s",
-                         "lab":  "openai",
-                         "title":  "Helping ChatGPT better recognize context in sensitive conversations",
-                         "url":  "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/",
-                         "published_at":  "2026-05-14",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-14-pwc-is-deploying-claude-to-build-technology-e",
-                         "lab":  "anthropic",
-                         "title":  "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
-                         "url":  "https://www.anthropic.com/news/pwc-expanded-partnership",
-                         "published_at":  "2026-05-14",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-14-anthropic-forms-200-million-partnership-with",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic forms $200 million partnership with the Gates Foundation",
-                         "url":  "https://www.anthropic.com/news/gates-foundation-partnership",
-                         "published_at":  "2026-05-14",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-13-codex-windows",
-                         "lab":  "openai",
-                         "title":  "打造安全且有效的沙箱，讓 Codex 能在 Windows 上運作",
-                         "url":  "https://openai.com/index/building-codex-windows-sandbox/",
-                         "published_at":  "2026-05-13",
-                         "category":  "工程"
-                     },
-                     {
-                         "id":  "openai-2026-05-13-tanstack-npm",
-                         "lab":  "openai",
-                         "title":  "我們對 TanStack npm 供應鏈攻擊事件的回應",
-                         "url":  "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
-                         "published_at":  "2026-05-13",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-13-introducing-claude-for-small-business",
-                         "lab":  "anthropic",
-                         "title":  "Introducing Claude for Small Business",
-                         "url":  "https://www.anthropic.com/news/claude-for-small-business",
-                         "published_at":  "2026-05-13",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-12-parameter-golf",
-                         "lab":  "openai",
-                         "title":  "我們從 Parameter Golf 學到什麼",
-                         "url":  "https://openai.com/index/what-parameter-golf-taught-us/",
-                         "published_at":  "2026-05-12",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-05-11-openai",
-                         "lab":  "openai",
-                         "title":  "OpenAI 校園網路：學生社團意願表單",
-                         "url":  "https://openai.com/index/openai-campus-network/",
-                         "published_at":  "2026-05-11",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-05-11-openai-launches-the-openai-deployment-company",
-                         "lab":  "openai",
-                         "title":  "OpenAI launches the OpenAI Deployment Company to help businesses build around intelligence",
-                         "url":  "https://openai.com/index/openai-launches-the-deployment-company/",
-                         "published_at":  "2026-05-11",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-05-08-openai-codex",
-                         "lab":  "openai",
-                         "title":  "在 OpenAI 安全使用 Codex",
-                         "url":  "https://openai.com/index/safe-codex-usage-at-openai/",
-                         "published_at":  "2026-05-08",
-                         "category":  "安全防護"
-                     },
-                     {
-                         "id":  "openai-2026-05-07-scaling-trusted-access-for-cyber-with-gpt-5-5",
-                         "lab":  "openai",
-                         "title":  "Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber",
-                         "url":  "https://openai.com/index/scaling-trusted-access-for-cyber/",
-                         "published_at":  "2026-05-07",
-                         "category":  "安全防護"
-                     },
-                     {
-                         "id":  "openai-2026-05-07-advancing-voice-intelligence-with-new-models",
-                         "lab":  "openai",
-                         "title":  "Advancing voice intelligence with new models in the API",
-                         "url":  "https://openai.com/index/new-voice-intelligence-models/",
-                         "published_at":  "2026-05-07",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-05-07-chatgpt",
-                         "lab":  "openai",
-                         "title":  "ChatGPT 的「可信任聯絡人」功能",
-                         "url":  "https://openai.com/index/chatgpt-trusted-contacts/",
-                         "published_at":  "2026-05-07",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-05-07-chatgpt",
-                         "lab":  "openai",
-                         "title":  "在 ChatGPT 中測試廣告",
-                         "url":  "https://openai.com/index/testing-ads-in-chatgpt/",
-                         "published_at":  "2026-05-07",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-05-06-",
-                         "lab":  "openai",
-                         "title":  "前沿企業如何拉大領先差距",
-                         "url":  "https://openai.com/index/how-frontier-enterprises-widen-their-lead/",
-                         "published_at":  "2026-05-06",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-05-06-introducing-chatgpt-futures-class-of-2026",
-                         "lab":  "openai",
-                         "title":  "Introducing ChatGPT Futures: Class of 2026",
-                         "url":  "https://openai.com/index/introducing-chatgpt-futures-class-of-2026/",
-                         "published_at":  "2026-05-06",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-06-higher-usage-limits-for-claude-and-a-compute",
-                         "lab":  "anthropic",
-                         "title":  "Higher usage limits for Claude and a compute deal with SpaceX",
-                         "url":  "https://www.anthropic.com/news/higher-limits-spacex",
-                         "published_at":  "2026-05-06",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-05-05-gpt-5-5-instant-system-card",
-                         "lab":  "openai",
-                         "title":  "GPT-5.5 Instant System Card",
-                         "url":  "https://openai.com/index/gpt-5-5-instant-system-card/",
-                         "published_at":  "2026-05-05",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-05-05-supercomputer-networking-to-accelerate-large",
-                         "lab":  "openai",
-                         "title":  "Supercomputer networking to accelerate large scale AI training",
-                         "url":  "https://openai.com/index/mrc-supercomputer-networking/",
-                         "published_at":  "2026-05-05",
-                         "category":  "工程"
-                     },
-                     {
-                         "id":  "openai-2026-05-05-gpt-5-5-instant",
-                         "lab":  "openai",
-                         "title":  "GPT-5.5 Instant：更聰明、更清晰，也更個人化",
-                         "url":  "https://openai.com/index/introducing-gpt-5-5-instant/",
-                         "published_at":  "2026-05-05",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-05-05-new-ways-to-buy-chatgpt-ads",
-                         "lab":  "openai",
-                         "title":  "New ways to buy ChatGPT ads",
-                         "url":  "https://openai.com/index/new-ways-to-buy-chatgpt-ads/",
-                         "published_at":  "2026-05-05",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-05-05-emea",
-                         "lab":  "openai",
-                         "title":  "促進 EMEA 地區青少年安全與福祉",
-                         "url":  "https://openai.com/index/emea-youth-safety-wellbeing/",
-                         "published_at":  "2026-05-05",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-05-04-openai-ai",
-                         "lab":  "openai",
-                         "title":  "OpenAI 如何大規模提供低延遲語音 AI",
-                         "url":  "https://openai.com/index/how-openai-serves-low-latency-voice-ai-at-scale/",
-                         "published_at":  "2026-05-04",
-                         "category":  "工程"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-01-building-reliable-agents-for-finance",
-                         "lab":  "anthropic",
-                         "title":  "Building reliable agents for finance",
-                         "url":  "https://www.anthropic.com/news/finance-agents",
-                         "published_at":  "2026-05-01",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-05-01-anthropic-launches-enterprise-ai-services-com",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic launches enterprise AI services company",
-                         "url":  "https://www.anthropic.com/news/enterprise-ai-services-company",
-                         "published_at":  "2026-05-01",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-introducing-gemini-omni",
-                         "lab":  "deepmind",
-                         "title":  "Introducing Gemini Omni",
-                         "url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
-                         "published_at":  "2026-05",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-strengthening-singapore-s-ai-future-a-new-nat",
-                         "lab":  "deepmind",
-                         "title":  "Strengthening Singapore\u0027s AI Future: A New National Partnership",
-                         "url":  "https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/",
-                         "published_at":  "2026-05",
-                         "category":  "Responsibility \u0026 Safety"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-gemini-3-5-frontier-intelligence-with-action",
-                         "lab":  "deepmind",
-                         "title":  "Gemini 3.5: frontier intelligence with action",
-                         "url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-                         "published_at":  "2026-05",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-gemini-for-science-ai-experiments-and-tools-f",
-                         "lab":  "deepmind",
-                         "title":  "Gemini for Science: AI experiments and tools for a new era of discovery",
-                         "url":  "https://deepmind.google/blog/gemini-for-science-io-2026/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-co-scientist-a-multi-agent-ai-partner-to-acce",
-                         "lab":  "deepmind",
-                         "title":  "Co-Scientist: A multi-agent AI partner to accelerate research",
-                         "url":  "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-introducing-google-antigravity-2-0",
-                         "lab":  "deepmind",
-                         "title":  "Introducing Google Antigravity 2.0",
-                         "url":  "https://antigravity.google/blog/introducing-google-antigravity-2-0",
-                         "published_at":  "2026-05",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-making-it-easier-to-understand-how-content-wa",
-                         "lab":  "deepmind",
-                         "title":  "Making it easier to understand how content was created and edited",
-                         "url":  "https://deepmind.google/blog/identifying-ai-generated-media-online/",
-                         "published_at":  "2026-05",
-                         "category":  "Responsibility \u0026 Safety"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-how-weathernext-helped-the-national-hurricane",
-                         "lab":  "deepmind",
-                         "title":  "How WeatherNext helped the National Hurricane Center better predict Hurricane Melissa\u0027s historic landfall in Jamaica",
-                         "url":  "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-simulate-real-world-places-with-project-genie",
-                         "lab":  "deepmind",
-                         "title":  "Simulate real-world places with Project Genie and Street View",
-                         "url":  "https://deepmind.google/blog/project-genie-expands/",
-                         "published_at":  "2026-05",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-uniting-biological-toolkits-for-a-new-approac",
-                         "lab":  "deepmind",
-                         "title":  "Uniting biological toolkits for a new approach to ALS",
-                         "url":  "https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-uncovering-repurposed-medicines-to-fight-live",
-                         "lab":  "deepmind",
-                         "title":  "Uncovering repurposed medicines to fight liver fibrosis",
-                         "url":  "https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-finding-the-molecular-switches-behind-new-inf",
-                         "lab":  "deepmind",
-                         "title":  "Finding the molecular switches behind new infectious diseases",
-                         "url":  "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-accelerating-discovery-of-liver-disease-mecha",
-                         "lab":  "deepmind",
-                         "title":  "Accelerating discovery of liver disease mechanisms",
-                         "url":  "https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-opening-new-paths-in-aging-research",
-                         "lab":  "deepmind",
-                         "title":  "Opening new paths in aging research",
-                         "url":  "https://deepmind.google/blog/opening-new-paths-in-aging-research/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-fast-tracking-genetic-leads-to-reverse-cellul",
-                         "lab":  "deepmind",
-                         "title":  "Fast-tracking genetic leads to reverse cellular aging",
-                         "url":  "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-we-re-launching-the-google-deepmind-accelerat",
-                         "lab":  "deepmind",
-                         "title":  "We\u0027re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
-                         "url":  "https://deepmind.google/blog/accelerator-ai-for-the-planet/",
-                         "published_at":  "2026-05",
-                         "category":  "Company"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-reimagining-the-mouse-pointer-for-the-ai-era",
-                         "lab":  "deepmind",
-                         "title":  "Reimagining the mouse pointer for the AI era",
-                         "url":  "https://deepmind.google/blog/ai-pointer/",
-                         "published_at":  "2026-05",
-                         "category":  "Research"
-                     },
-                     {
-                         "id":  "deepmind-2026-05-alphaevolve-how-our-gemini-powered-coding-age",
-                         "lab":  "deepmind",
-                         "title":  "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
-                         "url":  "https://deepmind.google/blog/alphaevolve-impact/",
-                         "published_at":  "2026-05",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "openai-2026-04-30-",
-                         "lab":  "openai",
-                         "title":  "推出進階帳戶安全性",
-                         "url":  "https://openai.com/index/introducing-advanced-account-security/",
-                         "published_at":  "2026-04-30",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-30-introducing-claude-for-creative-work",
-                         "lab":  "anthropic",
-                         "title":  "Introducing Claude for Creative Work",
-                         "url":  "https://www.anthropic.com/news/claude-for-creative-work",
-                         "published_at":  "2026-04-30",
-                         "category":  "Product"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-29-anthropic-appoints-theo-hourmouzis-as-general",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic appoints Theo Hourmouzis as General Manager of Australia and New Zealand",
-                         "url":  "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
-                         "published_at":  "2026-04-29",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-28-our-commitment-to-community-safety",
-                         "lab":  "openai",
-                         "title":  "Our commitment to community safety",
-                         "url":  "https://openai.com/index/our-commitment-to-community-safety/",
-                         "published_at":  "2026-04-28",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-04-28-openai-codex-aws",
-                         "lab":  "openai",
-                         "title":  "OpenAI 模型、Codex 與託管式智慧體登陸 AWS",
-                         "url":  "https://openai.com/index/openai-on-aws/",
-                         "published_at":  "2026-04-28",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-28-update-on-election-safeguards-and-ai-policy",
-                         "lab":  "anthropic",
-                         "title":  "Update on election safeguards and AI policy",
-                         "url":  "https://www.anthropic.com/news/election-safeguards-update",
-                         "published_at":  "2026-04-28",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-27-microsoft-openai",
-                         "lab":  "openai",
-                         "title":  "Microsoft 與 OpenAI 合作夥伴關係邁向下一階段",
-                         "url":  "https://openai.com/index/microsoft-openai-partnership-next-phase/",
-                         "published_at":  "2026-04-27",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-04-27-symphony",
-                         "lab":  "openai",
-                         "title":  "用於協調的開源規格：Symphony",
-                         "url":  "https://openai.com/index/symphony-open-source-spec/",
-                         "published_at":  "2026-04-27",
-                         "category":  "工程"
-                     },
-                     {
-                         "id":  "openai-2026-04-26-",
-                         "lab":  "openai",
-                         "title":  "我們的原則",
-                         "url":  "https://openai.com/index/our-principles/",
-                         "published_at":  "2026-04-26",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-25-anthropic-and-nec-announce-strategic-partners",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic and NEC announce strategic partnership",
-                         "url":  "https://www.anthropic.com/news/anthropic-nec",
-                         "published_at":  "2026-04-25",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-24-anthropic-and-amazon-expand-partnership-with",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic and Amazon expand partnership with new compute agreement",
-                         "url":  "https://www.anthropic.com/news/anthropic-amazon-compute",
-                         "published_at":  "2026-04-24",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-23-gpt-5-5",
-                         "lab":  "openai",
-                         "title":  "GPT-5.5 系統說明卡",
-                         "url":  "https://openai.com/index/gpt-5-5-system-card/",
-                         "published_at":  "2026-04-23",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-04-23-gpt-5-5",
-                         "lab":  "openai",
-                         "title":  "GPT-5.5 登場",
-                         "url":  "https://openai.com/index/introducing-gpt-5-5/",
-                         "published_at":  "2026-04-23",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-23-gpt-5-5",
-                         "lab":  "openai",
-                         "title":  "GPT-5.5 生物漏洞賞金計畫",
-                         "url":  "https://openai.com/index/gpt-5-5-bio-bug-bounty/",
-                         "published_at":  "2026-04-23",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-23-laxman-narasimhan-joins-anthropic-board",
-                         "lab":  "anthropic",
-                         "title":  "Laxman Narasimhan joins Anthropic board",
-                         "url":  "https://www.anthropic.com/news/narasimhan-board",
-                         "published_at":  "2026-04-23",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-22-chatgpt",
-                         "lab":  "openai",
-                         "title":  "讓 ChatGPT 更貼近臨床醫護人員的需求",
-                         "url":  "https://openai.com/index/making-chatgpt-better-for-clinicians/",
-                         "published_at":  "2026-04-22",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-22-websockets-responses-api",
-                         "lab":  "openai",
-                         "title":  "透過 WebSockets 加快 Responses API 中的智慧體工作流程",
-                         "url":  "https://openai.com/index/speeding-up-agentic-workflows-with-websockets/",
-                         "published_at":  "2026-04-22",
-                         "category":  "工程"
-                     },
-                     {
-                         "id":  "openai-2026-04-22-chatgpt",
-                         "lab":  "openai",
-                         "title":  "ChatGPT 工作區智慧體登場",
-                         "url":  "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
-                         "published_at":  "2026-04-22",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-22-openai-privacy-filter",
-                         "lab":  "openai",
-                         "title":  "OpenAI Privacy Filter 登場",
-                         "url":  "https://openai.com/index/introducing-openai-privacy-filter/",
-                         "published_at":  "2026-04-22",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-22-anthropic-announces-compute-partnerships-with",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic announces compute partnerships with Google and Broadcom",
-                         "url":  "https://www.anthropic.com/news/google-broadcom-partnership-compute",
-                         "published_at":  "2026-04-22",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-21-chatgpt-2-0",
-                         "lab":  "openai",
-                         "title":  "ChatGPT 圖像 2.0 登場",
-                         "url":  "https://openai.com/index/introducing-chatgpt-images-2-0/",
-                         "published_at":  "2026-04-21",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-21-codex",
-                         "lab":  "openai",
-                         "title":  "將 Codex 擴展至全球企業",
-                         "url":  "https://openai.com/index/scaling-codex-to-enterprises-worldwide/",
-                         "published_at":  "2026-04-21",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-21-anthropic-signs-mou-with-australian-governmen",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic signs MOU with Australian government",
-                         "url":  "https://www.anthropic.com/news/australia-MOU",
-                         "published_at":  "2026-04-21",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-17-introducing-claude-design-by-anthropic-labs",
-                         "lab":  "anthropic",
-                         "title":  "Introducing Claude Design by Anthropic Labs",
-                         "url":  "https://www.anthropic.com/news/claude-design-anthropic-labs",
-                         "published_at":  "2026-04-17",
-                         "category":  "Product"
-                     },
-                     {
-                         "id":  "openai-2026-04-16-codex",
-                         "lab":  "openai",
-                         "title":  "Codex，幾乎無所不能",
-                         "url":  "https://openai.com/index/codex-for-almost-everything/",
-                         "published_at":  "2026-04-16",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-16-gpt-rosalind",
-                         "lab":  "openai",
-                         "title":  "支援生命科學研究的 GPT-Rosalind 登場",
-                         "url":  "https://openai.com/index/introducing-gpt-rosalind/",
-                         "published_at":  "2026-04-16",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-16-",
-                         "lab":  "openai",
-                         "title":  "加速守護所有人的網路防禦生態系",
-                         "url":  "https://openai.com/index/accelerating-cyber-defense/",
-                         "published_at":  "2026-04-16",
-                         "category":  "安全防護"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-16-introducing-claude-opus-4-7",
-                         "lab":  "anthropic",
-                         "title":  "Introducing Claude Opus 4.7",
-                         "url":  "https://www.anthropic.com/news/claude-opus-4-7",
-                         "published_at":  "2026-04-16",
-                         "category":  "Product"
-                     },
-                     {
-                         "id":  "openai-2026-04-15-agents-sdk",
-                         "lab":  "openai",
-                         "title":  "Agents SDK 的下一步進化",
-                         "url":  "https://openai.com/index/agents-sdk-next-evolution/",
-                         "published_at":  "2026-04-15",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-04-14-",
-                         "lab":  "openai",
-                         "title":  "網路防禦新時代的可信存取",
-                         "url":  "https://openai.com/index/trusted-access-for-cyber-new-era/",
-                         "published_at":  "2026-04-14",
-                         "category":  "安全防護"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-14-launching-the-claude-partner-network",
-                         "lab":  "anthropic",
-                         "title":  "Launching the Claude Partner Network",
-                         "url":  "https://www.anthropic.com/news/claude-partner-network",
-                         "published_at":  "2026-04-14",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-10-axios",
-                         "lab":  "openai",
-                         "title":  "我們對 Axios 開發工具遭入侵事件的回應",
-                         "url":  "https://openai.com/index/axios-developer-tool-compromise/",
-                         "published_at":  "2026-04-10",
-                         "category":  "安全防護"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-10-introducing-the-anthropic-institute",
-                         "lab":  "anthropic",
-                         "title":  "Introducing the Anthropic Institute",
-                         "url":  "https://www.anthropic.com/news/the-anthropic-institute",
-                         "published_at":  "2026-04-10",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-08-the-next-phase-of-enterprise-ai",
-                         "lab":  "openai",
-                         "title":  "The next phase of enterprise AI",
-                         "url":  "https://openai.com/index/next-phase-of-enterprise-ai/",
-                         "published_at":  "2026-04-08",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-04-08-",
-                         "lab":  "openai",
-                         "title":  "推出兒童安全藍圖",
-                         "url":  "https://openai.com/index/introducing-child-safety-blueprint/",
-                         "published_at":  "2026-04-08",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-08-anthropic-opens-sydney-office-its-fourth-in-a",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic opens Sydney office, its fourth in Asia Pacific",
-                         "url":  "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific",
-                         "published_at":  "2026-04-08",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-07-anthropic-and-mozilla-partner-to-integrate-cl",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic and Mozilla partner to integrate Claude into Firefox for cybersecurity",
-                         "url":  "https://www.anthropic.com/news/mozilla-firefox-security",
-                         "published_at":  "2026-04-07",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "anthropic-2026-04-07-project-glasswing",
-                         "lab":  "anthropic",
-                         "title":  "Project Glasswing",
-                         "url":  "https://www.anthropic.com/glasswing",
-                         "published_at":  "2026-04-07",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-04-06-openai",
-                         "lab":  "openai",
-                         "title":  "推出 OpenAI 安全研究人才獎助計畫",
-                         "url":  "https://openai.com/index/openai-safety-scholar-grants/",
-                         "published_at":  "2026-04-06",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-04-02-openai-tbpn",
-                         "lab":  "openai",
-                         "title":  "OpenAI 收購 TBPN",
-                         "url":  "https://openai.com/index/openai-acquires-tbpn/",
-                         "published_at":  "2026-04-02",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-04-02-codex",
-                         "lab":  "openai",
-                         "title":  "Codex 現已為團隊提供按用量計費的定價方式",
-                         "url":  "https://openai.com/index/codex-usage-based-pricing/",
-                         "published_at":  "2026-04-02",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-enabling-a-new-model-for-healthcare-with-ai-c",
-                         "lab":  "deepmind",
-                         "title":  "Enabling a new model for healthcare with AI co-clinician",
-                         "url":  "https://deepmind.google/blog/ai-co-clinician/",
-                         "published_at":  "2026-04",
-                         "category":  "Science"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-announcing-our-partnership-with-the-republic",
-                         "lab":  "deepmind",
-                         "title":  "Announcing our partnership with the Republic of Korea",
-                         "url":  "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
-                         "published_at":  "2026-04",
-                         "category":  "Responsibility \u0026 Safety"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-decoupled-diloco-a-new-frontier-for-resilient",
-                         "lab":  "deepmind",
-                         "title":  "Decoupled DiLoCo: A new frontier for resilient, distributed AI training",
-                         "url":  "https://deepmind.google/blog/decoupled-diloco/",
-                         "published_at":  "2026-04",
-                         "category":  "Research"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-partnering-with-industry-leaders-to-accelerat",
-                         "lab":  "deepmind",
-                         "title":  "Partnering with industry leaders to accelerate AI transformation",
-                         "url":  "https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/",
-                         "published_at":  "2026-04",
-                         "category":  "Responsibility \u0026 Safety"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-gemini-3-1-flash-tts-the-next-generation-of-e",
-                         "lab":  "deepmind",
-                         "title":  "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
-                         "url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
-                         "published_at":  "2026-04",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-gemini-robotics-er-1-6-powering-real-world-ro",
-                         "lab":  "deepmind",
-                         "title":  "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
-                         "url":  "https://deepmind.google/blog/gemini-robotics-er-1-6/",
-                         "published_at":  "2026-04",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "deepmind-2026-04-gemma-4-byte-for-byte-the-most-capable-open-m",
-                         "lab":  "deepmind",
-                         "title":  "Gemma 4: Byte for byte, the most capable open models",
-                         "url":  "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
-                         "published_at":  "2026-04",
-                         "category":  "Models"
-                     },
-                     {
-                         "id":  "openai-2026-03-31-openai-1-220-ai",
-                         "lab":  "openai",
-                         "title":  "OpenAI 募得 1,220 億美元，加速 AI 邁入下一階段",
-                         "url":  "https://openai.com/index/openai-raises-122-billion/",
-                         "published_at":  "2026-03-31",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-26-where-we-stand-on-the-department-of-war",
-                         "lab":  "anthropic",
-                         "title":  "Where we stand on the Department of War",
-                         "url":  "https://www.anthropic.com/news/where-stand-department-war",
-                         "published_at":  "2026-03-26",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-25-",
-                         "lab":  "openai",
-                         "title":  "深入了解我們如何制定模型規格",
-                         "url":  "https://openai.com/index/model-spec-deep-dive/",
-                         "published_at":  "2026-03-25",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-03-25-openai",
-                         "lab":  "openai",
-                         "title":  "推出 OpenAI 安全漏洞賞金計畫",
-                         "url":  "https://openai.com/index/openai-security-bug-bounty/",
-                         "published_at":  "2026-03-25",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-25-statement-on-comments-by-secretary-of-defense",
-                         "lab":  "anthropic",
-                         "title":  "Statement on Comments by Secretary of Defense",
-                         "url":  "https://www.anthropic.com/news/statement-comments-secr",
-                         "published_at":  "2026-03-25",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-24-ai",
-                         "lab":  "openai",
-                         "title":  "協助開發者打造更安全的青少年 AI 體驗",
-                         "url":  "https://openai.com/index/teen-ai-experience-guidelines/",
-                         "published_at":  "2026-03-24",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-03-24-openai",
-                         "lab":  "openai",
-                         "title":  "OpenAI 基金會最新動態",
-                         "url":  "https://openai.com/index/openai-foundation-update/",
-                         "published_at":  "2026-03-24",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-03-24-chatgpt",
-                         "lab":  "openai",
-                         "title":  "在 ChatGPT 中推動商品探索",
-                         "url":  "https://openai.com/index/shopping-discovery-in-chatgpt/",
-                         "published_at":  "2026-03-24",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-24-anthropic-and-oracle-announce-cloud-partnersh",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic and Oracle announce cloud partnership",
-                         "url":  "https://www.anthropic.com/news/anthropic-oracle-partnership",
-                         "published_at":  "2026-03-24",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-23-sora",
-                         "lab":  "openai",
-                         "title":  "安全地使用 Sora 創作",
-                         "url":  "https://openai.com/index/safe-sora-creative-use/",
-                         "published_at":  "2026-03-23",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-20-model-welfare-at-anthropic",
-                         "lab":  "anthropic",
-                         "title":  "Model welfare at Anthropic",
-                         "url":  "https://www.anthropic.com/news/model-welfare",
-                         "published_at":  "2026-03-20",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-19-",
-                         "lab":  "openai",
-                         "title":  "我們如何監控內部程式碼編寫智慧體的行為錯位",
-                         "url":  "https://openai.com/index/monitoring-internal-coding-agent-misalignment/",
-                         "published_at":  "2026-03-19",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-03-19-openai-astral",
-                         "lab":  "openai",
-                         "title":  "OpenAI 將收購 Astral",
-                         "url":  "https://openai.com/index/openai-to-acquire-astral/",
-                         "published_at":  "2026-03-19",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-18-what-81-000-people-want-from-ai",
-                         "lab":  "anthropic",
-                         "title":  "What 81,000 people want from AI",
-                         "url":  "https://www.anthropic.com/81k-interviews",
-                         "published_at":  "2026-03-18",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-17-openai-japan-announces-japan-teen-safety-blue",
-                         "lab":  "openai",
-                         "title":  "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
-                         "url":  "https://openai.com/index/japan-teen-safety-blueprint/",
-                         "published_at":  "2026-03-17",
-                         "category":  "安全"
-                     },
-                     {
-                         "id":  "openai-2026-03-17-gpt-5-4-mini-nano",
-                         "lab":  "openai",
-                         "title":  "GPT-5.4 mini 和 nano 登場",
-                         "url":  "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
-                         "published_at":  "2026-03-17",
-                         "category":  "公司"
-                     },
-                     {
-                         "id":  "openai-2026-03-16-codex-security-sast",
-                         "lab":  "openai",
-                         "title":  "為什麼 Codex Security 不採用 SAST 報告",
-                         "url":  "https://openai.com/index/why-codex-security-doesnt-include-sast/",
-                         "published_at":  "2026-03-16",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-16-anthropic-raises-series-f-funding",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic raises Series F funding",
-                         "url":  "https://www.anthropic.com/news/anthropic-launches-series-f",
-                         "published_at":  "2026-03-16",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-11-ai",
-                         "lab":  "openai",
-                         "title":  "設計能抵禦提示注入的 AI 智慧體",
-                         "url":  "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
-                         "published_at":  "2026-03-11",
-                         "category":  "安全防護"
-                     },
-                     {
-                         "id":  "openai-2026-03-11-responses-api",
-                         "lab":  "openai",
-                         "title":  "從模型到智慧體：為 Responses API 建立電腦執行環境",
-                         "url":  "https://openai.com/index/equip-responses-api-computer-environment/",
-                         "published_at":  "2026-03-11",
-                         "category":  "工程"
-                     },
-                     {
-                         "id":  "openai-2026-03-10-llm",
-                         "lab":  "openai",
-                         "title":  "強化前沿 LLM 的指令階層",
-                         "url":  "https://openai.com/index/instruction-hierarchy-challenge/",
-                         "published_at":  "2026-03-10",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "openai-2026-03-10-chatgpt",
-                         "lab":  "openai",
-                         "title":  "在 ChatGPT 中探索學習數學與科學的新方式",
-                         "url":  "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/",
-                         "published_at":  "2026-03-10",
-                         "category":  "AI 採用"
-                     },
-                     {
-                         "id":  "anthropic-2026-03-10-anthropic-and-samsung-announce-strategic-part",
-                         "lab":  "anthropic",
-                         "title":  "Anthropic and Samsung announce strategic partnership",
-                         "url":  "https://www.anthropic.com/news/anthropic-samsung",
-                         "published_at":  "2026-03-10",
-                         "category":  "Announcements"
-                     },
-                     {
-                         "id":  "openai-2026-03-09-openai-promptfoo",
-                         "lab":  "openai",
-                         "title":  "OpenAI 將收購 Promptfoo",
-                         "url":  "https://openai.com/index/openai-to-acquire-promptfoo/",
-                         "published_at":  "2026-03-09",
-                         "category":  "公司"
-                     },
-                     {
-           
+{
+  "meta": {
+    "description": "Raw article metadata from official lab websites, 2026 only. For RS/RAG experiments — do NOT mix with queue.json.",
+    "crawled_at": "2026-05-28T00:00:00Z",
+    "note": "DeepMind dates have month precision only (date_precision: month). Anthropic articles may have some gaps in Jan–Mar 2026.",
+    "counts": {
+      "openai": 69,
+      "anthropic": 34,
+      "deepmind": 25,
+      "total": 128
+    },
+    "last_crawled": "2026-06-20",
+    "total": 146
+  },
+  "articles": [
+    {
+      "id": "anthropic-20260619-claude-code-expertise",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "title": "Claude Code Agentic Coding Usage Study",
+      "published_at": "2026-06-19",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260618-project-fetch-phase-two",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/project-fetch-phase-two",
+      "title": "Project Fetch Phase Two",
+      "published_at": "2026-06-18",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260618-biomysterybench",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench",
+      "title": "Evaluating Claude For Bioinformatics With BioMysteryBench",
+      "published_at": "2026-06-18",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260615-emotion-concepts-function",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/emotion-concepts-function",
+      "title": "Emotion as Functional Concepts in Claude",
+      "published_at": "2026-06-15",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260615-making-claude-a-chemist",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/making-claude-a-chemist",
+      "title": "Making Claude a Chemist",
+      "published_at": "2026-06-15",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260610-agents-in-biology",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/agents-in-biology",
+      "title": "Paving the Way for Agents in Biology",
+      "published_at": "2026-06-10",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260605-measuring-agent-autonomy",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+      "title": "Measuring Emerging Risks of Agentic AI",
+      "published_at": "2026-06-05",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260605-emergent-misalignment-reward-hacking",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking",
+      "title": "Emergent Misalignment from Reward Hacking",
+      "published_at": "2026-06-05",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260605-introspection",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/introspection",
+      "title": "Studying Claude's Self-Introspective Capabilities",
+      "published_at": "2026-06-05",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260605-automated-alignment-researchers",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/automated-alignment-researchers",
+      "title": "Automated Alignment Researchers: Weak-to-Strong Supervision",
+      "published_at": "2026-06-05",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "anthropic-20260605-assistant-axis",
+      "lab": "anthropic",
+      "url": "https://www.anthropic.com/research/assistant-axis",
+      "title": "The Assistant Axis: Mapping LLM Persona Space",
+      "published_at": "2026-06-05",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "openai-20260617-life-sci-bench",
+      "lab": "openai",
+      "url": "https://openai.com/index/introducing-life-sci-bench/",
+      "title": "Introducing LifeSciBench",
+      "published_at": "2026-06-17",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "openai-20260616-deployment-simulation",
+      "lab": "openai",
+      "url": "https://openai.com/index/deployment-simulation/",
+      "title": "Predicting model behavior before release by simulating deployment",
+      "published_at": "2026-06-16",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "openai-20260608-openai-submits-confidential-s-1",
+      "lab": "openai",
+      "url": "https://openai.com/index/openai-submits-confidential-s-1/",
+      "title": "OpenAI Submits Confidential S-1 to the SEC",
+      "published_at": "2026-06-08",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "deepmind-20260618-securing-future-ai-agents",
+      "lab": "deepmind",
+      "url": "https://deepmind.google/discover/blog/securing-future-ai-agents/",
+      "title": "Securing the future of AI agents",
+      "published_at": "2026-06-18",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "deepmind-20260616-uk-house-building",
+      "lab": "deepmind",
+      "url": "https://deepmind.google/discover/blog/uk-house-building/",
+      "title": "Using AI to speed up UK planning decisions",
+      "published_at": "2026-06-16",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "deepmind-20260611-multi-agent-safety",
+      "lab": "deepmind",
+      "url": "https://deepmind.google/discover/blog/multi-agent-safety/",
+      "title": "Multi-agent AI safety research funding",
+      "published_at": "2026-06-11",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "deepmind-20260609-sierra-leone-learning",
+      "lab": "deepmind",
+      "url": "https://deepmind.google/discover/blog/sierra-leone-learning/",
+      "title": "AI-assisted learning in Sierra Leone",
+      "published_at": "2026-06-09",
+      "crawled_at": "2026-06-20"
+    },
+    {
+      "id": "openai-2026-05-27-building-self-improving-tax-agents-with-codex",
+      "lab": "openai",
+      "title": "Building self-improving tax agents with Codex",
+      "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+      "published_at": "2026-05-27",
+      "category": "Engineering",
+      "crawled_at": "2026-05-28T00:00:00Z"
+    },
+    {
+      "id": "anthropic-2026-05-26-anthropic-appoints-kiyoung-choi-as-representa",
+      "lab": "anthropic",
+      "title": "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+      "url": "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+      "published_at": "2026-05-26",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-05-25-anthropic-co-founder-chris-olah-s-remarks-on",
+      "lab": "anthropic",
+      "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
+      "url": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+      "published_at": "2026-05-25",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-22-openai-named-a-leader-in-enterprise-coding-ag",
+      "lab": "openai",
+      "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+      "url": "https://openai.com/index/gartner-2026-agentic-coding-leader/",
+      "published_at": "2026-05-22",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-05-22-project-glasswing-an-initial-update",
+      "lab": "anthropic",
+      "title": "Project Glasswing: An initial update",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update",
+      "published_at": "2026-05-22",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-20-an-openai-model-has-disproved-a-central-conje",
+      "lab": "openai",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20",
+      "category": "研究"
+    },
+    {
+      "id": "openai-2026-05-19-ai",
+      "lab": "openai",
+      "title": "推進內容來源機制，打造更安全、更透明的 AI 生態系",
+      "url": "https://openai.com/index/advancing-content-provenance/",
+      "published_at": "2026-05-19",
+      "category": "安全"
+    },
+    {
+      "id": "anthropic-2026-05-19-widening-the-conversation-on-frontier-ai",
+      "lab": "anthropic",
+      "title": "Widening the conversation on frontier AI",
+      "url": "https://www.anthropic.com/news/widening-conversation-ai",
+      "published_at": "2026-05-19",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-05-19-kpmg-integrates-claude-across-its-core-busine",
+      "lab": "anthropic",
+      "title": "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
+      "url": "https://www.anthropic.com/news/anthropic-kpmg",
+      "published_at": "2026-05-19",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-18-openai-dell-technologies-codex",
+      "lab": "openai",
+      "title": "OpenAI 與 Dell Technologies 合作，將 Codex 帶入混合式與地端企業環境",
+      "url": "https://openai.com/index/dell-codex-enterprise-partnership/",
+      "published_at": "2026-05-18",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-05-18-anthropic-acquires-stainless",
+      "lab": "anthropic",
+      "title": "Anthropic acquires Stainless",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "published_at": "2026-05-18",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-15-chatgpt",
+      "lab": "openai",
+      "title": "ChatGPT 中全新的個人理財體驗",
+      "url": "https://openai.com/index/personal-finance-chatgpt/",
+      "published_at": "2026-05-15",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-05-14-work-with-codex-from-anywhere",
+      "lab": "openai",
+      "title": "Work with Codex from anywhere",
+      "url": "https://openai.com/index/work-with-codex-from-anywhere/",
+      "published_at": "2026-05-14",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-05-14-helping-chatgpt-better-recognize-context-in-s",
+      "lab": "openai",
+      "title": "Helping ChatGPT better recognize context in sensitive conversations",
+      "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/",
+      "published_at": "2026-05-14",
+      "category": "安全"
+    },
+    {
+      "id": "anthropic-2026-05-14-pwc-is-deploying-claude-to-build-technology-e",
+      "lab": "anthropic",
+      "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+      "published_at": "2026-05-14",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-05-14-anthropic-forms-200-million-partnership-with",
+      "lab": "anthropic",
+      "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+      "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+      "published_at": "2026-05-14",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-13-codex-windows",
+      "lab": "openai",
+      "title": "打造安全且有效的沙箱，讓 Codex 能在 Windows 上運作",
+      "url": "https://openai.com/index/building-codex-windows-sandbox/",
+      "published_at": "2026-05-13",
+      "category": "工程"
+    },
+    {
+      "id": "openai-2026-05-13-tanstack-npm",
+      "lab": "openai",
+      "title": "我們對 TanStack npm 供應鏈攻擊事件的回應",
+      "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+      "published_at": "2026-05-13",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-05-13-introducing-claude-for-small-business",
+      "lab": "anthropic",
+      "title": "Introducing Claude for Small Business",
+      "url": "https://www.anthropic.com/news/claude-for-small-business",
+      "published_at": "2026-05-13",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-12-parameter-golf",
+      "lab": "openai",
+      "title": "我們從 Parameter Golf 學到什麼",
+      "url": "https://openai.com/index/what-parameter-golf-taught-us/",
+      "published_at": "2026-05-12",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-05-11-openai",
+      "lab": "openai",
+      "title": "OpenAI 校園網路：學生社團意願表單",
+      "url": "https://openai.com/index/openai-campus-network/",
+      "published_at": "2026-05-11",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-05-11-openai-launches-the-openai-deployment-company",
+      "lab": "openai",
+      "title": "OpenAI launches the OpenAI Deployment Company to help businesses build around intelligence",
+      "url": "https://openai.com/index/openai-launches-the-deployment-company/",
+      "published_at": "2026-05-11",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-05-08-openai-codex",
+      "lab": "openai",
+      "title": "在 OpenAI 安全使用 Codex",
+      "url": "https://openai.com/index/safe-codex-usage-at-openai/",
+      "published_at": "2026-05-08",
+      "category": "安全防護"
+    },
+    {
+      "id": "openai-2026-05-07-scaling-trusted-access-for-cyber-with-gpt-5-5",
+      "lab": "openai",
+      "title": "Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber",
+      "url": "https://openai.com/index/scaling-trusted-access-for-cyber/",
+      "published_at": "2026-05-07",
+      "category": "安全防護"
+    },
+    {
+      "id": "openai-2026-05-07-advancing-voice-intelligence-with-new-models",
+      "lab": "openai",
+      "title": "Advancing voice intelligence with new models in the API",
+      "url": "https://openai.com/index/new-voice-intelligence-models/",
+      "published_at": "2026-05-07",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-05-07-chatgpt",
+      "lab": "openai",
+      "title": "ChatGPT 的「可信任聯絡人」功能",
+      "url": "https://openai.com/index/chatgpt-trusted-contacts/",
+      "published_at": "2026-05-07",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-05-07-chatgpt",
+      "lab": "openai",
+      "title": "在 ChatGPT 中測試廣告",
+      "url": "https://openai.com/index/testing-ads-in-chatgpt/",
+      "published_at": "2026-05-07",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-05-06-",
+      "lab": "openai",
+      "title": "前沿企業如何拉大領先差距",
+      "url": "https://openai.com/index/how-frontier-enterprises-widen-their-lead/",
+      "published_at": "2026-05-06",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-05-06-introducing-chatgpt-futures-class-of-2026",
+      "lab": "openai",
+      "title": "Introducing ChatGPT Futures: Class of 2026",
+      "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026/",
+      "published_at": "2026-05-06",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-05-06-higher-usage-limits-for-claude-and-a-compute",
+      "lab": "anthropic",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "published_at": "2026-05-06",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-05-05-gpt-5-5-instant-system-card",
+      "lab": "openai",
+      "title": "GPT-5.5 Instant System Card",
+      "url": "https://openai.com/index/gpt-5-5-instant-system-card/",
+      "published_at": "2026-05-05",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-05-05-supercomputer-networking-to-accelerate-large",
+      "lab": "openai",
+      "title": "Supercomputer networking to accelerate large scale AI training",
+      "url": "https://openai.com/index/mrc-supercomputer-networking/",
+      "published_at": "2026-05-05",
+      "category": "工程"
+    },
+    {
+      "id": "openai-2026-05-05-gpt-5-5-instant",
+      "lab": "openai",
+      "title": "GPT-5.5 Instant：更聰明、更清晰，也更個人化",
+      "url": "https://openai.com/index/introducing-gpt-5-5-instant/",
+      "published_at": "2026-05-05",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-05-05-new-ways-to-buy-chatgpt-ads",
+      "lab": "openai",
+      "title": "New ways to buy ChatGPT ads",
+      "url": "https://openai.com/index/new-ways-to-buy-chatgpt-ads/",
+      "published_at": "2026-05-05",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-05-05-emea",
+      "lab": "openai",
+      "title": "促進 EMEA 地區青少年安全與福祉",
+      "url": "https://openai.com/index/emea-youth-safety-wellbeing/",
+      "published_at": "2026-05-05",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-05-04-openai-ai",
+      "lab": "openai",
+      "title": "OpenAI 如何大規模提供低延遲語音 AI",
+      "url": "https://openai.com/index/how-openai-serves-low-latency-voice-ai-at-scale/",
+      "published_at": "2026-05-04",
+      "category": "工程"
+    },
+    {
+      "id": "anthropic-2026-05-01-building-reliable-agents-for-finance",
+      "lab": "anthropic",
+      "title": "Building reliable agents for finance",
+      "url": "https://www.anthropic.com/news/finance-agents",
+      "published_at": "2026-05-01",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-05-01-anthropic-launches-enterprise-ai-services-com",
+      "lab": "anthropic",
+      "title": "Anthropic launches enterprise AI services company",
+      "url": "https://www.anthropic.com/news/enterprise-ai-services-company",
+      "published_at": "2026-05-01",
+      "category": "Announcements"
+    },
+    {
+      "id": "deepmind-2026-05-introducing-gemini-omni",
+      "lab": "deepmind",
+      "title": "Introducing Gemini Omni",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
+      "published_at": "2026-05",
+      "category": "Models"
+    },
+    {
+      "id": "deepmind-2026-05-strengthening-singapore-s-ai-future-a-new-nat",
+      "lab": "deepmind",
+      "title": "Strengthening Singapore's AI Future: A New National Partnership",
+      "url": "https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/",
+      "published_at": "2026-05",
+      "category": "Responsibility & Safety"
+    },
+    {
+      "id": "deepmind-2026-05-gemini-3-5-frontier-intelligence-with-action",
+      "lab": "deepmind",
+      "title": "Gemini 3.5: frontier intelligence with action",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "published_at": "2026-05",
+      "category": "Models"
+    },
+    {
+      "id": "deepmind-2026-05-gemini-for-science-ai-experiments-and-tools-f",
+      "lab": "deepmind",
+      "title": "Gemini for Science: AI experiments and tools for a new era of discovery",
+      "url": "https://deepmind.google/blog/gemini-for-science-io-2026/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-co-scientist-a-multi-agent-ai-partner-to-acce",
+      "lab": "deepmind",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-introducing-google-antigravity-2-0",
+      "lab": "deepmind",
+      "title": "Introducing Google Antigravity 2.0",
+      "url": "https://antigravity.google/blog/introducing-google-antigravity-2-0",
+      "published_at": "2026-05",
+      "category": "Models"
+    },
+    {
+      "id": "deepmind-2026-05-making-it-easier-to-understand-how-content-wa",
+      "lab": "deepmind",
+      "title": "Making it easier to understand how content was created and edited",
+      "url": "https://deepmind.google/blog/identifying-ai-generated-media-online/",
+      "published_at": "2026-05",
+      "category": "Responsibility & Safety"
+    },
+    {
+      "id": "deepmind-2026-05-how-weathernext-helped-the-national-hurricane",
+      "lab": "deepmind",
+      "title": "How WeatherNext helped the National Hurricane Center better predict Hurricane Melissa's historic landfall in Jamaica",
+      "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-simulate-real-world-places-with-project-genie",
+      "lab": "deepmind",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "url": "https://deepmind.google/blog/project-genie-expands/",
+      "published_at": "2026-05",
+      "category": "Models"
+    },
+    {
+      "id": "deepmind-2026-05-uniting-biological-toolkits-for-a-new-approac",
+      "lab": "deepmind",
+      "title": "Uniting biological toolkits for a new approach to ALS",
+      "url": "https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-uncovering-repurposed-medicines-to-fight-live",
+      "lab": "deepmind",
+      "title": "Uncovering repurposed medicines to fight liver fibrosis",
+      "url": "https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-finding-the-molecular-switches-behind-new-inf",
+      "lab": "deepmind",
+      "title": "Finding the molecular switches behind new infectious diseases",
+      "url": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-accelerating-discovery-of-liver-disease-mecha",
+      "lab": "deepmind",
+      "title": "Accelerating discovery of liver disease mechanisms",
+      "url": "https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-opening-new-paths-in-aging-research",
+      "lab": "deepmind",
+      "title": "Opening new paths in aging research",
+      "url": "https://deepmind.google/blog/opening-new-paths-in-aging-research/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-fast-tracking-genetic-leads-to-reverse-cellul",
+      "lab": "deepmind",
+      "title": "Fast-tracking genetic leads to reverse cellular aging",
+      "url": "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-05-we-re-launching-the-google-deepmind-accelerat",
+      "lab": "deepmind",
+      "title": "We're launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
+      "url": "https://deepmind.google/blog/accelerator-ai-for-the-planet/",
+      "published_at": "2026-05",
+      "category": "Company"
+    },
+    {
+      "id": "deepmind-2026-05-reimagining-the-mouse-pointer-for-the-ai-era",
+      "lab": "deepmind",
+      "title": "Reimagining the mouse pointer for the AI era",
+      "url": "https://deepmind.google/blog/ai-pointer/",
+      "published_at": "2026-05",
+      "category": "Research"
+    },
+    {
+      "id": "deepmind-2026-05-alphaevolve-how-our-gemini-powered-coding-age",
+      "lab": "deepmind",
+      "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
+      "url": "https://deepmind.google/blog/alphaevolve-impact/",
+      "published_at": "2026-05",
+      "category": "Science"
+    },
+    {
+      "id": "openai-2026-04-30-",
+      "lab": "openai",
+      "title": "推出進階帳戶安全性",
+      "url": "https://openai.com/index/introducing-advanced-account-security/",
+      "published_at": "2026-04-30",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-04-30-introducing-claude-for-creative-work",
+      "lab": "anthropic",
+      "title": "Introducing Claude for Creative Work",
+      "url": "https://www.anthropic.com/news/claude-for-creative-work",
+      "published_at": "2026-04-30",
+      "category": "Product"
+    },
+    {
+      "id": "anthropic-2026-04-29-anthropic-appoints-theo-hourmouzis-as-general",
+      "lab": "anthropic",
+      "title": "Anthropic appoints Theo Hourmouzis as General Manager of Australia and New Zealand",
+      "url": "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+      "published_at": "2026-04-29",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-28-our-commitment-to-community-safety",
+      "lab": "openai",
+      "title": "Our commitment to community safety",
+      "url": "https://openai.com/index/our-commitment-to-community-safety/",
+      "published_at": "2026-04-28",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-04-28-openai-codex-aws",
+      "lab": "openai",
+      "title": "OpenAI 模型、Codex 與託管式智慧體登陸 AWS",
+      "url": "https://openai.com/index/openai-on-aws/",
+      "published_at": "2026-04-28",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-04-28-update-on-election-safeguards-and-ai-policy",
+      "lab": "anthropic",
+      "title": "Update on election safeguards and AI policy",
+      "url": "https://www.anthropic.com/news/election-safeguards-update",
+      "published_at": "2026-04-28",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-27-microsoft-openai",
+      "lab": "openai",
+      "title": "Microsoft 與 OpenAI 合作夥伴關係邁向下一階段",
+      "url": "https://openai.com/index/microsoft-openai-partnership-next-phase/",
+      "published_at": "2026-04-27",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-04-27-symphony",
+      "lab": "openai",
+      "title": "用於協調的開源規格：Symphony",
+      "url": "https://openai.com/index/symphony-open-source-spec/",
+      "published_at": "2026-04-27",
+      "category": "工程"
+    },
+    {
+      "id": "openai-2026-04-26-",
+      "lab": "openai",
+      "title": "我們的原則",
+      "url": "https://openai.com/index/our-principles/",
+      "published_at": "2026-04-26",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-04-25-anthropic-and-nec-announce-strategic-partners",
+      "lab": "anthropic",
+      "title": "Anthropic and NEC announce strategic partnership",
+      "url": "https://www.anthropic.com/news/anthropic-nec",
+      "published_at": "2026-04-25",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-04-24-anthropic-and-amazon-expand-partnership-with",
+      "lab": "anthropic",
+      "title": "Anthropic and Amazon expand partnership with new compute agreement",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "published_at": "2026-04-24",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-23-gpt-5-5",
+      "lab": "openai",
+      "title": "GPT-5.5 系統說明卡",
+      "url": "https://openai.com/index/gpt-5-5-system-card/",
+      "published_at": "2026-04-23",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-04-23-gpt-5-5",
+      "lab": "openai",
+      "title": "GPT-5.5 登場",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "published_at": "2026-04-23",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-23-gpt-5-5",
+      "lab": "openai",
+      "title": "GPT-5.5 生物漏洞賞金計畫",
+      "url": "https://openai.com/index/gpt-5-5-bio-bug-bounty/",
+      "published_at": "2026-04-23",
+      "category": "安全"
+    },
+    {
+      "id": "anthropic-2026-04-23-laxman-narasimhan-joins-anthropic-board",
+      "lab": "anthropic",
+      "title": "Laxman Narasimhan joins Anthropic board",
+      "url": "https://www.anthropic.com/news/narasimhan-board",
+      "published_at": "2026-04-23",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-22-chatgpt",
+      "lab": "openai",
+      "title": "讓 ChatGPT 更貼近臨床醫護人員的需求",
+      "url": "https://openai.com/index/making-chatgpt-better-for-clinicians/",
+      "published_at": "2026-04-22",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-22-websockets-responses-api",
+      "lab": "openai",
+      "title": "透過 WebSockets 加快 Responses API 中的智慧體工作流程",
+      "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets/",
+      "published_at": "2026-04-22",
+      "category": "工程"
+    },
+    {
+      "id": "openai-2026-04-22-chatgpt",
+      "lab": "openai",
+      "title": "ChatGPT 工作區智慧體登場",
+      "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
+      "published_at": "2026-04-22",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-22-openai-privacy-filter",
+      "lab": "openai",
+      "title": "OpenAI Privacy Filter 登場",
+      "url": "https://openai.com/index/introducing-openai-privacy-filter/",
+      "published_at": "2026-04-22",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-04-22-anthropic-announces-compute-partnerships-with",
+      "lab": "anthropic",
+      "title": "Anthropic announces compute partnerships with Google and Broadcom",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "published_at": "2026-04-22",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-21-chatgpt-2-0",
+      "lab": "openai",
+      "title": "ChatGPT 圖像 2.0 登場",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "published_at": "2026-04-21",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-21-codex",
+      "lab": "openai",
+      "title": "將 Codex 擴展至全球企業",
+      "url": "https://openai.com/index/scaling-codex-to-enterprises-worldwide/",
+      "published_at": "2026-04-21",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-04-21-anthropic-signs-mou-with-australian-governmen",
+      "lab": "anthropic",
+      "title": "Anthropic signs MOU with Australian government",
+      "url": "https://www.anthropic.com/news/australia-MOU",
+      "published_at": "2026-04-21",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-04-17-introducing-claude-design-by-anthropic-labs",
+      "lab": "anthropic",
+      "title": "Introducing Claude Design by Anthropic Labs",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "published_at": "2026-04-17",
+      "category": "Product"
+    },
+    {
+      "id": "openai-2026-04-16-codex",
+      "lab": "openai",
+      "title": "Codex，幾乎無所不能",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "published_at": "2026-04-16",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-16-gpt-rosalind",
+      "lab": "openai",
+      "title": "支援生命科學研究的 GPT-Rosalind 登場",
+      "url": "https://openai.com/index/introducing-gpt-rosalind/",
+      "published_at": "2026-04-16",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-16-",
+      "lab": "openai",
+      "title": "加速守護所有人的網路防禦生態系",
+      "url": "https://openai.com/index/accelerating-cyber-defense/",
+      "published_at": "2026-04-16",
+      "category": "安全防護"
+    },
+    {
+      "id": "anthropic-2026-04-16-introducing-claude-opus-4-7",
+      "lab": "anthropic",
+      "title": "Introducing Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "published_at": "2026-04-16",
+      "category": "Product"
+    },
+    {
+      "id": "openai-2026-04-15-agents-sdk",
+      "lab": "openai",
+      "title": "Agents SDK 的下一步進化",
+      "url": "https://openai.com/index/agents-sdk-next-evolution/",
+      "published_at": "2026-04-15",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-04-14-",
+      "lab": "openai",
+      "title": "網路防禦新時代的可信存取",
+      "url": "https://openai.com/index/trusted-access-for-cyber-new-era/",
+      "published_at": "2026-04-14",
+      "category": "安全防護"
+    },
+    {
+      "id": "anthropic-2026-04-14-launching-the-claude-partner-network",
+      "lab": "anthropic",
+      "title": "Launching the Claude Partner Network",
+      "url": "https://www.anthropic.com/news/claude-partner-network",
+      "published_at": "2026-04-14",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-10-axios",
+      "lab": "openai",
+      "title": "我們對 Axios 開發工具遭入侵事件的回應",
+      "url": "https://openai.com/index/axios-developer-tool-compromise/",
+      "published_at": "2026-04-10",
+      "category": "安全防護"
+    },
+    {
+      "id": "anthropic-2026-04-10-introducing-the-anthropic-institute",
+      "lab": "anthropic",
+      "title": "Introducing the Anthropic Institute",
+      "url": "https://www.anthropic.com/news/the-anthropic-institute",
+      "published_at": "2026-04-10",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-08-the-next-phase-of-enterprise-ai",
+      "lab": "openai",
+      "title": "The next phase of enterprise AI",
+      "url": "https://openai.com/index/next-phase-of-enterprise-ai/",
+      "published_at": "2026-04-08",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-04-08-",
+      "lab": "openai",
+      "title": "推出兒童安全藍圖",
+      "url": "https://openai.com/index/introducing-child-safety-blueprint/",
+      "published_at": "2026-04-08",
+      "category": "安全"
+    },
+    {
+      "id": "anthropic-2026-04-08-anthropic-opens-sydney-office-its-fourth-in-a",
+      "lab": "anthropic",
+      "title": "Anthropic opens Sydney office, its fourth in Asia Pacific",
+      "url": "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific",
+      "published_at": "2026-04-08",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-04-07-anthropic-and-mozilla-partner-to-integrate-cl",
+      "lab": "anthropic",
+      "title": "Anthropic and Mozilla partner to integrate Claude into Firefox for cybersecurity",
+      "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+      "published_at": "2026-04-07",
+      "category": "Announcements"
+    },
+    {
+      "id": "anthropic-2026-04-07-project-glasswing",
+      "lab": "anthropic",
+      "title": "Project Glasswing",
+      "url": "https://www.anthropic.com/glasswing",
+      "published_at": "2026-04-07",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-04-06-openai",
+      "lab": "openai",
+      "title": "推出 OpenAI 安全研究人才獎助計畫",
+      "url": "https://openai.com/index/openai-safety-scholar-grants/",
+      "published_at": "2026-04-06",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-04-02-openai-tbpn",
+      "lab": "openai",
+      "title": "OpenAI 收購 TBPN",
+      "url": "https://openai.com/index/openai-acquires-tbpn/",
+      "published_at": "2026-04-02",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-04-02-codex",
+      "lab": "openai",
+      "title": "Codex 現已為團隊提供按用量計費的定價方式",
+      "url": "https://openai.com/index/codex-usage-based-pricing/",
+      "published_at": "2026-04-02",
+      "category": "AI 採用"
+    },
+    {
+      "id": "deepmind-2026-04-enabling-a-new-model-for-healthcare-with-ai-c",
+      "lab": "deepmind",
+      "title": "Enabling a new model for healthcare with AI co-clinician",
+      "url": "https://deepmind.google/blog/ai-co-clinician/",
+      "published_at": "2026-04",
+      "category": "Science"
+    },
+    {
+      "id": "deepmind-2026-04-announcing-our-partnership-with-the-republic",
+      "lab": "deepmind",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+      "published_at": "2026-04",
+      "category": "Responsibility & Safety"
+    },
+    {
+      "id": "deepmind-2026-04-decoupled-diloco-a-new-frontier-for-resilient",
+      "lab": "deepmind",
+      "title": "Decoupled DiLoCo: A new frontier for resilient, distributed AI training",
+      "url": "https://deepmind.google/blog/decoupled-diloco/",
+      "published_at": "2026-04",
+      "category": "Research"
+    },
+    {
+      "id": "deepmind-2026-04-partnering-with-industry-leaders-to-accelerat",
+      "lab": "deepmind",
+      "title": "Partnering with industry leaders to accelerate AI transformation",
+      "url": "https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/",
+      "published_at": "2026-04",
+      "category": "Responsibility & Safety"
+    },
+    {
+      "id": "deepmind-2026-04-gemini-3-1-flash-tts-the-next-generation-of-e",
+      "lab": "deepmind",
+      "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
+      "published_at": "2026-04",
+      "category": "Models"
+    },
+    {
+      "id": "deepmind-2026-04-gemini-robotics-er-1-6-powering-real-world-ro",
+      "lab": "deepmind",
+      "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+      "published_at": "2026-04",
+      "category": "Models"
+    },
+    {
+      "id": "deepmind-2026-04-gemma-4-byte-for-byte-the-most-capable-open-m",
+      "lab": "deepmind",
+      "title": "Gemma 4: Byte for byte, the most capable open models",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "published_at": "2026-04",
+      "category": "Models"
+    },
+    {
+      "id": "openai-2026-03-31-openai-1-220-ai",
+      "lab": "openai",
+      "title": "OpenAI 募得 1,220 億美元，加速 AI 邁入下一階段",
+      "url": "https://openai.com/index/openai-raises-122-billion/",
+      "published_at": "2026-03-31",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-03-26-where-we-stand-on-the-department-of-war",
+      "lab": "anthropic",
+      "title": "Where we stand on the Department of War",
+      "url": "https://www.anthropic.com/news/where-stand-department-war",
+      "published_at": "2026-03-26",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-25-",
+      "lab": "openai",
+      "title": "深入了解我們如何制定模型規格",
+      "url": "https://openai.com/index/model-spec-deep-dive/",
+      "published_at": "2026-03-25",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-03-25-openai",
+      "lab": "openai",
+      "title": "推出 OpenAI 安全漏洞賞金計畫",
+      "url": "https://openai.com/index/openai-security-bug-bounty/",
+      "published_at": "2026-03-25",
+      "category": "安全"
+    },
+    {
+      "id": "anthropic-2026-03-25-statement-on-comments-by-secretary-of-defense",
+      "lab": "anthropic",
+      "title": "Statement on Comments by Secretary of Defense",
+      "url": "https://www.anthropic.com/news/statement-comments-secr",
+      "published_at": "2026-03-25",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-24-ai",
+      "lab": "openai",
+      "title": "協助開發者打造更安全的青少年 AI 體驗",
+      "url": "https://openai.com/index/teen-ai-experience-guidelines/",
+      "published_at": "2026-03-24",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-03-24-openai",
+      "lab": "openai",
+      "title": "OpenAI 基金會最新動態",
+      "url": "https://openai.com/index/openai-foundation-update/",
+      "published_at": "2026-03-24",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-03-24-chatgpt",
+      "lab": "openai",
+      "title": "在 ChatGPT 中推動商品探索",
+      "url": "https://openai.com/index/shopping-discovery-in-chatgpt/",
+      "published_at": "2026-03-24",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-03-24-anthropic-and-oracle-announce-cloud-partnersh",
+      "lab": "anthropic",
+      "title": "Anthropic and Oracle announce cloud partnership",
+      "url": "https://www.anthropic.com/news/anthropic-oracle-partnership",
+      "published_at": "2026-03-24",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-23-sora",
+      "lab": "openai",
+      "title": "安全地使用 Sora 創作",
+      "url": "https://openai.com/index/safe-sora-creative-use/",
+      "published_at": "2026-03-23",
+      "category": "安全"
+    },
+    {
+      "id": "anthropic-2026-03-20-model-welfare-at-anthropic",
+      "lab": "anthropic",
+      "title": "Model welfare at Anthropic",
+      "url": "https://www.anthropic.com/news/model-welfare",
+      "published_at": "2026-03-20",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-19-",
+      "lab": "openai",
+      "title": "我們如何監控內部程式碼編寫智慧體的行為錯位",
+      "url": "https://openai.com/index/monitoring-internal-coding-agent-misalignment/",
+      "published_at": "2026-03-19",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-03-19-openai-astral",
+      "lab": "openai",
+      "title": "OpenAI 將收購 Astral",
+      "url": "https://openai.com/index/openai-to-acquire-astral/",
+      "published_at": "2026-03-19",
+      "category": "公司"
+    },
+    {
+      "id": "anthropic-2026-03-18-what-81-000-people-want-from-ai",
+      "lab": "anthropic",
+      "title": "What 81,000 people want from AI",
+      "url": "https://www.anthropic.com/81k-interviews",
+      "published_at": "2026-03-18",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-17-openai-japan-announces-japan-teen-safety-blue",
+      "lab": "openai",
+      "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+      "url": "https://openai.com/index/japan-teen-safety-blueprint/",
+      "published_at": "2026-03-17",
+      "category": "安全"
+    },
+    {
+      "id": "openai-2026-03-17-gpt-5-4-mini-nano",
+      "lab": "openai",
+      "title": "GPT-5.4 mini 和 nano 登場",
+      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "published_at": "2026-03-17",
+      "category": "公司"
+    },
+    {
+      "id": "openai-2026-03-16-codex-security-sast",
+      "lab": "openai",
+      "title": "為什麼 Codex Security 不採用 SAST 報告",
+      "url": "https://openai.com/index/why-codex-security-doesnt-include-sast/",
+      "published_at": "2026-03-16",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-03-16-anthropic-raises-series-f-funding",
+      "lab": "anthropic",
+      "title": "Anthropic raises Series F funding",
+      "url": "https://www.anthropic.com/news/anthropic-launches-series-f",
+      "published_at": "2026-03-16",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-11-ai",
+      "lab": "openai",
+      "title": "設計能抵禦提示注入的 AI 智慧體",
+      "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+      "published_at": "2026-03-11",
+      "category": "安全防護"
+    },
+    {
+      "id": "openai-2026-03-11-responses-api",
+      "lab": "openai",
+      "title": "從模型到智慧體：為 Responses API 建立電腦執行環境",
+      "url": "https://openai.com/index/equip-responses-api-computer-environment/",
+      "published_at": "2026-03-11",
+      "category": "工程"
+    },
+    {
+      "id": "openai-2026-03-10-llm",
+      "lab": "openai",
+      "title": "強化前沿 LLM 的指令階層",
+      "url": "https://openai.com/index/instruction-hierarchy-challenge/",
+      "published_at": "2026-03-10",
+      "category": "AI 採用"
+    },
+    {
+      "id": "openai-2026-03-10-chatgpt",
+      "lab": "openai",
+      "title": "在 ChatGPT 中探索學習數學與科學的新方式",
+      "url": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/",
+      "published_at": "2026-03-10",
+      "category": "AI 採用"
+    },
+    {
+      "id": "anthropic-2026-03-10-anthropic-and-samsung-announce-strategic-part",
+      "lab": "anthropic",
+      "title": "Anthropic and Samsung announce strategic partnership",
+      "url": "https://www.anthropic.com/news/anthropic-samsung",
+      "published_at": "2026-03-10",
+      "category": "Announcements"
+    },
+    {
+      "id": "openai-2026-03-09-openai-promptfoo",
+      "lab": "openai",
+      "title": "OpenAI 將收購 Promptfoo",
+      "url": "https://openai.com/index/openai-to-acquire-promptfoo/",
+      "published_at": "2026-03-09",
+      "category": "公司"
+    }
+  ]
+}
