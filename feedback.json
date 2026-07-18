@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:51:05.857Z",
+  "updated_at": "2026-07-18T18:51:16.181Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -14,6 +14,7 @@
     "deepmind-20260611-multi-agent-safety": "dislike",
     "anthropic-20260610-agents-in-biology": "like",
     "deepmind-20260609-sierra-leone-learning": "dislike",
-    "openai-20260608-openai-submits-confidential-s-1": "dislike"
+    "openai-20260608-openai-submits-confidential-s-1": "dislike",
+    "anthropic-20260605-emergent-misalignment-reward-hacking": "dislike"
   }
 }
