@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:53:05.205Z",
+  "updated_at": "2026-07-18T18:53:06.189Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -28,6 +28,7 @@
     "anthropic-20260528-series-h": "dislike",
     "openai-20260527-tax-agents-codex": "like",
     "anthropic-20260527-coding-agents-social-sciences": "like",
-    "anthropic-20260527-milan-office": "dislike"
+    "anthropic-20260527-milan-office": "dislike",
+    "anthropic-20260526-korea-representative-director": "dislike"
   }
 }
