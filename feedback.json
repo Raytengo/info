@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:53:31.941Z",
+  "updated_at": "2026-07-18T18:53:36.663Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -34,6 +34,7 @@
     "anthropic-20260515-2028-ai-leadership": "dislike",
     "anthropic-20260520-natural-language-autoencoders": "like",
     "deepmind-20260521-co-scientist": "like",
-    "anthropic-20260522-glasswing-initial-update": "like"
+    "anthropic-20260522-glasswing-initial-update": "like",
+    "anthropic-20260525-chris-olah-pope-leo-encyclical": "dislike"
   }
 }
