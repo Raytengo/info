@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-07-18T18:49:22.302Z",
+  "updated_at": "2026-07-18T18:49:35.652Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
-    "anthropic-20260619-claude-code-expertise": "dislike"
+    "anthropic-20260619-claude-code-expertise": "dislike",
+    "anthropic-20260618-project-fetch-phase-two": "like"
   }
 }
