@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:50:47.054Z",
+  "updated_at": "2026-07-18T18:50:50.639Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -10,6 +10,7 @@
     "openai-20260617-life-sci-bench": "like",
     "openai-20260616-deployment-simulation": "dislike",
     "anthropic-20260615-emotion-concepts-function": "like",
-    "anthropic-20260615-making-claude-a-chemist": "like"
+    "anthropic-20260615-making-claude-a-chemist": "like",
+    "deepmind-20260611-multi-agent-safety": "dislike"
   }
 }
