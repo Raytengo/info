@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:53:26.450Z",
+  "updated_at": "2026-07-18T18:53:30.246Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -32,6 +32,7 @@
     "anthropic-20260526-korea-representative-director": "dislike",
     "anthropic-20260508-teaching-claude-why": "like",
     "anthropic-20260515-2028-ai-leadership": "dislike",
-    "anthropic-20260520-natural-language-autoencoders": "like"
+    "anthropic-20260520-natural-language-autoencoders": "like",
+    "deepmind-20260521-co-scientist": "like"
   }
 }
