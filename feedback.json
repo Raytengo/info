@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:52:47.265Z",
+  "updated_at": "2026-07-18T18:52:48.899Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -23,6 +23,7 @@
     "anthropic-20260603-services-track-partner-hub": "dislike",
     "anthropic-20260601-confidential-s1-sec": "dislike",
     "deepmind-20260601-gram-alignment-auditing": "like",
-    "openai-20260529-rosalind-biodefense": "like"
+    "openai-20260529-rosalind-biodefense": "like",
+    "anthropic-20260528-claude-opus-4-8": "dislike"
   }
 }
