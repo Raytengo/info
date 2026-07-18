@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:50:17.228Z",
+  "updated_at": "2026-07-18T18:50:41.406Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -7,6 +7,8 @@
     "anthropic-20260618-project-fetch-phase-two": "like",
     "anthropic-20260618-biomysterybench": "dislike",
     "deepmind-20260618-securing-future-ai-agents": "dislike",
-    "openai-20260617-life-sci-bench": "like"
+    "openai-20260617-life-sci-bench": "like",
+    "openai-20260616-deployment-simulation": "dislike",
+    "anthropic-20260615-emotion-concepts-function": "like"
   }
 }
