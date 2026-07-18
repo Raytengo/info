@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:51:53.385Z",
+  "updated_at": "2026-07-18T18:52:15.527Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -18,6 +18,7 @@
     "anthropic-20260605-emergent-misalignment-reward-hacking": "dislike",
     "anthropic-20260605-measuring-agent-autonomy": "dislike",
     "anthropic-20260605-introspection": "like",
-    "anthropic-20260605-automated-alignment-researchers": "like"
+    "anthropic-20260605-automated-alignment-researchers": "like",
+    "openai-20260603-gpt-rosalind-new-capabilities": "dislike"
   }
 }
