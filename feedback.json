@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T18:53:36.663Z",
+  "updated_at": "2026-07-19T05:21:28.382Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -35,6 +35,7 @@
     "anthropic-20260520-natural-language-autoencoders": "like",
     "deepmind-20260521-co-scientist": "like",
     "anthropic-20260522-glasswing-initial-update": "like",
-    "anthropic-20260525-chris-olah-pope-leo-encyclical": "dislike"
+    "anthropic-20260525-chris-olah-pope-leo-encyclical": "dislike",
+    "openai-20260716-why-teens-deserve-access-safe-ai": "dislike"
   }
 }
