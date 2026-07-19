@@ -1,18 +1,423 @@
 {
   "meta": {
     "description": "Raw article metadata from official lab websites, 2026 only. For RS/RAG experiments — do NOT mix with queue.json.",
-    "crawled_at": "2026-05-28T00:00:00Z",
+    "crawled_at": "2026-07-19T00:00:00Z",
     "note": "DeepMind dates have month precision only (date_precision: month). Anthropic articles may have some gaps in Jan–Mar 2026.",
     "counts": {
-      "openai": 69,
-      "anthropic": 34,
-      "deepmind": 25,
-      "total": 128
+      "total": 191,
+      "anthropic": 63,
+      "deepmind": 34,
+      "openai": 94
     },
-    "last_crawled": "2026-06-20",
-    "total": 146
+    "last_crawled": "2026-07-19",
+    "total": 191
   },
   "articles": [
+    {
+      "id": "anthropic-20260714-claude-for-teachers",
+      "lab": "anthropic",
+      "title": "Introducing Claude for Teachers",
+      "url": "https://www.anthropic.com/news/claude-for-teachers",
+      "published_at": "2026-07-14",
+      "category": "Product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260714-canadian-ai-research",
+      "lab": "anthropic",
+      "title": "Anthropic commits $10 million to Canadian AI research",
+      "url": "https://www.anthropic.com/news/canadian-ai-research",
+      "published_at": "2026-07-14",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260714-how-canada-uses-claude",
+      "lab": "anthropic",
+      "title": "How Canada uses Claude: Findings from the Anthropic Economic Index",
+      "url": "https://www.anthropic.com/research/how-canada-uses-claude",
+      "published_at": "2026-07-14",
+      "category": "Economic Research",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260713-claude-values-models-languages",
+      "lab": "anthropic",
+      "title": "Claude's values across models and languages",
+      "url": "https://www.anthropic.com/research/claude-values-models-languages",
+      "published_at": "2026-07-13",
+      "category": "Societal Impacts",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260709-ust-claude",
+      "lab": "anthropic",
+      "title": "UST is bringing Claude to physical AI",
+      "url": "https://www.anthropic.com/news/ust-claude",
+      "published_at": "2026-07-09",
+      "category": "Case Study",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260709-hard-questions",
+      "lab": "anthropic",
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "published_at": "2026-07-09",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260709-ben-bernanke",
+      "lab": "anthropic",
+      "title": "Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/ben-bernanke",
+      "published_at": "2026-07-09",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260709-reflect-with-claude",
+      "lab": "anthropic",
+      "title": "Introducing a way to reflect on how you use Claude",
+      "url": "https://www.anthropic.com/news/reflect-with-claude",
+      "published_at": "2026-07-09",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260709-claude-plays-robotics",
+      "lab": "anthropic",
+      "title": "Claude plays robotics",
+      "url": "https://www.anthropic.com/research/claude-plays-robotics",
+      "published_at": "2026-07-09",
+      "category": "Frontier Red Team",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260708-off-switch-dual-use",
+      "lab": "anthropic",
+      "title": "An off switch for dual-use knowledge in AI models",
+      "url": "https://www.anthropic.com/research/off-switch-dual-use",
+      "published_at": "2026-07-08",
+      "category": "Alignment",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260706-alberta-government-claude-cybersecurity",
+      "lab": "anthropic",
+      "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "url": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+      "published_at": "2026-07-06",
+      "category": "Case Study",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260706-global-workspace",
+      "lab": "anthropic",
+      "title": "A global workspace in language models",
+      "url": "https://www.anthropic.com/research/global-workspace",
+      "published_at": "2026-07-06",
+      "category": "Interpretability",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260706-making-of-claude-code",
+      "lab": "anthropic",
+      "title": "The Making of Claude Code",
+      "url": "https://www.anthropic.com/features/making-of-claude-code",
+      "published_at": "2026-07-06",
+      "category": "",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260702-fable-safeguards-jailbreak-framework",
+      "lab": "anthropic",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+      "published_at": "2026-07-02",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260630-claude-sonnet-5",
+      "lab": "anthropic",
+      "title": "Introducing Claude Sonnet 5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "published_at": "2026-06-30",
+      "category": "Product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260630-redeploying-fable-5",
+      "lab": "anthropic",
+      "title": "Redeploying Fable 5",
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "published_at": "2026-06-30",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260630-claude-science-ai-workbench",
+      "lab": "anthropic",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+      "published_at": "2026-06-30",
+      "category": "Announcements",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "anthropic-20260626-economic-index-june-2026-report",
+      "lab": "anthropic",
+      "title": "Anthropic Economic Index report: Cadences",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "published_at": "2026-06-26",
+      "category": "Economic Research",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "deepmind-20260716-bioresilience",
+      "lab": "deepmind",
+      "title": "Our approach to bioresilience",
+      "url": "https://deepmind.google/blog/our-approach-to-bioresilience/",
+      "published_at": "2026-07-16",
+      "category": "Responsibility & Safety",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "deepmind-20260714-atl-saathi",
+      "lab": "deepmind",
+      "title": "Empowering India's next generation of innovators with ATL Saathi",
+      "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/",
+      "published_at": "2026-07-14",
+      "category": "",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "deepmind-20260630-nano-banana-2-lite-omni-flash",
+      "lab": "deepmind",
+      "title": "Start building with Nano Banana 2 Lite and Gemini Omni Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+      "published_at": "2026-06-30",
+      "category": "",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "deepmind-20260624-computer-use-gemini-3-5-flash",
+      "lab": "deepmind",
+      "title": "Introducing computer use in Gemini 3.5 Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+      "published_at": "2026-06-24",
+      "category": "",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "deepmind-20260622-a24-partnership",
+      "lab": "deepmind",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/deepmind-a24-research-partnership/",
+      "published_at": "2026-06-22",
+      "category": "",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260717-a-scorecard-for-the-ai-age",
+      "lab": "openai",
+      "title": "A scorecard for the AI age",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age/",
+      "published_at": "2026-07-17",
+      "category": "company",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260716-why-teens-deserve-access-safe-ai",
+      "lab": "openai",
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      "published_at": "2026-07-16",
+      "category": "safety",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260715-advancing-ai-safety-through-state-and-federal-action",
+      "lab": "openai",
+      "title": "The US is advancing AI safety through state and federal action",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/",
+      "published_at": "2026-07-15",
+      "category": "global-affairs",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260715-unlocking-self-improvement-gpt-red",
+      "lab": "openai",
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "published_at": "2026-07-15",
+      "category": "safety",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260709-gpt-5-6",
+      "lab": "openai",
+      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "published_at": "2026-07-09",
+      "category": "product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260709-chatgpt-for-your-most-ambitious-work",
+      "lab": "openai",
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "published_at": "2026-07-09",
+      "category": "product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260709-gpt-5-6-preferred-model-microsoft-365-copilot",
+      "lab": "openai",
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/",
+      "published_at": "2026-07-09",
+      "category": "product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260709-bio-bug-bounty",
+      "lab": "openai",
+      "title": "OpenAI Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty/",
+      "published_at": "2026-07-09",
+      "category": "safety",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260708-government-national-security-partnerships",
+      "lab": "openai",
+      "title": "Our approach to government and national security partnerships",
+      "url": "https://openai.com/index/government-national-security-partnerships/",
+      "published_at": "2026-07-08",
+      "category": "global-affairs",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260708-separating-signal-from-noise-coding-evaluations",
+      "lab": "openai",
+      "title": "Separating signal from noise in coding evaluations",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+      "published_at": "2026-07-08",
+      "category": "research",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260708-k-12-educators-practical-skills",
+      "lab": "openai",
+      "title": "Helping K–12 educators build practical AI skills",
+      "url": "https://openai.com/index/k-12-educators-practical-skills/",
+      "published_at": "2026-07-08",
+      "category": "global-affairs",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260708-introducing-gpt-live",
+      "lab": "openai",
+      "title": "Introducing GPT-Live",
+      "url": "https://openai.com/index/introducing-gpt-live/",
+      "published_at": "2026-07-08",
+      "category": "product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260630-how-chatgpt-adoption-has-expanded",
+      "lab": "openai",
+      "title": "How ChatGPT adoption has expanded",
+      "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded/",
+      "published_at": "2026-06-30",
+      "category": "global-affairs",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260630-introducing-genebench-pro",
+      "lab": "openai",
+      "title": "Introducing GeneBench-Pro",
+      "url": "https://openai.com/index/introducing-genebench-pro/",
+      "published_at": "2026-06-30",
+      "category": "research",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260629-mapping-ai-jobs-transition-eu",
+      "lab": "openai",
+      "title": "Mapping Europe's AI Workforce Opportunity",
+      "url": "https://openai.com/index/mapping-ai-jobs-transition-eu/",
+      "published_at": "2026-06-29",
+      "category": "global-affairs",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260628-hp-frontier-partnership",
+      "lab": "openai",
+      "title": "HP Inc. launches Frontier strategic partnership with OpenAI",
+      "url": "https://openai.com/index/hp-frontier-partnership/",
+      "published_at": "2026-06-28",
+      "category": "company",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260626-previewing-gpt-5-6-sol",
+      "lab": "openai",
+      "title": "Previewing GPT-5.6 Sol: a next-generation model",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "published_at": "2026-06-26",
+      "category": "product",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260625-how-agents-are-transforming-work",
+      "lab": "openai",
+      "title": "How agents are transforming work",
+      "url": "https://openai.com/index/how-agents-are-transforming-work/",
+      "published_at": "2026-06-25",
+      "category": "company",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260624-openai-broadcom-jalapeno-inference-chip",
+      "lab": "openai",
+      "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "published_at": "2026-06-24",
+      "category": "company",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260623-helping-build-shared-standards-for-advanced-ai",
+      "lab": "openai",
+      "title": "Helping build shared standards for advanced AI",
+      "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai/",
+      "published_at": "2026-06-23",
+      "category": "global-affairs",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260622-daybreak-securing-the-world",
+      "lab": "openai",
+      "title": "Daybreak: Tools for securing every organization in the world",
+      "url": "https://openai.com/index/daybreak-securing-the-world/",
+      "published_at": "2026-06-22",
+      "category": "company",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "openai-20260621-samsung-electronics-chatgpt-codex-deployment",
+      "lab": "openai",
+      "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/",
+      "published_at": "2026-06-21",
+      "category": "company",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
     {
       "id": "anthropic-20260619-claude-code-expertise",
       "lab": "anthropic",

@@ -21,6 +21,9 @@ const QUEUE_URL = "https://raw.githubusercontent.com/Raytengo/info/master/queue.
 // Minutes each article stays on screen before rotating to the next
 const ROTATION_MINUTES = 5;
 
+// Widget only shows articles from the last N days ("this week").
+const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+
 const LAB_COLORS  = { openai: "#10A37F", anthropic: "#CC785C", deepmind: "#4285F4" };
 const LAB_LABELS  = { openai: "OpenAI",  anthropic: "Anthropic", deepmind: "DeepMind" };
 
@@ -295,6 +298,13 @@ async function fetchArticles() {
     if (LAB_FILTER) {
       articles = articles.filter(a => a.lab === LAB_FILTER);
     }
+
+    // Widget shows only THIS WEEK's news (last 7 days); the webpage shows the
+    // whole month (queue.json holds the month, widget filters it down).
+    const now    = Date.now();
+    const weekly = articles.filter(a => (now - new Date(a.published_at).getTime()) <= WEEK_MS);
+    // Fallback: if a quiet week has no new articles, show the month rather than an empty widget.
+    articles = weekly.length ? weekly : articles;
 
     articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
     return articles;
