@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T05:27:34.364Z",
+  "updated_at": "2026-07-19T05:27:37.330Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -47,6 +47,7 @@
     "anthropic-20260713-claude-values-models-languages": "like",
     "anthropic-20260709-ust-claude": "like",
     "anthropic-20260709-hard-questions": "dislike",
-    "anthropic-20260709-ben-bernanke": "dislike"
+    "anthropic-20260709-ben-bernanke": "dislike",
+    "anthropic-20260709-reflect-with-claude": "like"
   }
 }
