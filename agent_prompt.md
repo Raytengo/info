@@ -211,14 +211,21 @@ https://deepmind.google/sitemap.xml
     "count": {文章數}
   },
   "digest": {
-    "all": "一句話總結本週三家 lab 的整體動態",
-    "openai": "OpenAI 本週重點（若無新文章則填「本週無更新」）",
-    "anthropic": "Anthropic 本週重點（同上）",
-    "deepmind": "DeepMind 本週重點（同上）"
+    "all":       { "title": "近一個月 AI 研究總覽", "body": "..." },
+    "openai":    { "title": "OpenAI 近期方向",      "body": "..." },
+    "anthropic": { "title": "Anthropic 近期方向",   "body": "..." },
+    "deepmind":  { "title": "DeepMind 近期方向",    "body": "..." }
   },
   "articles": [ ...本週文章，含 summary 和 detail... ]
 }
 ```
+
+**digest body 格式（前端已支援列點渲染）：**
+
+- 第一行：一句總況（含篇數），不加列點符號。
+- 之後 2–5 行列點，每行格式 `• 標籤：內容`（`\n` 分行）。標籤 2–5 字（如 產品／研究／安全／旗艦換代），前端會自動加粗。
+- 每行內容 ≤ 35 字，只挑本期最大的幾件事，不求面面俱到；一樣禁用破折號、全形標點。
+- `all` 的列點跨三家挑重點；各 lab 的列點只講自家。若該 lab 本期無新文章，body 填「本期無更新」。
 
 articles 每筆格式：
 ```json

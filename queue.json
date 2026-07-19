@@ -6,19 +6,19 @@
   "digest": {
     "all": {
       "title": "近一個月 AI 研究總覽",
-      "body": "近 30 天（6/20–7/19）三家實驗室新增 45 篇。三家都換旗艦：Anthropic Claude Sonnet 5、OpenAI GPT-5.6（Sol／Luna）；OpenAI 主軸從跑分轉向「每美元完成多少工作」，ChatGPT 進化成能自主工作數小時的智慧體，並自研推論晶片 Jalapeño。\n\n研究面 Anthropic 最亮眼：模型內部被發現自發長出類似「全域工作區」的結構、GRAM 能在訓練後像關開關般移除危險知識；OpenAI 則罕見自曝編碼基準 SWE-Bench Pro 約三成任務有瑕疵。\n\n安全與治理密集：自我對弈紅隊 GPT-Red、生物越獄賞金常設化、亞伯達省用 50 個代理審 4.66 億行碼、柏南克加入長期利益信託；DeepMind 聚焦生物韌性框架與教育落地。"
+      "body": "6/20 至 7/19 共 45 篇：OpenAI 22、Anthropic 18、DeepMind 5。\n• 旗艦換代：Claude Sonnet 5 與 GPT-5.6 世代同月上線，主打性價比\n• 研究亮點：Claude 自發長出「全域工作區」；GRAM 可事後移除危險知識\n• 評估警訊：OpenAI 自曝 SWE-Bench Pro 約三成任務有瑕疵\n• 安全與治理：自我對弈紅隊 GPT-Red；亞伯達省 50 個代理審 4.66 億行碼"
     },
     "openai": {
       "title": "OpenAI 近期方向",
-      "body": "GPT-5.6 世代登場（Sol／Terra／Luna）、主打「每美元智慧」，ChatGPT 轉為 agentic 並深入 Microsoft 365；硬體端首發自研推論晶片 Jalapeño。安全面推自我對弈紅隊 GPT-Red、Daybreak 自動修補與生物越獄賞金常設化，並罕見自曝編碼評估基準的可靠性問題。"
+      "body": "本期 22 篇，主軸是 GPT-5.6 世代與「每美元智慧」。\n• 產品：ChatGPT 轉為可自主工作數小時的智慧體；自研推論晶片 Jalapeño\n• 研究：自曝 SWE-Bench Pro 三成任務有瑕疵；GeneBench-Pro 改測科研判斷力\n• 安全：自我對弈紅隊 GPT-Red；生物越獄賞金常設化"
     },
     "anthropic": {
       "title": "Anthropic 近期方向",
-      "body": "旗艦 Claude Sonnet 5 登場（效能逼近 Opus 4.8、價更低）。研究以可解釋性與對齊為重：語言模型自發形成「全域工作區」、GRAM 可事後移除雙用途危險知識、跨語言價值觀差異；應用與治理面擴向教育（Claude for Teachers）、政府資安（亞伯達省）與長期治理（柏南克入 LTBT）。"
+      "body": "本期 18 篇，研究密度三家最高。\n• 可解釋性：模型自發長出「全域工作區」；價值觀隨語言與版本浮動\n• 對齊：GRAM 像開關般移除危險知識；提出越獄嚴重度刻度 CJS\n• 產品與應用：Sonnet 5 逼近旗艦；亞伯達省 50 個代理審 4.66 億行碼"
     },
     "deepmind": {
       "title": "DeepMind 近期方向",
-      "body": "模型端一次更新多項：Gemini 3.5 Flash 內建電腦操作、Nano Banana 2 Lite 與 Omni Flash 主打又快又便宜的生成流水線；方向聚焦責任與教育——生物韌性（bioresilience）三支柱框架、給印度創客教師的 ATL Saathi，以及入股 A24 的創作研究合作。"
+      "body": "本期 5 篇，模型與責任兩條線。\n• 模型：Gemini 3.5 Flash 內建電腦操作；Nano Banana 2 Lite 走量產價位\n• 責任與落地：生物韌性三支柱；印度教師助手 ATL Saathi；入股 A24 共造創作工具"
     }
   },
   "articles": [
