@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T03:51:03.348Z",
+  "updated_at": "2026-07-20T03:51:04.216Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -47,6 +47,7 @@
     "openai-20260716-why-teens-deserve-access-safe-ai": "dislike",
     "openai-20260715-advancing-ai-safety-through-state-and-federal-action": "dislike",
     "openai-20260715-unlocking-self-improvement-gpt-red": "like",
-    "anthropic-20260714-claude-for-teachers": "dislike"
+    "anthropic-20260714-claude-for-teachers": "dislike",
+    "anthropic-20260714-canadian-ai-research": "dislike"
   }
 }
