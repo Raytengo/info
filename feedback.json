@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T06:53:52.970Z",
+  "updated_at": "2026-07-21T06:54:09.363Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -53,6 +53,7 @@
     "nvidia-20260623-dflash-speculative-decoding-blackwell": "dislike",
     "nvidia-20260720-cosmos-3-edge": "like",
     "nvidia-20260714-autoresearch-workflow-rl-agent-skills-nemo": "like",
-    "nvidia-20260714-post-train-cosmos-3-agent-skills": "like"
+    "nvidia-20260714-post-train-cosmos-3-agent-skills": "like",
+    "nvidia-20260714-lessons-from-the-leaderboard-ai-reasoning": "like"
   }
 }
