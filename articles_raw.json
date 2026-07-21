@@ -4,16 +4,25 @@
     "crawled_at": "2026-07-19T00:00:00Z",
     "note": "DeepMind dates have month precision only (date_precision: month). Anthropic articles may have some gaps in Jan–Mar 2026.",
     "counts": {
-      "total": 203,
+      "total": 204,
       "anthropic": 63,
       "deepmind": 34,
       "openai": 94,
-      "nvidia": 12
+      "nvidia": 13
     },
     "last_crawled": "2026-07-19",
-    "total": 203
+    "total": 204
   },
   "articles": [
+    {
+      "id": "nvidia-20260720-cosmos-3-edge",
+      "lab": "nvidia",
+      "title": "Introducing Cosmos 3 Edge",
+      "url": "https://huggingface.co/blog/nvidia/cosmos3edge",
+      "published_at": "2026-07-20",
+      "category": "Robotics / Physical AI",
+      "crawled_at": "2026-07-21T00:00:00Z"
+    },
     {
       "id": "nvidia-20260714-autoresearch-workflow-rl-agent-skills-nemo",
       "lab": "nvidia",

@@ -1,12 +1,12 @@
 {
   "meta": {
     "last_crawled": "2026-07-19T00:00:00Z",
-    "total": 57
+    "total": 58
   },
   "digest": {
     "all": {
       "title": "近一個月 AI 研究總覽",
-      "body": "6/20 至 7/19 共 57 篇：OpenAI 22、Anthropic 18、DeepMind 5、NVIDIA 12。\n• 旗艦換代：Claude Sonnet 5 與 GPT-5.6 世代同月上線，主打性價比\n• 研究亮點：Claude 自發長出「全域工作區」；GRAM 可事後移除危險知識\n• 評估警訊：OpenAI 自曝 SWE-Bench Pro 約三成任務有瑕疵\n• 安全與治理：自我對弈紅隊 GPT-Red；亞伯達省 50 個代理審 4.66 億行碼\n• 加速科學：NVIDIA 用 GPU 推進量子糾錯與生物運算，錯誤率最高降近 348 倍"
+      "body": "6/20 至 7/20 共 58 篇：OpenAI 22、Anthropic 18、DeepMind 5、NVIDIA 13。\n• 旗艦換代：Claude Sonnet 5 與 GPT-5.6 世代同月上線，主打性價比\n• 研究亮點：Claude 自發長出「全域工作區」；GRAM 可事後移除危險知識\n• 評估警訊：OpenAI 自曝 SWE-Bench Pro 約三成任務有瑕疵\n• 安全與治理：自我對弈紅隊 GPT-Red；亞伯達省 50 個代理審 4.66 億行碼\n• 加速科學：NVIDIA 用 GPU 推進量子糾錯與生物運算，錯誤率最高降近 348 倍"
     },
     "openai": {
       "title": "OpenAI 近期方向",
@@ -22,10 +22,21 @@
     },
     "nvidia": {
       "title": "NVIDIA 近期方向",
-      "body": "本期精選 12 篇，主軸橫跨科學運算、機器人與訓練推論系統。\n• 科學：量子糾錯邏輯錯誤率降近 348 倍；共折疊搜尋快 177 倍\n• 實體 AI：GR00T 人形政策進步 61%；機器人評測揭統計陷阱\n• 代理研究：自主代理五小時把小模型準確率拉到近 97%\n• 系統：主機卸載讓 671B 訓練快 57%；DFlash 推論最高快 15 倍"
+      "body": "本期精選 13 篇，主軸橫跨科學運算、機器人與訓練推論系統。\n• 科學：量子糾錯邏輯錯誤率降近 348 倍；共折疊搜尋快 177 倍\n• 實體 AI：Cosmos 3 Edge 4B 可上機即時跑；GR00T 人形 +61%\n• 代理研究：自主代理五小時把小模型準確率拉到近 97%\n• 系統：主機卸載讓 671B 訓練快 57%；DFlash 推論最高快 15 倍"
     }
   },
   "articles": [
+    {
+      "id": "nvidia-20260720-cosmos-3-edge",
+      "lab": "nvidia",
+      "title": "Introducing Cosmos 3 Edge",
+      "summary": "Cosmos 3 Edge 只要 4B，就能在 Jetson 機器人上即時跑世界模型、不連雲端",
+      "detail": "以理解與動作兩座 transformer 塔把世界模型縮到 4B，能在 Jetson Thor 上維持 15 Hz 即時推論、每次產生 32 個動作。同級模型中它的 VANTAGE-Bench 視覺分析排第一，機器人策略學習也達 SOTA；但它跑在偏低的控制解析度下，更複雜的場景仍得靠更大的 Nano 或 Super。\n\n重點：世界模型小到能在機體上離線運行，讓實體 AI 從雲端推論走向機器人本身即時決策。",
+      "url": "https://huggingface.co/blog/nvidia/cosmos3edge",
+      "image_url": "",
+      "published_at": "2026-07-20",
+      "crawled_at": "2026-07-21T00:00:00Z"
+    },
     {
       "id": "openai-20260717-a-scorecard-for-the-ai-age",
       "lab": "openai",
