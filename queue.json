@@ -1,12 +1,12 @@
 {
   "meta": {
     "last_crawled": "2026-07-19T00:00:00Z",
-    "total": 45
+    "total": 57
   },
   "digest": {
     "all": {
       "title": "近一個月 AI 研究總覽",
-      "body": "6/20 至 7/19 共 45 篇：OpenAI 22、Anthropic 18、DeepMind 5。\n• 旗艦換代：Claude Sonnet 5 與 GPT-5.6 世代同月上線，主打性價比\n• 研究亮點：Claude 自發長出「全域工作區」；GRAM 可事後移除危險知識\n• 評估警訊：OpenAI 自曝 SWE-Bench Pro 約三成任務有瑕疵\n• 安全與治理：自我對弈紅隊 GPT-Red；亞伯達省 50 個代理審 4.66 億行碼"
+      "body": "6/20 至 7/19 共 57 篇：OpenAI 22、Anthropic 18、DeepMind 5、NVIDIA 12。\n• 旗艦換代：Claude Sonnet 5 與 GPT-5.6 世代同月上線，主打性價比\n• 研究亮點：Claude 自發長出「全域工作區」；GRAM 可事後移除危險知識\n• 評估警訊：OpenAI 自曝 SWE-Bench Pro 約三成任務有瑕疵\n• 安全與治理：自我對弈紅隊 GPT-Red；亞伯達省 50 個代理審 4.66 億行碼\n• 加速科學：NVIDIA 用 GPU 推進量子糾錯與生物運算，錯誤率最高降近 348 倍"
     },
     "openai": {
       "title": "OpenAI 近期方向",
@@ -19,6 +19,10 @@
     "deepmind": {
       "title": "DeepMind 近期方向",
       "body": "本期 5 篇，模型與責任兩條線。\n• 模型：Gemini 3.5 Flash 內建電腦操作；Nano Banana 2 Lite 走量產價位\n• 責任與落地：生物韌性三支柱；印度教師助手 ATL Saathi；入股 A24 共造創作工具"
+    },
+    "nvidia": {
+      "title": "NVIDIA 近期方向",
+      "body": "本期精選 12 篇，主軸橫跨科學運算、機器人與訓練推論系統。\n• 科學：量子糾錯邏輯錯誤率降近 348 倍；共折疊搜尋快 177 倍\n• 實體 AI：GR00T 人形政策進步 61%；機器人評測揭統計陷阱\n• 代理研究：自主代理五小時把小模型準確率拉到近 97%\n• 系統：主機卸載讓 671B 訓練快 57%；DFlash 推論最高快 15 倍"
     }
   },
   "articles": [
@@ -122,6 +126,39 @@
       "crawled_at": "2026-07-19T00:00:00Z"
     },
     {
+      "id": "nvidia-20260714-autoresearch-workflow-rl-agent-skills-nemo",
+      "lab": "nvidia",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "自主代理在五小時內把視覺計數模型準確率從 25% 拉到近 97%",
+      "detail": "讓 Codex（後端 GPT 5.5）當自主研究員，靠系統整理、會話記憶與自動研究等技能，端到端跑完 NeMo RL 的環境建置、基線測試與迭代優化。在一項合成視覺計數任務上，五小時預算內把小模型準確率從 25.0% 拉到 96.875%。但長工作階段易出現目標漂移與空轉迴圈，仍需人類把關方向。\n\n重點：模型調校本身正被交給代理自動完成，人類退到定題與驗證的位置。",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo/",
+      "image_url": "",
+      "published_at": "2026-07-14",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260714-post-train-cosmos-3-agent-skills",
+      "lab": "nvidia",
+      "title": "Post-Train NVIDIA Cosmos 3 in One Day Using Agent Skills",
+      "summary": "代理技能自動微調物理 AI 模型，交通安全影片問答準確率衝上 93%",
+      "detail": "用 TAO 代理技能把 Cosmos 3 Nano 的後訓練自動化：代理自行驗證資料、配置 LoRA，再以 Bayesian AutoML 掃超參。在 Woven 交通安全影片問答上，準確率從 54.41% 拉到 93.35%；而 LoRA 路線雖逼近全參數微調的效果，卻省下約七倍 GPU 時數。\n\n重點：讓代理接手繁瑣的調參試錯，微調從專家手工活變成可批次跑的流程。",
+      "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-in-one-day-using-agent-skills/",
+      "image_url": "",
+      "published_at": "2026-07-14",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260714-lessons-from-the-leaderboard-ai-reasoning",
+      "lab": "nvidia",
+      "title": "Lessons From the Leaderboard: What 5,000+ Kagglers Taught Us About Improving AI Reasoning",
+      "summary": "逾五千名 Kaggler 發現：單一總分看不出模型是真學會推理還是換題型取巧",
+      "detail": "逾五千名參賽者在秩不超過 32 的 LoRA 與固定推論預算下改良 Nemotron-3-Nano-30B，歸納出可驗證思路鏈、壓縮 token、記憶與運算分離等做法。最關鍵的教訓在評估方法本身：把成績拆到各題型才看得出，總分持平往往只是強項補了弱項，並非推理能力真的提升。\n\n重點：改良推理模型前得先會量它，否則進步可能只是分數在題型間搬家。",
+      "url": "https://developer.nvidia.com/blog/lessons-from-the-leaderboard-what-5000-kagglers-taught-us-about-improving-ai-reasoning/",
+      "image_url": "",
+      "published_at": "2026-07-14",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
       "id": "anthropic-20260713-claude-values-models-languages",
       "lab": "anthropic",
       "title": "Claude's values across models and languages",
@@ -130,6 +167,61 @@
       "url": "https://www.anthropic.com/research/claude-values-models-languages",
       "image_url": "",
       "published_at": "2026-07-13",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260713-ising-decoding-color-code-300x",
+      "lab": "nvidia",
+      "title": "NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300x",
+      "summary": "小型 CNN 預解碼器把彩色碼的邏輯錯誤率壓到現有方法的近 1/348",
+      "detail": "用一個小型 3D 卷積網路當預解碼器，先吃下三角彩色碼在時空上的局部錯誤徵狀，訓練資料由 cuQuantum 等函式庫合成。在相同碼距與物理雜訊下，它的邏輯錯誤率比既有的 Chromobius 低 347.7 倍，執行還快 7.3 倍；代價是層數愈多愈準卻愈慢，且要在較大碼距才划算。\n\n重點：神經網路預解碼讓量子糾錯的準度與速度一起往前，是邁向容錯的關鍵一環。",
+      "url": "https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x/",
+      "image_url": "",
+      "published_at": "2026-07-13",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260713-extreme-event-likelihoods-guided-generative-models",
+      "lab": "nvidia",
+      "title": "Extreme Event Likelihoods with Guided Generative Models",
+      "summary": "用引導式擴散模型算極端氣候機率，估計誤差比蒙地卡羅少 25%",
+      "detail": "把擴散式氣候模擬器（cBottle）引導到熱帶氣旋等罕見狀態多產生樣本，再用勝算比修正權重，把樣本還原回真實氣候分布以估計極端事件機率。相較單純蒙地卡羅取樣，標準誤差降低約 25%；但修正需對生成模型取二階導數，取樣成本很高。\n\n重點：生成模型正被拿來補采樣資料最稀缺的尾端，讓罕見災害的機率變得可算。",
+      "url": "https://developer.nvidia.com/blog/extreme-event-likelihoods-with-guided-generative-models/",
+      "image_url": "",
+      "published_at": "2026-07-13",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260711-evaluate-general-purpose-robot-policies",
+      "lab": "nvidia",
+      "title": "How to Evaluate General-Purpose Robot Policies for Real-World Deployment",
+      "summary": "機器人只跑 70 次評測，九成成功率的真實區間竟橫跨 15 個百分點",
+      "detail": "RoboLab 用與機體無關的任務評測機器人政策，拆出視覺辨識、程序推理與關係邏輯等能力，並以部分給分和軌跡平滑度做診斷。它點出評測的統計陷阱：僅 70 次試跑時，九成成功率的信賴區間寬達 15 個百分點，要逾千次才收斂到約 2 個百分點。而且目前沒有政策能連續完成多個複雜子任務。\n\n重點：機器人成績若不附上試跑次數與區間，單一成功率幾乎沒有意義。",
+      "url": "https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/",
+      "image_url": "",
+      "published_at": "2026-07-11",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260710-co-folding-bionemo-agent-toolkit",
+      "lab": "nvidia",
+      "title": "Accelerating End-to-End Co-Folding Performance with NVIDIA BioNeMo Agent Toolkit",
+      "summary": "把蛋白質共折疊全流程搬上 GPU，同源序列搜尋比 CPU 快 177 倍",
+      "detail": "把共折疊結構預測的主要瓶頸都搬上 GPU：MSA 同源搜尋改用 MMseqs2-GPU，推論以 cuEquivariance 加速幾何運算，再用上下文平行的 Fold-CP 跨多卡擴展。其中同源序列搜尋比 CPU 版 JackHMMER 快達 177 倍，並能在 64 張 B300 上預測約三萬 token 的大型複合體。\n\n重點：結構預測的算力門檻一降，能處理的分子體系規模跟著放大。",
+      "url": "https://developer.nvidia.com/blog/accelerating-end-to-end-co-folding-performance-with-nvidia-bionemo-agent-toolkit/",
+      "image_url": "",
+      "published_at": "2026-07-10",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260710-host-offloading-jax-llm-training",
+      "lab": "nvidia",
+      "title": "Reducing High-Bandwidth Memory Bottlenecks in JAX-Based LLM Training with Host Offloading",
+      "summary": "把激活值暫存到主機記憶體，671B 模型訓練吞吐比重算快 57%",
+      "detail": "訓練時不重算激活值，而是先卸載到主機記憶體、反向傳播再取回，靠 Grace Blackwell 的高速 NVLink-C2C 互連與延遲隱藏排程，把資料傳輸和運算重疊。在 GB200 NVL72 上訓練 DeepSeek-V3 671B，吞吐比傳統重算激活值快 57%；代價是 GPU 峰值記憶體略為升高。\n\n重點：互連頻寬夠高時，換記憶體位置就能省下重算，用空間換時間。",
+      "url": "https://developer.nvidia.com/blog/reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading/",
+      "image_url": "",
+      "published_at": "2026-07-10",
       "crawled_at": "2026-07-19T00:00:00Z"
     },
     {
@@ -232,6 +324,17 @@
       "crawled_at": "2026-07-19T00:00:00Z"
     },
     {
+      "id": "nvidia-20260709-synthetic-data-financial-ai-nemo",
+      "lab": "nvidia",
+      "title": "Synthetic Data Generation for Financial AI Research with NVIDIA NeMo",
+      "summary": "單純生成金融新聞標題有 65% 是近重複，逐輪語意去重才拉出五十萬條",
+      "detail": "用 NeMo Data Designer 以高溫、類別加權生成標題，再用 NeMo Curator 對整個累積語料做全域語意去重，並讓少樣本範例逐輪演化以維持多樣性。單次五萬條會有約六成五被判為近重複；改成迭代式後，最終產出 502,536 條互不重複的標題。代價是全域比對隨語料成長爆量，後期需約五億次成對比較。\n\n重點：合成資料的難點不在生成數量，而在持續產出彼此不重複的新樣本。",
+      "url": "https://developer.nvidia.com/blog/synthetic-data-generation-for-financial-ai-research-with-nvidia-nemo/",
+      "image_url": "",
+      "published_at": "2026-07-09",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
       "id": "anthropic-20260708-off-switch-dual-use",
       "lab": "anthropic",
       "title": "An off switch for dual-use knowledge in AI models",
@@ -284,6 +387,17 @@
       "url": "https://openai.com/index/introducing-gpt-live/",
       "image_url": "",
       "published_at": "2026-07-08",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260707-humanoid-robot-policies-isaac-gr00t",
+      "lab": "nvidia",
+      "title": "Develop Humanoid Robot Policies End-to-End with NVIDIA Isaac GR00T",
+      "summary": "人形機器人政策模型 GR00T 1.7 在 DROID 基準上比前代提升 61%",
+      "detail": "提供從模擬、遙操作收資料、訓練到部署的一條龍人形機器人開發流程，核心是以 Cosmos-Reason2-2B 為骨幹的視覺語言動作模型 GR00T 1.7，並用伺服器客戶端架構在模擬中閉環評估。它在 DROID-F6 基準比前代 N1.6 進步 61%。但成效高度依賴乾淨、動作平滑的示範資料，且要跑上百至上千回合才測得出可信的成功率。\n\n重點：人形操控的進展仍卡在示範資料品質與評估成本，而非只看模型換代。",
+      "url": "https://developer.nvidia.com/blog/develop-humanoid-robot-policies-end-to-end-with-nvidia-isaac-gr00t/",
+      "image_url": "",
+      "published_at": "2026-07-07",
       "crawled_at": "2026-07-19T00:00:00Z"
     },
     {
@@ -480,6 +594,28 @@
       "summary": "OpenAI 共同創立 Appia 基金會，打造第三方查核 AI 是否合規的「信任層」。",
       "detail": "OpenAI 共同創立由 Linux 基金會託管的 Appia 基金會，做法是制定開放、模組化規格，把國際標準轉譯成 AI 價值鏈各環節可執行的評估準則，讓第三方能查核合規並產出可重用的佐證。填補的是目前缺失的「信任層」：不同組織開發的模型與應用，彼此難以驗證。\n\n重點：跨國治理 AI 的前提，是先有一套各方都認可的檢驗與互信機制。",
       "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai/",
+      "image_url": "",
+      "published_at": "2026-06-23",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260623-ai-scientist-life-science-bionemo",
+      "lab": "nvidia",
+      "title": "Build an AI Scientist for Life Science Discovery with NVIDIA BioNeMo Agent Toolkit",
+      "summary": "把加速模型包成可查文件的「技能」，AI 代理做科研任務成功率從 57% 到全對",
+      "detail": "BioNeMo Agent Toolkit 把結構預測、分子生成、對接等加速模型，包裝成有文件、標明輸入與失敗模式的「技能」，讓 AI 代理能自行發現並正確呼叫。有了這些技能，代理完成生醫任務的平均成功率從 57.1% 升到 100%，每千 token 通過的驗證斷言也多一倍。但官方端點僅供小規模開發測試，非生產級推論。\n\n重點：讓科研模型變得「代理可讀」，比模型本身更快變成能自動化的科學工具。",
+      "url": "https://developer.nvidia.com/blog/build-an-ai-scientist-for-life-science-discovery-with-nvidia-bionemo-agent-toolkit/",
+      "image_url": "",
+      "published_at": "2026-06-23",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260623-dflash-speculative-decoding-blackwell",
+      "lab": "nvidia",
+      "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+      "summary": "用區塊擴散一次草擬多個 token，Blackwell 上推論吞吐最高快 15 倍",
+      "detail": "DFlash 是給推測解碼用的區塊擴散草稿模型，不再逐字生成，而是並行草擬多個未來 token，並用目標模型的隱狀態與 KV 注入維持高接受率。在 Blackwell 上，gpt-oss-120b 於高互動速率下吞吐最高提升 15 倍，比 EAGLE-3 推測解碼再高 1.5 倍。但需與既有推論框架整合，且目前僅釋出約 20 個模型檢查點。\n\n重點：推測解碼的草稿階段改用擴散並行化，把高互動情境的延遲再往下壓。",
+      "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
       "image_url": "",
       "published_at": "2026-06-23",
       "crawled_at": "2026-07-19T00:00:00Z"

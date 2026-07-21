@@ -11,6 +11,7 @@
    openai    → only OpenAI
    anthropic → only Anthropic
    deepmind  → only DeepMind
+   nvidia    → only NVIDIA
    (empty)   → all labs, time-rotated
 */
 
@@ -24,8 +25,8 @@ const ROTATION_MINUTES = 5;
 // Widget only shows articles from the last N days ("this week").
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 
-const LAB_COLORS  = { openai: "#10A37F", anthropic: "#CC785C", deepmind: "#4285F4" };
-const LAB_LABELS  = { openai: "OpenAI",  anthropic: "Anthropic", deepmind: "DeepMind" };
+const LAB_COLORS  = { openai: "#10A37F", anthropic: "#CC785C", deepmind: "#4285F4", nvidia: "#76B900" };
+const LAB_LABELS  = { openai: "OpenAI",  anthropic: "Anthropic", deepmind: "DeepMind", nvidia: "NVIDIA" };
 
 var LAB_FILTER = "";   // set via widget parameter
 
@@ -253,7 +254,7 @@ async function showNewsList() {
     return;
   }
 
-  const LAB_EMOJI = { openai: "🟢", anthropic: "🟠", deepmind: "🔵" };
+  const LAB_EMOJI = { openai: "🟢", anthropic: "🟠", deepmind: "🔵", nvidia: "🟩" };
 
   for (const a of articles) {
     const row = new UITableRow();

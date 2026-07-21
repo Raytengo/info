@@ -21,6 +21,7 @@
       --openai:      #10A37F;
       --anthropic:   #CC785C;
       --deepmind:    #4285F4;
+      --nvidia:      #76B900;
       --radius-card: 16px;
       --radius-pill: 20px;
       --sheet-radius:22px;
@@ -117,6 +118,7 @@
     .tab[data-lab="openai"].active    { background: var(--openai);     color: #fff; }
     .tab[data-lab="anthropic"].active { background: var(--anthropic);  color: #fff; }
     .tab[data-lab="deepmind"].active  { background: var(--deepmind);   color: #fff; }
+    .tab[data-lab="nvidia"].active    { background: var(--nvidia);     color: #fff; }
     .tab-badge {
       background: rgba(255,255,255,0.3);
       color: inherit;
@@ -432,6 +434,7 @@
     <button class="tab" data-lab="openai">OpenAI<span class="tab-badge" id="badge-openai"></span></button>
     <button class="tab" data-lab="anthropic">Anthropic<span class="tab-badge" id="badge-anthropic"></span></button>
     <button class="tab" data-lab="deepmind">DeepMind<span class="tab-badge" id="badge-deepmind"></span></button>
+    <button class="tab" data-lab="nvidia">NVIDIA<span class="tab-badge" id="badge-nvidia"></span></button>
   </div>
 </div>
 
@@ -481,8 +484,8 @@
 </div>
 
 <script>
-  const LAB_COLORS = { openai: '#10A37F', anthropic: '#CC785C', deepmind: '#4285F4' };
-  const LAB_LABELS = { openai: 'OpenAI', anthropic: 'Anthropic', deepmind: 'DeepMind' };
+  const LAB_COLORS = { openai: '#10A37F', anthropic: '#CC785C', deepmind: '#4285F4', nvidia: '#76B900' };
+  const LAB_LABELS = { openai: 'OpenAI', anthropic: 'Anthropic', deepmind: 'DeepMind', nvidia: 'NVIDIA' };
 
   // ── GitHub Feedback Config ──
   // 填入你的 fine-grained PAT（只需 Raytengo/info 的 Contents: Read and write）
@@ -698,7 +701,7 @@
   }
 
   function updateBadges() {
-    ['all','openai','anthropic','deepmind'].forEach(lab => {
+    ['all','openai','anthropic','deepmind','nvidia'].forEach(lab => {
       const n = unreadCount(lab);
       const el = document.getElementById('badge-' + lab);
       if (el) { el.textContent = n > 0 ? n : ''; el.style.display = n > 0 ? '' : 'none'; }

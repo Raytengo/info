@@ -1,13 +1,13 @@
 # Info — AI Research News Tracker
 
-追蹤 OpenAI、Anthropic、DeepMind 的最新研究動態。每週自動更新，透過 iOS Widget 與網頁版瀏覽，左滑右滑回饋偏好。
+追蹤 OpenAI、Anthropic、DeepMind、NVIDIA 的最新研究動態。每週自動更新，透過 iOS Widget 與網頁版瀏覽，左滑右滑回饋偏好。
 
 ## 運作流程
 
 ```
 每週觸發（Cowork scheduled task）
     ↓
-爬取本週三家 lab 新文章（listing page only）
+爬取本週四家 lab 新文章（listing page only）
     ↓
 Agent 依據偏好歷史篩選 + 排序 → 選出 top N 篇
     ↓
@@ -37,8 +37,8 @@ feedback.json 更新 → 下週 agent 參考
 1. 在 iOS 安裝 [Scriptable](https://scriptable.app/)
 2. 將 `AI Research Widget.js` 複製到 Scriptable
 3. 新增 Widget，長按 → 編輯 Widget，可選填參數：
-   - `openai` / `anthropic` / `deepmind` — 只顯示該 lab
-   - 留空 — 三家輪播
+   - `openai` / `anthropic` / `deepmind` / `nvidia` — 只顯示該 lab
+   - 留空 — 四家輪播
 
 支援 Small / Medium / Large 三種尺寸，點擊 Widget 開啟網頁版。
 
@@ -49,7 +49,7 @@ feedback.json 更新 → 下週 agent 參考
 ```json
 {
   "meta": { "updated_at": "", "count": 0 },
-  "digest": { "all": "", "openai": "", "anthropic": "", "deepmind": "" },
+  "digest": { "all": "", "openai": "", "anthropic": "", "deepmind": "", "nvidia": "" },
   "articles": [
     {
       "id": "openai-2026-05-22-...",
@@ -88,3 +88,4 @@ feedback.json 更新 → 下週 agent 參考
 - OpenAI：https://openai.com/news/
 - Anthropic：https://www.anthropic.com/news
 - DeepMind：https://deepmind.google/discover/blog/
+- NVIDIA：https://developer.nvidia.com/blog/

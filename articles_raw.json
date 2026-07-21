@@ -4,15 +4,124 @@
     "crawled_at": "2026-07-19T00:00:00Z",
     "note": "DeepMind dates have month precision only (date_precision: month). Anthropic articles may have some gaps in Jan–Mar 2026.",
     "counts": {
-      "total": 191,
+      "total": 203,
       "anthropic": 63,
       "deepmind": 34,
-      "openai": 94
+      "openai": 94,
+      "nvidia": 12
     },
     "last_crawled": "2026-07-19",
-    "total": 191
+    "total": 203
   },
   "articles": [
+    {
+      "id": "nvidia-20260714-autoresearch-workflow-rl-agent-skills-nemo",
+      "lab": "nvidia",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo/",
+      "published_at": "2026-07-14",
+      "category": "Agentic AI / Generative AI",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260714-post-train-cosmos-3-agent-skills",
+      "lab": "nvidia",
+      "title": "Post-Train NVIDIA Cosmos 3 in One Day Using Agent Skills",
+      "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-in-one-day-using-agent-skills/",
+      "published_at": "2026-07-14",
+      "category": "Simulation / Modeling / Design",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260714-lessons-from-the-leaderboard-ai-reasoning",
+      "lab": "nvidia",
+      "title": "Lessons From the Leaderboard: What 5,000+ Kagglers Taught Us About Improving AI Reasoning",
+      "url": "https://developer.nvidia.com/blog/lessons-from-the-leaderboard-what-5000-kagglers-taught-us-about-improving-ai-reasoning/",
+      "published_at": "2026-07-14",
+      "category": "Agentic AI / Generative AI",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260713-ising-decoding-color-code-300x",
+      "lab": "nvidia",
+      "title": "NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300x",
+      "url": "https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x/",
+      "published_at": "2026-07-13",
+      "category": "Quantum Computing",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260713-extreme-event-likelihoods-guided-generative-models",
+      "lab": "nvidia",
+      "title": "Extreme Event Likelihoods with Guided Generative Models",
+      "url": "https://developer.nvidia.com/blog/extreme-event-likelihoods-with-guided-generative-models/",
+      "published_at": "2026-07-13",
+      "category": "Simulation / Modeling / Design",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260711-evaluate-general-purpose-robot-policies",
+      "lab": "nvidia",
+      "title": "How to Evaluate General-Purpose Robot Policies for Real-World Deployment",
+      "url": "https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/",
+      "published_at": "2026-07-11",
+      "category": "Robotics",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260710-co-folding-bionemo-agent-toolkit",
+      "lab": "nvidia",
+      "title": "Accelerating End-to-End Co-Folding Performance with NVIDIA BioNeMo Agent Toolkit",
+      "url": "https://developer.nvidia.com/blog/accelerating-end-to-end-co-folding-performance-with-nvidia-bionemo-agent-toolkit/",
+      "published_at": "2026-07-10",
+      "category": "Simulation / Modeling / Design",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260710-host-offloading-jax-llm-training",
+      "lab": "nvidia",
+      "title": "Reducing High-Bandwidth Memory Bottlenecks in JAX-Based LLM Training with Host Offloading",
+      "url": "https://developer.nvidia.com/blog/reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading/",
+      "published_at": "2026-07-10",
+      "category": "Agentic AI / Generative AI",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260709-synthetic-data-financial-ai-nemo",
+      "lab": "nvidia",
+      "title": "Synthetic Data Generation for Financial AI Research with NVIDIA NeMo",
+      "url": "https://developer.nvidia.com/blog/synthetic-data-generation-for-financial-ai-research-with-nvidia-nemo/",
+      "published_at": "2026-07-09",
+      "category": "Agentic AI / Generative AI",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260707-humanoid-robot-policies-isaac-gr00t",
+      "lab": "nvidia",
+      "title": "Develop Humanoid Robot Policies End-to-End with NVIDIA Isaac GR00T",
+      "url": "https://developer.nvidia.com/blog/develop-humanoid-robot-policies-end-to-end-with-nvidia-isaac-gr00t/",
+      "published_at": "2026-07-07",
+      "category": "Robotics",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260623-ai-scientist-life-science-bionemo",
+      "lab": "nvidia",
+      "title": "Build an AI Scientist for Life Science Discovery with NVIDIA BioNeMo Agent Toolkit",
+      "url": "https://developer.nvidia.com/blog/build-an-ai-scientist-for-life-science-discovery-with-nvidia-bionemo-agent-toolkit/",
+      "published_at": "2026-06-23",
+      "category": "Simulation / Modeling / Design",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
+    {
+      "id": "nvidia-20260623-dflash-speculative-decoding-blackwell",
+      "lab": "nvidia",
+      "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+      "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
+      "published_at": "2026-06-23",
+      "category": "Data Center / Cloud",
+      "crawled_at": "2026-07-19T00:00:00Z"
+    },
     {
       "id": "anthropic-20260714-claude-for-teachers",
       "lab": "anthropic",

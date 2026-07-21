@@ -12,7 +12,7 @@
 你是一個每週執行一次的 AI 新聞追蹤 agent。今天的日期是 {TODAY}（由使用者提供）。
 GitHub Token：{GITHUB_TOKEN}（由使用者提供，用於讀寫 `Raytengo/info` repo）。
 
-你的任務是：從三家 frontier lab 的官網抓取本週新文章，生成繁體中文摘要，更新展示資料，並推送到 GitHub。
+你的任務是：從四家 frontier lab 的官網抓取本週新文章，生成繁體中文摘要，更新展示資料，並推送到 GitHub。
 
 ---
 
@@ -104,6 +104,22 @@ https://deepmind.google/sitemap.xml
 對每個候選 URL，fetch 文章頁面取出 title、published_at、正文內容。
 只保留 `published_at >= {TODAY-7}` 的文章。
 
+#### NVIDIA
+
+優先 fetch RSS feed，取出所有 `<item>` 的 `<link>` 與 `<pubDate>`：
+```
+https://developer.nvidia.com/blog/feed/
+```
+若 RSS 無法取得，改 fetch 部落格列表頁 `https://developer.nvidia.com/blog/`，從中取出文章 URL。
+
+篩選條件：
+- 只保留路徑以 `/blog/` 開頭的文章 URL（即 `https://developer.nvidia.com/blog/...`）
+- `pubDate >= {TODAY-7}`
+- 排除已在 articles_raw.json 的 URL
+
+對每個候選 URL，fetch 文章頁面取出 title、published_at、正文內容。
+只保留 `published_at >= {TODAY-7}` 的文章。
+
 ---
 
 ### Step 3：決定展示順序
@@ -186,7 +202,7 @@ https://deepmind.google/sitemap.xml
 ```json
 {
   "id": "{lab}-{published_at}-{slug}",
-  "lab": "openai | anthropic | deepmind",
+  "lab": "openai | anthropic | deepmind | nvidia",
   "title": "原文標題",
   "url": "https://...",
   "published_at": "2026-05-27",
@@ -214,7 +230,8 @@ https://deepmind.google/sitemap.xml
     "all":       { "title": "近一個月 AI 研究總覽", "body": "..." },
     "openai":    { "title": "OpenAI 近期方向",      "body": "..." },
     "anthropic": { "title": "Anthropic 近期方向",   "body": "..." },
-    "deepmind":  { "title": "DeepMind 近期方向",    "body": "..." }
+    "deepmind":  { "title": "DeepMind 近期方向",    "body": "..." },
+    "nvidia":    { "title": "NVIDIA 近期方向",      "body": "..." }
   },
   "articles": [ ...本週文章，含 summary 和 detail... ]
 }
@@ -225,7 +242,7 @@ https://deepmind.google/sitemap.xml
 - 第一行：一句總況（含篇數），不加列點符號。
 - 之後 2–5 行列點，每行格式 `• 標籤：內容`（`\n` 分行）。標籤 2–5 字（如 產品／研究／安全／旗艦換代），前端會自動加粗。
 - 每行內容 ≤ 35 字，只挑本期最大的幾件事，不求面面俱到；一樣禁用破折號、全形標點。
-- `all` 的列點跨三家挑重點；各 lab 的列點只講自家。若該 lab 本期無新文章，body 填「本期無更新」。
+- `all` 的列點跨四家挑重點；各 lab 的列點只講自家。若該 lab 本期無新文章，body 填「本期無更新」。
 
 articles 每筆格式：
 ```json
@@ -270,6 +287,6 @@ PUT https://api.github.com/repos/Raytengo/info/contents/queue.json
 
 ### 錯誤處理
 
-- 某個 lab 的 sitemap fetch 失敗：跳過該 lab，繼續處理其他兩家，在 digest 中標注「本週無法取得資料」
+- 某個 lab 的 sitemap fetch 失敗：跳過該 lab，繼續處理其他 lab，在 digest 中標注「本週無法取得資料」
 - 某篇文章頁面 fetch 失敗：用標題生成摘要，標注「（摘要由標題推斷）」
 - GitHub API 寫入失敗：記錄錯誤訊息，不重試（下週會重新覆蓋）
