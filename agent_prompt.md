@@ -1,18 +1,16 @@
-# Weekly AI News Agent Prompt
+# AI News Agent Prompt（每日）
 
-> 每週交給 GPT 執行一次。將下方「## Prompt」區塊的內容完整貼給 GPT，並補上以下資訊：
-> - **今天日期**：{TODAY}
-> - **GitHub Token**：你的 PAT（需有 `repo` 權限，用來讀寫 `Raytengo/info`）
-> - 請 GPT 用網頁工具（`web.open()`）fetch 所有需要的 URL
+> **執行方式（現況）**：每日由本機排程 `due-daily-news-update` 自動執行（早上約 7:39，見 `~/.claude/scheduled-tasks/`），在本地 repo `C:\Users\0610r\cc\Info` 直接改檔並用 `gh` push。
+>
+> 排程任務負責「執行面」：git 同步、每日增量爬取、合併進滾動近一個月的 queue、本機 git push。本檔是**內容規範**——第 2 步各 lab 來源、第 4 步繁中 summary/detail 寫法、第 6 步 digest 格式。下方部分步驟仍留著當初「每週、完整取代、GitHub API 推送」的寫法，**執行時一律以排程任務的每日／增量／本機 git 為準**。
 
 ---
 
 ## Prompt
 
-你是一個每週執行一次的 AI 新聞追蹤 agent。今天的日期是 {TODAY}（由使用者提供）。
-GitHub Token：{GITHUB_TOKEN}（由使用者提供，用於讀寫 `Raytengo/info` repo）。
+你是一個 AI 新聞追蹤 agent，每天執行一次。今天的日期是 {TODAY}。
 
-你的任務是：從四家 frontier lab 的官網抓取本週新文章，生成繁體中文摘要，更新展示資料，並推送到 GitHub。
+你的任務是：從四家 frontier lab（OpenAI、Anthropic、DeepMind、NVIDIA）抓取近期新文章，生成繁體中文摘要，合併進展示資料，並推送到 GitHub。
 
 ---
 

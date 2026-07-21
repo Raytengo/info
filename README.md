@@ -1,32 +1,32 @@
 # Info — AI Research News Tracker
 
-追蹤 OpenAI、Anthropic、DeepMind、NVIDIA 的最新研究動態。每週自動更新，透過 iOS Widget 與網頁版瀏覽，左滑右滑回饋偏好。
+追蹤 OpenAI、Anthropic、DeepMind、NVIDIA 的最新研究動態。每日自動更新，透過 iOS Widget 與網頁版瀏覽，左滑右滑回饋偏好。
 
 ## 運作流程
 
 ```
-每週觸發（Cowork scheduled task）
+每日觸發（本機排程，早上約 7:39）
     ↓
-爬取本週四家 lab 新文章（listing page only）
+爬取近幾天四家 lab 新文章（listing page only）
     ↓
-Agent 依據偏好歷史篩選 + 排序 → 選出 top N 篇
+Agent 依偏好歷史 + 去重，合併進滾動近一個月的 feed
     ↓
 Agent 生成繁中 summary / detail
     ↓
 寫入 queue.json → git push → GitHub Pages 自動更新
     ↓
-Widget / 網頁顯示本週內容
+Widget / 網頁顯示近期內容
     ↓
 使用者左滑（不喜歡）/ 右滑（喜歡）
     ↓
-feedback.json 更新 → 下週 agent 參考
+feedback.json 更新 → 隔天 agent 參考
 ```
 
 ## 檔案說明
 
 | 檔案 | 說明 |
 |------|------|
-| `queue.json` | 本週展示文章，由 agent 每週生成並推送 |
+| `queue.json` | 近一個月展示文章，由 agent 每日更新並推送 |
 | `feedback.json` | 使用者 like/dislike 記錄，供 agent 學習偏好 |
 | `articles_raw.json` | 歷史文章 metadata 庫（2026 年起，僅 title + url，備用） |
 | `AI Research Widget.js` | iOS Scriptable 桌面小工具 |
