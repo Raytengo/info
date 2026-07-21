@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T06:03:30.066Z",
+  "updated_at": "2026-07-21T06:53:45.023Z",
   "ratings": {
     "openai-20260522-discrete-geometry-conjecture": "like",
     "deepmind-20260520-gemini-computer-use": "like",
@@ -50,6 +50,7 @@
     "anthropic-20260709-hard-questions": "dislike",
     "anthropic-20260709-ben-bernanke": "dislike",
     "anthropic-20260709-claude-plays-robotics": "like",
-    "nvidia-20260623-dflash-speculative-decoding-blackwell": "dislike"
+    "nvidia-20260623-dflash-speculative-decoding-blackwell": "dislike",
+    "nvidia-20260720-cosmos-3-edge": "like"
   }
 }
