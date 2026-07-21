@@ -499,6 +499,7 @@
   let filter   = 'all';
   let readSet  = new Set(JSON.parse(localStorage.getItem('ai-read') || '[]'));
   let sheetArticle = null;
+  let view     = [];  // 目前顯示順序（篩選 + 未讀優先排序後）；index 查找的單一依據
 
   // ── Feedback state ──
   let feedbackMap = {}; // { articleId: 'like' | 'dislike' }
@@ -662,9 +663,8 @@
     el.addEventListener('click', () => {
       if (el.dataset.swiped) { delete el.dataset.swiped; return; }
       if (Math.abs(currentDx) > 10) return;
-      const idx  = parseInt(el.dataset.idx);
-      const pool = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
-      openSheet(pool[idx], el);
+      const idx = parseInt(el.dataset.idx);
+      openSheet(view[idx], el);
     });
   }
 
@@ -742,7 +742,11 @@
 
   // ── Render ──
   function render(animate = true) {
-    const shown = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
+    // 未讀優先：先篩選，再穩定排序（未讀在前、已讀在後，各組維持原本的日期/偏好順序）
+    const shown = (filter === 'all' ? articles : articles.filter(a => a.lab === filter))
+      .slice()
+      .sort((a, b) => (readSet.has(a.id) ? 1 : 0) - (readSet.has(b.id) ? 1 : 0));
+    view = shown;
     const list  = document.getElementById('list');
 
     if (animate) {
@@ -790,9 +794,8 @@
 
     // Bind swipe + tap
     list.querySelectorAll('.card').forEach(el => {
-      const idx  = parseInt(el.dataset.idx);
-      const pool = filter === 'all' ? articles : articles.filter(a => a.lab === filter);
-      bindCardInteractions(el, pool[idx]);
+      const idx = parseInt(el.dataset.idx);
+      bindCardInteractions(el, shown[idx]);
     });
 
   }
@@ -869,6 +872,13 @@
       }
 
       render(false);
+
+      // 深連結：?a=<article-id> → 直接打開該篇（手機 widget 點擊會帶這個參數，免得還要自己找）
+      const targetId = new URLSearchParams(location.search).get('a');
+      if (targetId) {
+        const art = articles.find(a => a.id === targetId);
+        if (art) openSheet(art, document.querySelector('.card[data-id="' + CSS.escape(targetId) + '"]'));
+      }
     } catch(e) {
       document.getElementById('list').innerHTML = `<div class="placeholder">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16M16 6v16"/></svg>

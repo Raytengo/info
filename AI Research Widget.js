@@ -18,6 +18,7 @@
 /* ============ CONFIG ============ */
 
 const QUEUE_URL = "https://raw.githubusercontent.com/Raytengo/info/master/queue.json";
+const PAGE_URL  = "https://raytengo.github.io/info/";  // 點擊跳轉的網頁；帶 ?a=<id> 直接開該篇
 
 // Minutes each article stays on screen before rotating to the next
 const ROTATION_MINUTES = 5;
@@ -65,7 +66,7 @@ async function buildWidget() {
 
   const w = new ListWidget();
   w.setPadding(16, 18, 16, 18);
-  w.url = "https://raytengo.github.io/info/";
+  w.url = article ? PAGE_URL + "?a=" + encodeURIComponent(article.id) : PAGE_URL;
 
   if (!article) { return renderError(w); }
 
@@ -260,7 +261,7 @@ async function showNewsList() {
     const row = new UITableRow();
     row.height = 80;
     row.dismissOnSelect = false;
-    row.onSelect = () => { Safari.open(a.url); };
+    row.onSelect = () => { Safari.open(PAGE_URL + "?a=" + encodeURIComponent(a.id)); };
 
     const emoji = LAB_EMOJI[a.lab] || "⚪";
     const label = LAB_LABELS[a.lab] || a.lab;
