@@ -106,19 +106,33 @@ https://deepmind.google/sitemap.xml
 
 #### NVIDIA
 
+NVIDIA 的研究內容分散在多個網站，用**兩個來源**，都聚焦科研、避開 GPU 硬體/基建/產品。
+
+**來源 A — NVIDIA Technical Blog（developer.nvidia.com）**
+
 優先 fetch RSS feed，取出所有 `<item>` 的 `<link>` 與 `<pubDate>`：
 ```
 https://developer.nvidia.com/blog/feed/
 ```
-若 RSS 無法取得，改 fetch 部落格列表頁 `https://developer.nvidia.com/blog/`，從中取出文章 URL。
+若 RSS 無法取得，改 fetch 列表頁 `https://developer.nvidia.com/blog/`。
 
 篩選條件：
-- 只保留路徑以 `/blog/` 開頭的文章 URL（即 `https://developer.nvidia.com/blog/...`）
-- `pubDate >= {TODAY-7}`
-- 排除已在 articles_raw.json 的 URL
+- 路徑以 `/blog/` 開頭、`pubDate >= {TODAY-7}`、排除已在 articles_raw.json 的 URL。
+- **只收研究類分類**：Agentic AI / Generative AI、Robotics、Simulation / Modeling / Design、Computer Vision / Video Analytics、Data Science。
+- **排除基建/產品類**：Data Center / Cloud、Networking / Communications、Edge Computing、Content Creation / Rendering，以及遊戲、電信、企業部署 how-to、純 GPU/CUDA 硬體優化。
+- ⚠️ 分類不完美：少數研究好料會被歸在基建分類（例如一篇推論加速「方法」可能被標成 Data Center / Cloud）。所以分類過濾後，**仍要對每篇做一層「研究實質」判斷**——留下方法／科學發現／模型能力／評估洞見，砍掉純硬體規格、部署、商業。這層判斷比分類標籤更重要。
 
-對每個候選 URL，fetch 文章頁面取出 title、published_at、正文內容。
-只保留 `published_at >= {TODAY-7}` 的文章。
+**來源 B — NVIDIA on Hugging Face（新研究模型發布）**
+
+fetch NVIDIA 的文章列表頁：
+```
+https://huggingface.co/blog?author=nvidia
+```
+取出各文章連結（URL 格式 `https://huggingface.co/blog/nvidia/<slug>`）與發布日期。
+- 只保留 `published_at >= {TODAY-7}`、排除已在 articles_raw.json 的 URL。
+- 這裡專門補抓 developer blog 收不到的**新模型／研究發布**（如 Cosmos、Nemotron 等）；developer blog 常趕不上或不刊這類 launch。
+
+兩來源合併後，對每個候選 fetch 文章頁面取出 title、published_at、正文內容，只保留 `published_at >= {TODAY-7}`。NVIDIA 內容量大，**寧缺勿濫**，只收真正的科研／模型內容。
 
 ---
 

@@ -88,4 +88,4 @@ feedback.json 更新 → 下週 agent 參考
 - OpenAI：https://openai.com/news/
 - Anthropic：https://www.anthropic.com/news
 - DeepMind：https://deepmind.google/discover/blog/
-- NVIDIA：https://developer.nvidia.com/blog/
+- NVIDIA：https://developer.nvidia.com/blog/（僅研究分類）＋ https://huggingface.co/blog?author=nvidia（新模型發布）
