@@ -20,11 +20,14 @@
 const QUEUE_URL = "https://raw.githubusercontent.com/Raytengo/info/master/queue.json";
 const PAGE_URL  = "https://raytengo.github.io/info/";  // 點擊跳轉的網頁；帶 ?a=<id> 直接開該篇
 
-// Minutes each article stays on screen before rotating to the next
-const ROTATION_MINUTES = 5;
+// Minutes each article stays on screen before rotating to the next.
+// Note: iOS decides how often a home-screen widget actually refreshes (often
+// not every minute, whatever this is). We hint iOS via refreshAfterDate below,
+// but a true 1-minute cadence is best-effort, not guaranteed by the OS.
+const ROTATION_MINUTES = 1;
 
-// Widget only shows articles from the last N days ("this week").
-const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+// Widget only shows articles from the last N days (rolling window).
+const WINDOW_MS = 14 * 24 * 60 * 60 * 1000;  // 兩週
 
 const LAB_COLORS  = { openai: "#10A37F", anthropic: "#CC785C", deepmind: "#4285F4", nvidia: "#76B900" };
 const LAB_LABELS  = { openai: "OpenAI",  anthropic: "Anthropic", deepmind: "DeepMind", nvidia: "NVIDIA" };
@@ -66,6 +69,7 @@ async function buildWidget() {
 
   const w = new ListWidget();
   w.setPadding(16, 18, 16, 18);
+  w.refreshAfterDate = new Date(Date.now() + ROTATION_MINUTES * 60 * 1000);  // 請 iOS 盡快再刷新（盡力，非保證）
   w.url = article ? PAGE_URL + "?a=" + encodeURIComponent(article.id) : PAGE_URL;
 
   if (!article) { return renderError(w); }
@@ -301,12 +305,12 @@ async function fetchArticles() {
       articles = articles.filter(a => a.lab === LAB_FILTER);
     }
 
-    // Widget shows only THIS WEEK's news (last 7 days); the webpage shows the
-    // whole month (queue.json holds the month, widget filters it down).
+    // Widget shows the last two weeks' news; the webpage shows the whole month
+    // (queue.json holds the month, the widget filters it down).
     const now    = Date.now();
-    const weekly = articles.filter(a => (now - new Date(a.published_at).getTime()) <= WEEK_MS);
-    // Fallback: if a quiet week has no new articles, show the month rather than an empty widget.
-    articles = weekly.length ? weekly : articles;
+    const recent = articles.filter(a => (now - new Date(a.published_at).getTime()) <= WINDOW_MS);
+    // Fallback: if a quiet fortnight has no articles, show everything rather than an empty widget.
+    articles = recent.length ? recent : articles;
 
     articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
     return articles;
